@@ -10,8 +10,6 @@ require 'dstk'
 # Twitter API info: https://dev.twitter.com/docs/platform-objects/tweets
 # Geocoding: http://www.datasciencetoolkit.org/
 
-# path to file with all file that have tweets (passed as argument)
-file_list = ARGV[0]
 # wanted bounding box
 bounding_box = {
   # CONTINENTAL USA
@@ -35,6 +33,9 @@ end
 ########################## NO NEED TO CHANGE ANYTHING BELOW ############################
 ########################################################################################
 ########################################################################################
+
+# path to file with all file that have tweets (passed as argument)
+file_list = ARGV[0]
 
 # check if a coordinates point is wthin a certain box
 def within_box?(bounding_box, point_lat, point_lon)
