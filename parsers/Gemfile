@@ -1,0 +1,7 @@
+# A sample Gemfile
+source "https://rubygems.org"
+
+gem 'unicode_utils'
+gem 'json'
+gem 'dstk'
+
