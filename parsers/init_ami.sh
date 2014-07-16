@@ -2,6 +2,7 @@
 sudo locale-gen en_US.UTF-8
 export LC_ALL="en_US.UTF-8"
 sudo dpkg-reconfigure locales
+echo 'LC_MESSAGES="C"' | sudo tee -a /etc/default/locale
 echo 'LC_ALL="en_US.UTF-8"' | sudo tee -a /etc/default/locale
 
 # 2) Update and install needed packages
@@ -39,3 +40,5 @@ echo "gem: --no-ri --no-rdoc" | sudo tee ~/.gemrc
 # 6) Install Gems
 gem install bundler
 bundle install
+
+#### REBOOT

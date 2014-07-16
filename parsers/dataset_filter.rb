@@ -37,6 +37,9 @@ end
 # path to file with all file that have tweets (passed as argument)
 file_list = ARGV[0]
 
+# step for saved tweets and parsed tweets
+step = 1000
+
 # check if a coordinates point is wthin a certain box
 def within_box?(bounding_box, point_lat, point_lon)
   box_lons = [bounding_box[:ne][:lon], bounding_box[:sw][:lon]]
@@ -48,6 +51,9 @@ dstk = DSTK::DSTK.new
 
 File.open(file_list).read.each_line do |tweets_filename|
 
+  # skips if line is commented
+  next if tweets_filename[0] == '#'
+
   # remove new line at the end of line
   tweets_filename.chomp!
 
@@ -56,10 +62,7 @@ File.open(file_list).read.each_line do |tweets_filename|
   output_file = File.open(output_filename, "w")
 
   # print init time
-  puts "> started '#{tweets_filename}' at #{Time.now}"
-
-  # skips if line is commented
-  next if tweets_filename[0] == '#'
+  puts "> [#{Time.now}] started '#{tweets_filename}' parse"
 
   tweets_file = Zlib::GzipReader.new(open(tweets_filename), {encoding: Encoding::UTF_8})
   output_string = ""
@@ -71,7 +74,7 @@ File.open(file_list).read.each_line do |tweets_filename|
       tweet = JSON.parse(tweet)
 
       tweets_parsed += 1
-      puts "> parsed 10000 tweets at #{Time.now}" if tweets_parsed % 5000 == 0
+      puts "> [#{Time.now}] #{tweets_parsed} tweets parsed" if tweets_parsed % step == 0
 
       # skip null tweets
       next if tweet['text'].nil?
@@ -150,11 +153,10 @@ File.open(file_list).read.each_line do |tweets_filename|
       output_string += JSON.generate(final_tweet) + "\n"
 
       # if it wrote 'enough' tweets writes to file
-      if tweets_saved == 1000
+      if tweets_saved % step == 0
         output_file.write(output_string)
-        tweets_saved = 0
         output_string = ""
-        puts "> saved 1000 tweets at #{Time.now}"
+        puts "> [#{Time.now}] #{tweets_saved} tweets saved"
       end
     end
 
@@ -162,7 +164,7 @@ File.open(file_list).read.each_line do |tweets_filename|
     output_file.write(output_string)
 
     # print end time
-    puts "> ended '#{tweets_filename}' at #{Time.now}"
+    puts "> [#{Time.now}] ended '#{tweets_filename}' parse"
   ensure
     # make sure we close file
     output_file.close
