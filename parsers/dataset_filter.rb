@@ -10,8 +10,6 @@ require 'dstk'
 # Twitter API info: https://dev.twitter.com/docs/platform-objects/tweets
 # Geocoding: http://www.datasciencetoolkit.org/
 
-# path to file with all file that have tweets (passed as argument)
-file_list = ARGV[0]
 # wanted bounding box
 bounding_box = {
   # CONTINENTAL USA
@@ -35,6 +33,9 @@ end
 ########################## NO NEED TO CHANGE ANYTHING BELOW ############################
 ########################################################################################
 ########################################################################################
+
+# path to file with all file that have tweets (passed as argument)
+file_list = ARGV[0]
 
 # check if a coordinates point is wthin a certain box
 def within_box?(bounding_box, point_lat, point_lon)
@@ -63,10 +64,14 @@ File.open(file_list).read.each_line do |tweets_filename|
   tweets_file = Zlib::GzipReader.new(open(tweets_filename), {encoding: Encoding::UTF_8})
   output_string = ""
   begin
-    tweet_num = 0
+    tweets_saved = 0
+    tweets_parsed = 0
     tweets_file.each_line do |tweet|
       # parse tweet to hash form JSON
       tweet = JSON.parse(tweet)
+
+      tweets_parsed += 1
+      puts "> parsed 10000 tweets at #{Time.now}" if tweets_parsed % 5000 == 0
 
       # skip null tweets
       next if tweet['text'].nil?
@@ -141,17 +146,20 @@ File.open(file_list).read.each_line do |tweets_filename|
       final_tweet['coordinates']['county'] = state_county.last
 
       # write tweets to output file
-      tweet_num += 1
+      tweets_saved += 1
       output_string += JSON.generate(final_tweet) + "\n"
 
       # if it wrote 'enough' tweets writes to file
-      if tweet_num == 2
+      if tweets_saved == 1000
         output_file.write(output_string)
-        tweet_num = 0
+        tweets_saved = 0
         output_string = ""
-        puts "> Added 1000 tweets at #{Time.now}"
+        puts "> saved 1000 tweets at #{Time.now}"
       end
     end
+
+    # print whats left
+    output_file.write(output_string)
 
     # print end time
     puts "> ended '#{tweets_filename}' at #{Time.now}"
