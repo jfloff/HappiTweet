@@ -9,8 +9,6 @@ require 'zlib'
 
 # RELEVANT INFO:
 
-# path to file with all tweets passed as argument
-tweets_filename = ARGV[0]
 # csv files with first column with the word, and second with the score separated with commans
 word_lists_info = [
   {key: 'en.hedo' , path: '/Users/jfloff/Code/sigspatial2014/data/hedonometer_anew_full.csv'},
@@ -20,14 +18,17 @@ word_lists_info = [
 def word_score_filter(word,score)
   return score > 7
 end
-# output filename
-output_filename = ARGV[1]
 
 ########################################################################################
 ########################################################################################
 ########################## NO NEED TO CHANGE ANYTHING BELOW ############################
 ########################################################################################
 ########################################################################################
+
+# path to file with all tweets passed as argument
+tweets_filename = ARGV[0]
+# output filename
+output_filename = ARGV[1]
 
 # Load word lists
 word_lists = []
