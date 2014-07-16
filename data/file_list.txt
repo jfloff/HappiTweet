@@ -1,4 +1,4 @@
-/Users/jfloff/Code/sigspatial2014/data/tweets02_aaaj.gz
+# http://dmir.inesc-id.pt/shinra/~bmartins/twitter-data/data/
 #
 # 233 files * 1'000'000 tweets each file = 233'000'000
 #
