@@ -18,13 +18,13 @@ to_state_county_score <- function(input_filename){
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
     tweet <- fromJSON(line)
-    
+
     states <- c(tweet[['coordinates']][['state']], states)
     counties <- c(tweet[['coordinates']][['county']], counties)
     scores <- c(as.double(tweet[['score']]), scores)
   }
   close(con)
-  # build data frame and write to CSV
+  # build data frame
   data.frame(state = states, county = counties, score = scores)
 }
 
@@ -43,7 +43,7 @@ count_tweets <- function(input_filename, by_state) {
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
     tweet <- fromJSON(line)
-    
+
     states <- c(tweet[['coordinates']][['state']], states)
     counties <- c(tweet[['coordinates']][['county']], counties)
   }
@@ -78,7 +78,7 @@ to_state_county_word_count <- function(input_filename){
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
     tweet <- fromJSON(line)
-    
+
     states <- c(tweet[['coordinates']][['state']], states)
     counties <- c(tweet[['coordinates']][['county']], counties)
     word_counts <- c(tweet[['word_count']], word_counts)
@@ -109,9 +109,9 @@ mode <- function(x) {
 # by_state  -> flag that indicates if the features are by state (true) or county (false)
 #
 score_features <- function(file, by_state) {
-  
+
   scores <- to_state_county_score(file)
-  
+
   if(by_state) {
     split_by_entity <- split(scores, scores$state)
     features <- data.frame(entity = unique(scores$state))
@@ -120,7 +120,7 @@ score_features <- function(file, by_state) {
     split_by_entity <- split(scores, scores$state_county)
     features <- data.frame(entity = unique(scores$state_county))
   }
-  
+
 
   features$max = sapply(split_by_entity, function(x) round(max(x$score), digits=2))[features$entity]
   features$min = sapply(split_by_entity, function(x) round(min(x$score), digits=2))[features$entity]
@@ -146,10 +146,10 @@ tweets_count_features <- function(file, all_file, by_state) {
   # merge data replacing NAs with 0
   tweets <- merge(df, all_tweets, by="entity", all = TRUE)
   tweets[is.na(tweets)] <- 0
-  
+
   tweets$percentage <- round((tweets$count.x * 100)/tweets$count.y, digits=2)
   res <- data.frame(entity=tweets$entity, count=tweets$count.x, percentage=tweets$percentage)
-  
+
   res[with(res, order(entity)), ]
   res
 }
@@ -162,7 +162,7 @@ tweets_count_features <- function(file, all_file, by_state) {
 #
 mean_words_features <- function(file, by_state) {
   state_county_word_count <- to_state_county_word_count(file)
-  
+
   if(by_state) {
     state_county_word_count <- subset(state_county_word_count, select=c('state','word_count'))
   } else {
@@ -170,24 +170,24 @@ mean_words_features <- function(file, by_state) {
     state_county_word_count <- subset(state_county_word_count, select=c('state_county','word_count'))
   }
   colnames(state_county_word_count)[1] <- 'entity'
-  
+
   df <- aggregate(. ~ entity, data=state_county_word_count, FUN=sum)
   colnames(df)[2] <- 'total_words'
-  
+
   df$total_tweets <- count(state_county_word_count, c('entity'))$freq
   res <- data.frame(entity = df$entity, mean_words = df$total_words / df$total_tweets)
-  
+
   res[with(res, order(entity)), ]
   res
 }
 
 ####
 # Merges a list of features into a single data frame
-# 
+#
 # features -> list of features data frames to merge
 #
 merge_features <- function(features){
-  # merge the first two elements   
+  # merge the first two elements
   merged <- merge(features[1], features[2], by="entity", all = TRUE)
   # remove those from the features
   features<-features[-c(1, 2)]

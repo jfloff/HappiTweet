@@ -27,7 +27,7 @@ sudo apt-get install -y r-base
 
 # install needed packages
 
-sudo Rscript -e "install.packages(c('sp','maps','maptools'), repos='http://cran.rstudio.com/')"
+sudo Rscript -e "install.packages(c('sp','maps','maptools','RJSONIO'), repos='http://cran.rstudio.com/')"
 
 # 5) Install Ruby
 curl -L https://get.rvm.io | bash -s stable

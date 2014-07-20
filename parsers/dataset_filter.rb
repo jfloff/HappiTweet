@@ -57,118 +57,155 @@ File.open(file_list).read.each_line do |tweets_filename|
   # remove new line at the end of line
   tweets_filename.chomp!
 
-  # set output filename adding _parsed at the end, and on the current directory
-  output_filename = tweets_filename.rpartition('/').last.partition('.').first + "_parsed"
-  output_file = File.open(output_filename, "w")
-
   # print init time
   puts "> [#{Time.now}] started '#{tweets_filename}' parse"
 
+  puts "> [#{Time.now}] downloading '#{tweets_filename}'"
   tweets_file = Zlib::GzipReader.new(open(tweets_filename), {encoding: Encoding::UTF_8})
-  output_string = ""
-  begin
-    tweets_saved = 0
-    tweets_parsed = 0
-    tweets_file.each_line do |tweet|
-      # parse tweet to hash form JSON
-      tweet = JSON.parse(tweet)
+  puts "> [#{Time.now}] finished '#{tweets_filename}' download"
 
-      tweets_parsed += 1
-      puts "> [#{Time.now}] #{tweets_parsed} tweets parsed" if tweets_parsed % step == 0
+  output_tweets = Array.new
+  output_error_tweets = Array.new
 
-      # skip null tweets
-      next if tweet['text'].nil?
+  tweets_parsed = 0
+  tweets_file.each_line do |tweet|
+    # parse tweet to hash form JSON
+    tweet = JSON.parse(tweet)
 
-      # replace text removing non-UTF8 chars
-      tweet['text'] = UnicodeUtils.downcase(tweet['text'].encode('UTF-8', :invalid => :replace, :undef => :replace, :replace => '').delete("\n"))
+    tweets_parsed += 1
+    puts "> [#{Time.now}] #{tweets_parsed} tweets parsed" if tweets_parsed % step == 0
 
-      # if no coordinates given, tries to geocode user location
-      if tweet['coordinates'].nil? and !tweet['user']['location'].nil? and !tweet['user']['location'].empty?
+    # skip null tweets
+    next if tweet['text'].nil?
 
-        # replace location removing non-UTF8 chars
-        # also removes \n and ' (found out that DSK doesn't handle them very well)
-        tweet['user']['location'] = UnicodeUtils.downcase(tweet['user']['location'].encode('UTF-8', :invalid => :replace, :undef => :replace, :replace => '').delete("\n", "'"))
+    # replace text removing non-UTF8 chars
+    tweet['text'] = UnicodeUtils.downcase(tweet['text'].encode('UTF-8', :invalid => :replace, :undef => :replace, :replace => '').delete("\n"))
+
+    # if no coordinates given, tries to geocode user location
+    if tweet['coordinates'].nil? and !tweet['user']['location'].nil? and !tweet['user']['location'].empty?
+
+      # replace location removing non-UTF8 chars
+      # also removes \n and ' (found out that DSK doesn't handle them very well)
+      tweet['user']['location'] = UnicodeUtils.downcase(tweet['user']['location'].encode('UTF-8', :invalid => :replace, :undef => :replace, :replace => '').delete("\n", "'"))
 
 
-        # gets coordinates from tweet using search
-        # takes only th first result
-        # loops until we have an asnwer, if exception raised we wait i*30 seconds
-        i = 0
-        coordinates = nil
-        loop do
-          begin
-            coordinates = dstk.geocode(tweet['user']['location'])['results'][0]
+      # gets coordinates from tweet using search
+      # takes only th first result
+      # loops until we have an asnwer, if exception raised we wait i*30 seconds
+      i = 0
+      coordinates = nil
+      loop do
+        begin
+          coordinates = dstk.geocode(tweet['user']['location'])['results'][0]
+          break
+        rescue Exception => e
+          # if more than 3 exceptions we skip tweet
+          if (i > 3)
+            puts "Exception found: " + e.message
+            puts "\tSkiping tweet with location: " + tweet['user']['location']
+            output_error_tweets << tweet
             break
-          rescue Exception => e
-            # if more than 3 exceptions we skip tweet
-            if (i > 3)
-              puts "Exception found: " + e.message
-              puts "\tSkiping tweet with location: " + tweet['user']['location']
-              break
-            else
-              # each time we sleep more time untill we skip tweets
-              i += 1
-              sleep(30 * i)
-            end
+          else
+            # each time we sleep more time untill we skip tweets
+            i += 1
+            sleep(30 * i)
           end
-        end
-
-        # replace the coordinates with the location ones
-        unless coordinates.nil?
-          tweet['coordinates'] = {'coordinates' => [] }
-          tweet['coordinates']['coordinates'].insert(0, coordinates['geometry']['location']['lng'])
-          tweet['coordinates']['coordinates'].insert(1, coordinates['geometry']['location']['lat'])
         end
       end
 
-      # if location is still nil, no coordinates were found, skips tweet
-      next if tweet['coordinates'].nil?
+      # replace the coordinates with the location ones
+      unless coordinates.nil?
+        tweet['coordinates'] = {'coordinates' => [] }
+        tweet['coordinates']['coordinates'].insert(0, coordinates['geometry']['location']['lng'])
+        tweet['coordinates']['coordinates'].insert(1, coordinates['geometry']['location']['lat'])
+      end
+    end
 
-      # tweet coordinates
-      tweet_lat = tweet['coordinates']['coordinates'][1]
-      tweet_lon = tweet['coordinates']['coordinates'][0]
+    # if location is still nil, no coordinates were found, skips tweet
+    next if tweet['coordinates'].nil?
 
-      # if outside box skips tweet
-      next unless within_box?(bounding_box, tweet_lat, tweet_lon)
+    # tweet coordinates
+    tweet_lat = tweet['coordinates']['coordinates'][1]
+    tweet_lon = tweet['coordinates']['coordinates'][0]
 
-      # setup final tweet with wanted attrbiutes
-      final_tweet = Hash.new
-      # default attributes
-      final_tweet['text'] = tweet['text']
-      final_tweet['coordinates'] = tweet['coordinates']
-      # extra attributes
-      transfer_attr(tweet, final_tweet)
+    # if outside box skips tweet
+    next unless within_box?(bounding_box, tweet_lat, tweet_lon)
 
-      # execute R script to know state,county
-      state_county = %x(Rscript lonlat2statecounty.R #{tweet_lon} #{tweet_lat}).partition(',')
+    # setup final tweet with wanted attrbiutes
+    final_tweet = Hash.new
+    # default attributes
+    final_tweet['text'] = tweet['text']
+    final_tweet['coordinates'] = tweet['coordinates']
+    # extra attributes
+    transfer_attr(tweet, final_tweet)
+
+    # save tweets in array
+    output_tweets << final_tweet
+  end
+
+  # close tweets file
+  tweets_file.close
+
+  # base name for output and errors
+  filename_base = tweets_filename.rpartition('/').last.partition('.').first
+
+  # write errors if any
+  unless output_error_tweets.empty?
+    output_error = File.open(filename_base + "_error", "w")
+    output_error_string = output_error_tweets.map{ |tweet| JSON.generate(tweet) }
+    output_error.write(output_error_string.join("\n"))
+    output_error.close
+  end
+
+  # write tweets if any
+  unless output_tweets.empty?
+    # open temp file with everything except state and county
+    temp_filename = filename_base + "_parsed_temp"
+    temp_file = File.open(temp_filename , "w")
+    # pass to json each tweet and joins
+
+
+    output_string = output_tweets.map{ |tweet| JSON.generate(tweet) }
+    temp_file.write(output_string.join("\n"))
+    temp_file.close
+
+    # execute R script to know state,county for each line
+    state_county_filename = 'state_county_temp'
+    %x(Rscript lonlat2statecounty.R #{temp_filename} #{state_county_filename})
+
+    # delete temp file
+    File.delete(temp_filename)
+
+    # open both files to associate states and couties to tweets
+    states_counties = File.open(state_county_filename)
+
+    # open output file
+    output_filename = filename_base + "_parsed"
+    output_file = File.open(output_filename , "w")
+    output_string = ""
+
+    # loop the tweets and the answers to state_county
+    output_tweets.each.zip(states_counties.each).each do |tweet, state_county|
+
+      state_county = state_county.chomp.split(',')
 
       # skips tweet if coordinates are outside shapefile for continental US
       next if state_county.last.empty?
 
-      final_tweet['coordinates']['state'] = state_county.first
-      final_tweet['coordinates']['county'] = state_county.last
+      tweet['coordinates']['state'] = state_county.first
+      tweet['coordinates']['county'] = state_county.last
 
-      # write tweets to output file
-      tweets_saved += 1
-      output_string += JSON.generate(final_tweet) + "\n"
-
-      # if it wrote 'enough' tweets writes to file
-      if tweets_saved % step == 0
-        output_file.write(output_string)
-        output_string = ""
-        puts "> [#{Time.now}] #{tweets_saved} tweets saved"
-      end
+      output_string += JSON.generate(tweet) + "\n"
     end
 
-    # print whats left
     output_file.write(output_string)
-
-    # print end time
-    puts "> [#{Time.now}] ended '#{tweets_filename}' parse"
-  ensure
-    # make sure we close file
     output_file.close
-    tweets_file.close
+
+    # delete temp file
+    File.delete(state_county_filename)
   end
+
+  # print end time
+  puts "> [#{Time.now}] ended '#{tweets_filename}' parse"
 end
 
