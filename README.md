@@ -1,3 +1,4 @@
+
 # HappiTweet
 
 Welcome to the HappiTweet research project. In this project we relate twitter messages with location happiness.
