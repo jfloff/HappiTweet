@@ -1,5 +1,33 @@
 #!/usr/bin/env ruby
 
+# Parses multiple tweet files
+#
+# Given a file with multiple files, it downloads each file and parses it.
+# Parsing of that file consists of filtering of files where tweets:
+#   1) Either have a twitter geotag JSON field, or has a
+#      location got Geolocation services
+#   2) Are within a certain bounding box, previously defined below
+# Finally, filtered tweets are written to an output file, and the error ones
+# are signaled in a errors file.
+#
+# Parameters:
+#   ARGV[0]: text file with a list of files do download and parse tweets from
+#
+# Constants:
+#   bounding_box: tweets location are filtered according to this bounding box
+#   transfer_attr: function that defines what tweet attributes do we keep
+#   step: ammount of tweets to parse before we write to the file
+#
+# Return:
+#   Returns a parsed file for each file in the file list, that has the same
+#   name as the original file, with ends in '_parsed'.
+#   An error file is also output, its name is the same as the original ending
+#   with '_error'.
+#
+# Example:
+#   $ ruby dataset_filter.rb ../data/file_list.txt
+
+
 require 'open-uri'
 require 'json'
 require 'unicode_utils/downcase'
@@ -28,17 +56,17 @@ def transfer_attr(tweet, final_tweet)
 end
 # output_file is in the same directory as inputfile but with a '_parsed' at the end
 
-########################################################################################
-########################################################################################
-########################## NO NEED TO CHANGE ANYTHING BELOW ############################
-########################################################################################
-########################################################################################
+# step for saved tweets and parsed tweets
+step = 1000
+
+########################################################################################################################
+########################################################################################################################
+########################################### NO NEED TO CHANGE ANYTHING BELOW  ##########################################
+########################################################################################################################
+########################################################################################################################
 
 # path to file with all file that have tweets (passed as argument)
 file_list = ARGV[0]
-
-# step for saved tweets and parsed tweets
-step = 1000
 
 # check if a coordinates point is wthin a certain box
 def within_box?(bounding_box, point_lat, point_lon)

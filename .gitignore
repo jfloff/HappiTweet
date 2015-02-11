@@ -1,2 +1,5 @@
 .DS_Store
-
+*.pem
+temp/
+Gemfile.lock
+config.yaml

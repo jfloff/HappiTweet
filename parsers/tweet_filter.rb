@@ -11,19 +11,19 @@ require 'zlib'
 
 # csv files with first column with the word, and second with the score separated with commans
 word_lists_info = [
-  {key: 'en.hedo' , path: '/Users/jfloff/Code/sigspatial2014/data/hedonometer_anew_full.csv'},
-  {key: 'es.anew' , path: '/Users/jfloff/Code/sigspatial2014/data/es_anew_all.csv'}
+  {key: 'en.hedo' , path: '../data/hedonometer_anew_full.csv'},
+  {key: 'es.anew' , path: '../data/es_anew_all.csv'}
 ]
 # function that filters the words in the list accordingly to some parameter
 def word_score_filter(word,score)
   return score > 7
 end
 
-########################################################################################
-########################################################################################
-########################## NO NEED TO CHANGE ANYTHING BELOW ############################
-########################################################################################
-########################################################################################
+########################################################################################################################
+########################################################################################################################
+########################################### NO NEED TO CHANGE ANYTHING BELOW  ##########################################
+########################################################################################################################
+########################################################################################################################
 
 # path to file with all tweets passed as argument
 tweets_filename = ARGV[0]
@@ -34,7 +34,8 @@ output_filename = ARGV[1]
 word_lists = []
 word_lists_info.each do |word_list_info|
   word_list = Hash.new
-  CSV.foreach(word_list_info[:path]) do |row|
+  filepath = File.expand_path(word_list_info[:path])
+  CSV.foreach(filepath) do |row|
     word = UnicodeUtils.downcase(row[0])
     score = row[1].to_f
 
