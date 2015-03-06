@@ -1,4 +1,4 @@
-setwd("~/Code/sigspatial2014")
+setwd("~/git/acmsigspatial2014")
 
 library(plyr)
 library(RJSONIO)
@@ -19,8 +19,8 @@ to_state_county_score <- function(input_filename){
   {
     tweet <- fromJSON(line)
 
-    states <- c(tweet[['coordinates']][['state']], states)
-    counties <- c(tweet[['coordinates']][['county']], counties)
+    states <- c(tweet[['state']], states)
+    counties <- c(tweet[['county']], counties)
     scores <- c(as.double(tweet[['score']]), scores)
   }
   close(con)
@@ -44,8 +44,8 @@ count_tweets <- function(input_filename, by_state) {
   {
     tweet <- fromJSON(line)
 
-    states <- c(tweet[['coordinates']][['state']], states)
-    counties <- c(tweet[['coordinates']][['county']], counties)
+    states <- c(tweet[['state']], states)
+    counties <- c(tweet[['county']], counties)
   }
   close(con)
   # build data frame and write to CSV
@@ -79,8 +79,8 @@ to_state_county_word_count <- function(input_filename){
   {
     tweet <- fromJSON(line)
 
-    states <- c(tweet[['coordinates']][['state']], states)
-    counties <- c(tweet[['coordinates']][['county']], counties)
+    states <- c(tweet[['state']], states)
+    counties <- c(tweet[['county']], counties)
     word_counts <- c(tweet[['word_count']], word_counts)
   }
   close(con)

@@ -1,4 +1,4 @@
-setwd("~/Code/sigspatial2014/") 
+setwd("~/git/acmsigspatial2014")
 
 source('model/features.R', echo=FALSE)
 
