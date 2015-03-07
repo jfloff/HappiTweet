@@ -6,17 +6,16 @@ source('lib/lib.R', echo=FALSE)
 ############################## BY STATE ####################################
 ############################################################################
 
-features_1 <- score_features(file="/Users/manuelreis/Downloads/non_neutral_data_test_subset", by_state=TRUE)
-features_2 <- score_features(file="/Users/manuelreis/Downloads/non_neutral_data_test_subset", by_state=TRUE)
+features_1 <- score_features(file="~/non_neutral_data_test_subset", by_state=TRUE)
 
 # ....
 #features_7 <- tweets_count_features(file="data/us_tweets_with_score", all_file="data/us_tweets", by_state=TRUE)
 # ....
-#features_10 <- mean_words_features(file="data/us_tweets_with_score", by_state=TRUE)
+features_10 <- mean_words_features(file="~/non_neutral_data_test_subset", by_state=TRUE)
 # ....
 
 #state_features <- merge_features(features = list(features_1, features_10, features_7))
-state_features <- merge_features(features = list(features_1, features_2))
+state_features <- merge_features(features = list(features_1, features_10))
 
 
 ############################################################################

@@ -10,12 +10,11 @@ library(caret)
 set.seed(1)
 
 # load features and remove state column
-features <- as.matrix(state_features[,2:49])
+features <- as.matrix(state_features[,2:ncol(state_features)])
 
 # load gallup and keep data for 2012
 gallup <- read.csv("data/gallup.csv", header = TRUE )
 gallup <- as.vector(gallup[,2])
-
 # train model and generate predictions, using the same data for training and testing (cross-validation is only used to tune parameters)
 model1 <- cv.glmnet( x=features , y=gallup , alpha = 0.5 , nfolds=10 )
 coefficients <- coef( model1 , s = "lambda.min" )
