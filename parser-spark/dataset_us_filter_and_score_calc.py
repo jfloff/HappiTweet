@@ -5,8 +5,8 @@ import marshal
 
 ''' Configuration Parameters '''
 
-tweetsFile = "/tmp/ist169518/out_tweets01_aaa/part-*"
-outFile = "/tmp/ist169518/out-loff-tweets01_aaa/part-*"
+tweetsFile = "/tmp/ist169518/out_*/part*"
+outFileProcessedDataset = "/tmp/ist169518/filtered-scored"
 
 # Emotional Lexicons
 # csv files with first column with the word, and second with the score separated with commans
@@ -33,7 +33,6 @@ def process_tweets(line):
         return json.dumps(tweet)
     else:
         return ""
-
 
 def calculate_emotional_score(tweet):
     ok_to_output = False
@@ -72,11 +71,12 @@ def filtered(tweet):
     filtered_tweet['text'] = tweet['text']
     return filtered_tweet
 
-
+states = ["alabama","arizona","arkansas","california","colorado","connecticut","delaware","florida","georgia","idaho","illinois","indiana","iowa","kansas","kentucky","louisiana","maine","maryland","massachusetts","michigan","minnesota","mississippi","missouri","montana","nebraska","nevada","new hampshire","new jersey","new mexico","new york","north carolina","north dakota","ohio","oklahoma","oregon","pennsylvania","rhode island","south carolina","south dakota","tennessee","texas","utah","vermont","virginia","washington","west virginia","wisconsin","wyoming"]
 def from_usa_and_required_fields(line):
     tweet = json.loads(line)
     try:
-       if tweet['carmen']['country'] == "United States" and tweet['carmen']['state'] and tweet['carmen']['county'] and tweet['carmen']['state'] != "Alaska" and tweet['carmen']['state'] != "Hawaii":
+       if tweet['carmen']['country'] == "United States" and tweet['carmen']['state'] and tweet['carmen']['county'] and tweet['carmen']['state'] != "Alaska" and tweet['carmen']['state'] != "Hawaii" and tweet['carmen']['state'].lower().strip() in states:
+           number_tweets_usa.add(1)
            return True
     except Exception, e:
         #print e
@@ -117,8 +117,11 @@ sc = SparkContext()
 #broadcast wordlists
 word_lists_var = sc.broadcast(word_lists)
 
+number_tweets_usa = sc.accumulator(0)
+
 
 #not not line returns true if the line is not an empty string
-thefile = sc.textFile(tweetsFile).filter(from_usa_and_required_fields).map(process_tweets).filter(lambda line: not not line).saveAsTextFile(outFile)
+thefile = sc.textFile(tweetsFile).filter(from_usa_and_required_fields).map(process_tweets).filter(lambda line: not not line).saveAsTextFile(outFileProcessedDataset)
+print "\n\nThe number of USA tweets is: ", number_tweets_usa.value
 sc.stop()
 
