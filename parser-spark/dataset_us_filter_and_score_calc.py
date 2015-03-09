@@ -57,7 +57,8 @@ def calculate_emotional_score(tweet):
             for term in choosen_record['total_word_occurences'].values():
                 total_score += term['occurences'] * term['score']
             score = format(total_score / choosen_record['total_words'], '.2f')
-            tweet[word_lists_key] = {'score': score, 'word_list_key': choosen_record['word_list_key'], 'word_count': choosen_record['total_words']}
+            tweet['scores'].append({word_lists_key : {'score': score, 'word_list_key': choosen_record['word_list_key'], 'word_count': choosen_record['total_words']}})
+
     if ok_to_output:
         return tweet
     else:
@@ -69,6 +70,7 @@ def filtered(tweet):
     filtered_tweet['state'] = tweet['carmen']['state']
     filtered_tweet['county'] = tweet['carmen']['county']
     filtered_tweet['text'] = tweet['text']
+    filtered_tweet['scores'] = dict()
     return filtered_tweet
 
 states = ["alabama","arizona","arkansas","california","colorado","connecticut","delaware","florida","georgia","idaho","illinois","indiana","iowa","kansas","kentucky","louisiana","maine","maryland","massachusetts","michigan","minnesota","mississippi","missouri","montana","nebraska","nevada","new hampshire","new jersey","new mexico","new york","north carolina","north dakota","ohio","oklahoma","oregon","pennsylvania","rhode island","south carolina","south dakota","tennessee","texas","utah","vermont","virginia","washington","west virginia","wisconsin","wyoming"]
@@ -76,7 +78,6 @@ def from_usa_and_required_fields(line):
     tweet = json.loads(line)
     try:
        if tweet['carmen']['country'] == "United States" and tweet['carmen']['state'] and tweet['carmen']['county'] and tweet['carmen']['state'] != "Alaska" and tweet['carmen']['state'] != "Hawaii" and tweet['carmen']['state'].lower().strip() in states:
-           number_tweets_usa.add(1)
            return True
     except Exception, e:
         #print e
@@ -112,16 +113,15 @@ for info in word_list_info:
 word_lists = {'more_than_7': word_lists_more_than_7, 'no_filter': word_lists_no_filter, 'delta_one_of_5': word_lists_filter_delta_one_of_5}
 
 
+
 '''Spark Code'''
 sc = SparkContext()
 #broadcast wordlists
 word_lists_var = sc.broadcast(word_lists)
 
-number_tweets_usa = sc.accumulator(0)
 
 
 #not not line returns true if the line is not an empty string
 thefile = sc.textFile(tweetsFile).filter(from_usa_and_required_fields).map(process_tweets).filter(lambda line: not not line).saveAsTextFile(outFileProcessedDataset)
-print "\n\nThe number of USA tweets is: ", number_tweets_usa.value
 sc.stop()
 
