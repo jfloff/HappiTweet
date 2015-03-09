@@ -9,11 +9,15 @@ tweetsFile = "/tmp/ist169518/out_*/part*"
 outFileProcessedDataset = "/tmp/ist169518/filtered-scored"
 
 # Emotional Lexicons
-# csv files with first column with the word, and second with the score separated with commans
+# csv files with first column with the word, and second with the score separated with commas
 word_list_info = [
-  {'key': 'en.hedo' , 'path': '/afs/.ist.utl.pt/users/1/8/ist169518/lexicons/hedonometer_anew_full.csv'},
-  {'key': 'es.anew' , 'path': '/afs/.ist.utl.pt/users/1/8/ist169518/lexicons/es_anew_all.csv'}
+  {'key': 'en.hedo' , 'path': '/Users/manuelreis/Downloads/hedonometer_anew_full.csv' },
+  {'key': 'es.anew' , 'path': '/Users/manuelreis/Downloads/es_anew_all.csv'}
 ]
+
+#The set of considered filters appliable to the lexicons. Note that every enty on this set must have an associated method whose name starts by "score_filter_", e.g., def score_filter_MYFILTER: ...
+filters = ['more_than_7', 'delta_one_of_5', 'no_filter']
+
 
 '''Auxiliar Functions Definiton'''
 
@@ -23,6 +27,12 @@ def score_filter_more_than_7(score):
 
 def score_filter_delta_one_of_5(score):
     return  score < 4 or score > 6
+
+def score_filter_no_filter(score):
+    return True
+
+
+### DO NOT MODIFY BELOW THIS LINE ###
 
 def process_tweets(line):
     tweet = json.loads(line)
@@ -57,7 +67,7 @@ def calculate_emotional_score(tweet):
             for term in choosen_record['total_word_occurences'].values():
                 total_score += term['occurences'] * term['score']
             score = format(total_score / choosen_record['total_words'], '.2f')
-            tweet['scores'].append({word_lists_key : {'score': score, 'word_list_key': choosen_record['word_list_key'], 'word_count': choosen_record['total_words']}})
+            tweet['scores'][word_lists_key] = {'score': score, 'word_list_key': choosen_record['word_list_key'], 'word_count': choosen_record['total_words']}
 
     if ok_to_output:
         return tweet
@@ -87,31 +97,24 @@ def from_usa_and_required_fields(line):
 
 '''Loading Emotional Lexicons'''
 
-word_lists_more_than_7 = []
-word_lists_no_filter = []
-word_lists_filter_delta_one_of_5 = []
-
+word_lists = dict()
+for filter_name in filters:
+        word_lists[filter_name] = list()
 
 for info in word_list_info:
-    word_list_more_than_7 = dict()
-    word_list_no_filter = dict()
-    word_list_filter_delta_one_of_5 = dict()
-    with open(info['path'], "r") as fp:  
+    temporary_word_lists = dict()
+    for filter_name in filters:
+        temporary_word_lists[filter_name] = dict()
+    with open(info['path'], "r") as fp:
         for line in fp:
-                row = line.split(',')
-                word = row[0].lower().decode('utf-8')
-                score = float(row[1])
-                if score_filter_more_than_7(score):
-                    word_list_more_than_7[word] = score
-                if score_filter_delta_one_of_5(score):
-                    word_list_filter_delta_one_of_5[word] = score
-                word_list_no_filter[word] = score
-    word_lists_more_than_7.append({'key': info['key'], 'word_list': word_list_more_than_7})
-    word_lists_no_filter.append({'key': info['key'], 'word_list': word_list_no_filter})
-    word_lists_filter_delta_one_of_5.append({'key': info['key'], 'word_list': word_list_filter_delta_one_of_5})
-
-word_lists = {'more_than_7': word_lists_more_than_7, 'no_filter': word_lists_no_filter, 'delta_one_of_5': word_lists_filter_delta_one_of_5}
-
+            row = line.split(',')
+            word = row[0].lower().decode('utf-8')
+            score = float(row[1])
+            for filter_name in filters:
+                if globals()["score_filter_" + filter_name](score):
+                    temporary_word_lists[filter_name][word] = score
+    for filter_name in filters:
+        word_lists[filter_name].append({'key': info['key'], 'word_list': temporary_word_lists[filter_name]})
 
 
 '''Spark Code'''
