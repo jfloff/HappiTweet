@@ -75,7 +75,7 @@ def calculate_emotional_score(tweet):
                 for term in dim['total_word_occurences'].values():
                     total_score += term['occurences'] * term['score']
                 score = format(total_score / choosen_record['total_words'], '.2f')
-                tweet[choosen_record['word_list_key'] + "-" + dim['name'] + "-" + word_lists_key ] = {'score': score, 'word_count': choosen_record['total_words']}
+                tweet['scores'].append({ choosen_record['word_list_key'] + "-" + dim['name'] + "-" + word_lists_key :  {'score': score, 'word_count': choosen_record['total_words']}})
 
     if ok_to_output:
         return tweet
@@ -88,6 +88,7 @@ def filtered(tweet):
     filtered_tweet['state'] = tweet['carmen']['state']
     filtered_tweet['county'] = tweet['carmen']['county']
     filtered_tweet['text'] = tweet['text']
+    filtered_tweet['scores'] = list()
     return filtered_tweet
 
 states = ["alabama","arizona","arkansas","california","colorado","connecticut","delaware","florida","georgia","idaho","illinois","indiana","iowa","kansas","kentucky","louisiana","maine","maryland","massachusetts","michigan","minnesota","mississippi","missouri","montana","nebraska","nevada","new hampshire","new jersey","new mexico","new york","north carolina","north dakota","ohio","oklahoma","oregon","pennsylvania","rhode island","south carolina","south dakota","tennessee","texas","utah","vermont","virginia","washington","west virginia","wisconsin","wyoming"]
