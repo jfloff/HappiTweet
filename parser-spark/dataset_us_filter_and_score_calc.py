@@ -66,6 +66,7 @@ def calculate_emotional_score(tweet):
                         else:
                             dimension_record['total_word_occurences'][word]['occurences'] += 1
                 record['dimensions'].append(dimension_record)
+            record['total_words'] = record['total_words'] / len(word_list['dimensions'])
             if record['total_words'] > choosen_record['total_words']: choosen_record = record
         
         if choosen_record['total_words'] > 0:
@@ -96,7 +97,7 @@ def from_usa_and_required_fields(line):
     tweet = json.loads(line)
     try:
        if tweet['carmen']['country'] == "United States" and tweet['carmen']['state'] and tweet['carmen']['county'] and tweet['carmen']['state'] != "Alaska" and tweet['carmen']['state'] != "Hawaii" and tweet['carmen']['state'].lower().strip() in states:
-           return True
+            return True
     except Exception, e:
         #print e
         return False
