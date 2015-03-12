@@ -1,4 +1,4 @@
-setwd("~/Code/sigspatial2014/") 
+setwd(Sys.getenv("R_HAPPITWEET"))
 
 source('model/features.R', echo=FALSE)
 

@@ -1,4 +1,4 @@
-setwd("~/Code/sigspatial2014")
+setwd(Sys.getenv("R_HAPPITWEET"))
 
 source('lib.R', echo=FALSE)
 source('model/state_model.R', echo=FALSE)
@@ -18,7 +18,7 @@ gallup$state = states_abbrv
 gallup$color = colors
 gallup <- subset(gallup, select=c(group,state,ranking,color))
 
-# Predictions with states named vector 
+# Predictions with states named vector
 labmt <- data.frame(state = states, score = as.vector(predictions))
 labmt$ranking = rank(-labmt$score, ties.method= "first")
 labmt$group = "Prediction Model"
@@ -37,7 +37,7 @@ plot <- ggplot(bump, aes(x=group, y=ranking, color=color, group=state, label=sta
   scale_x_discrete(expand = c(0.2,0.2)) +
   theme(
     legend.position="none",
-    axis.text=element_text(size=13,face='bold'), 
+    axis.text=element_text(size=13,face='bold'),
     axis.line.y = element_blank(),
     axis.text.y = element_blank(),
     axis.ticks.y = element_blank(),

@@ -1,4 +1,4 @@
-setwd("~/Code/sigspatial2014")
+setwd(Sys.getenv("R_HAPPITWEET"))
 
 source('lib.R', echo=FALSE)
 
@@ -9,19 +9,19 @@ library(maptools)
 library(RColorBrewer)
 library(scales)
 
-#### 
+####
 # Plots a quintile choroplet given a named vector with score by state
 plot_quintiles <- function(vec, title){
   # Gets data set with states already inside R
   states_polygons = map_data('state')
   states_polygons = subset(states_polygons, region != 'district of columbia')
-  
+
   #Now link the vote data to the state shapes by matching names:
   states_polygons$score = vec[states_polygons$region]
-  
+
   quantiles <- quantile(vec, c(0, 0.2, 0.4, 0.6, 0.8, 1))
   states_polygons$quantiles <- sapply(states_polygons$score, function(x) get_quintile(quantiles, x))
-  
+
   #Finally, add a color layer to the map:
   # passes the map, and as fill column the scores
   map = ggplot(states_polygons) +
@@ -39,30 +39,30 @@ plot_quintiles <- function(vec, title){
           axis.title.y=element_blank()
     ) +
     scale_fill_manual(values = c('#689A27','#4DA7C1','#E7CD44','#E87625','#C53D27'))
-  
+
   # 2013
   # GREEN = #4F993F
   # BLUE = #329FB2
   # YELLOW = #E4CC3C
   # ORANGE = #E76B19
   # RED = #C22D20
-  
+
   # 2012
   # GREEN = #689A27
   # BLUE = #4DA7C1
   # YELLOW = #E7CD44
   # ORANGE = #E87625
   # RED = #C53D27
-  
+
   map = map + theme(
     plot.title=element_text(face="bold", size=20),
     legend.title = element_text(size = 16, face="bold"),
     legend.text = element_text(size = 16)
   )
-  map = map + 
+  map = map +
     coord_map(project='globular') +
     ggtitle(title)
-  
+
   map
 }
 

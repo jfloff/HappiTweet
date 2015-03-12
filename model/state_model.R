@@ -1,4 +1,4 @@
-setwd("~/git/acmsigspatial2014")
+setwd(Sys.getenv("R_HAPPITWEET"))
 
 source('model/features.R', echo=FALSE)
 
@@ -23,7 +23,7 @@ predictions <- predict( model1 , newx=features, s = "lambda.min")
 # train and generate predictions with a leave-one-out cross validation methodology
 folds <- createFolds( gallup , k = length(gallup) , list = TRUE, returnTrain = TRUE )
 coefficients <- rep(0.0, length(coefficients))
-for (f in folds) {  
+for (f in folds) {
  model1 <- cv.glmnet( x=features[f,] , y=gallup[f] , alpha = 0.5 , nfolds=length(gallup[f]) )
  c <- coef( model1 , s = "lambda.min" )
  coefficients <- coefficients + coef( model1 , s = "lambda.min" )

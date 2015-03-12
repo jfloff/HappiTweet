@@ -5,7 +5,7 @@
 # AWS credentials and other sensitive information there.
 #
 
-aws: 
+aws:
 	access_key_id: ''
 	secret_access_key: ''
 	region: ''
@@ -17,3 +17,6 @@ aws:
 	  # for tagging purposes
 	  key: 'happitweet'
 	  value: 'happitweet'
+
+r:
+	working_directory: ''

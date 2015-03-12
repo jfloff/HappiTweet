@@ -1,4 +1,4 @@
-setwd("~/Code/sigspatial2014")
+setwd(Sys.getenv("R_HAPPITWEET"))
 
 source('lib.R', echo=FALSE)
 
@@ -31,7 +31,7 @@ plot_tweet_distribution <- function(data, state_name, title){
     ggtitle(title) +
     xlab("ANEW valence score") +
     ylab("Density")
-  
+
   state_plot
 }
 

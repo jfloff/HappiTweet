@@ -1,4 +1,4 @@
-setwd("~/git/acmsigspatial2014")
+setwd(Sys.getenv("R_HAPPITWEET"))
 
 library(plyr)
 library(RJSONIO)
@@ -21,7 +21,8 @@ to_state_county_score <- function(input_filename){
 
     states <- c(tweet[['state']], states)
     counties <- c(tweet[['county']], counties)
-    scores <- c(as.double(tweet[['score']]), scores)
+#     scores <- c(as.double(tweet[['scores']]), scores)
+    print(tweet[['scores']])
   }
   close(con)
   # build data frame
