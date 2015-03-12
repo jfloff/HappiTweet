@@ -3,3 +3,4 @@
 temp/
 Gemfile.lock
 config.yaml
+.Rhistory
