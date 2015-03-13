@@ -6,17 +6,31 @@
 #
 
 aws:
-	access_key_id: ''
-	secret_access_key: ''
-	region: ''
-	# http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html
-	instance:
-	  image_id: ami-f0b11187 #UBUNTU
-	  key_name: ''
-	  instance_type: 't2.micro'
-	  # for tagging purposes
-	  key: 'happitweet'
-	  value: 'happitweet'
+  access_key_id: ''
+  secret_access_key: ''
+  region: ''
+  # http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-RunInstances.html
+  instance:
+    image_id: ami-f0b11187 #UBUNTU
+    key_name: ''
+    instance_type: 't2.micro'
+    # for tagging purposes
+    key: 'happitweet'
+    value: 'happitweet'
 
-r:
-	working_directory: ''
+  r:
+    working_directory: ''
+    packages:
+      - 'yaml'
+      - 'ggplot2'
+      - 'RColorBrewer'
+      - 'scales'
+      - 'sp'
+      - 'maps'
+      - 'maptools'
+      - 'reshape'
+      - 'glmnet'
+      - 'Metrics'
+      - 'caret'
+      - 'plyr'
+      - 'RJSONIO'

@@ -9,8 +9,8 @@ Duplicate the `config.yaml.template` and remove the `template` extension. Fill t
 * Your R configuration, such as your working directory
 
 After setting the configuration, you should:
-* Install needed gems located in the `Gemfile`
 * Run the `r_config.R` script: `./r_config` or `Rscript r_config.R`
+* In case you are using the AWS Parser: install needed gems located in the `Gemfile`
 
 ## Parsers
 
