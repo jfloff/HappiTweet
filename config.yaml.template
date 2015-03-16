@@ -1,7 +1,7 @@
 # Configuration File
 #
-# DONT USE THIS FILE. DUPLLICATE IT AND REMOVE THE TEMPLATE EXTENSION.
-# The resultant file will be ignore by git, and will be safe to place
+# DONT USE THIS FILE. DUPLICATE IT AND REMOVE THE TEMPLATE EXTENSION.
+# The resultant file will be ignored by git, and will be safe to place
 # AWS credentials and other sensitive information there.
 #
 
