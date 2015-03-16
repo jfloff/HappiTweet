@@ -1,5 +1,5 @@
 #!/usr/bin/Rscript
-
+#
 # checks if the package is installed, and it install it if not
 # http://stackoverflow.com/a/23286257/1700053
 pkgTest <- function(x)
