@@ -13,7 +13,7 @@ to_state_county_score = function(input_filename){
   
   # keeps a data frame per lexicon
   tweets_by_lexicon = list()
-  i = 0
+  # i = 0
   # parse json file by line
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
@@ -39,8 +39,8 @@ to_state_county_score = function(input_filename){
       tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
     }
     
-    i = i + 1
-    if (i == 100) break
+    # i = i + 1
+    # if (i == 100) break
   }
   
   # close file connection
@@ -117,7 +117,7 @@ count_tweets_all = function(input_filename, by_state) {
   states = c()
   counties = c()
   # parse json file by line
-  i = 0
+  # i = 0
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
     tweet = fromJSON(line)
@@ -125,8 +125,8 @@ count_tweets_all = function(input_filename, by_state) {
     states = c(tweet[['state']], states)
     counties = c(tweet[['county']], counties)
     
-    i = i + 1
-    if (i == 100) break
+    # i = i + 1
+    # if (i == 100) break
   }
   close(con)
   # build data frame and write to CSV
@@ -155,7 +155,7 @@ count_tweets_by_lexicon = function(input_filename, by_state) {
   
   # keeps a data frame per lexicon
   tweets_by_lexicon = list()
-  i = 0
+  # i = 0
   # parse json file by line
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
@@ -181,8 +181,8 @@ count_tweets_by_lexicon = function(input_filename, by_state) {
       tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
     }
     
-    i = i + 1
-    if (i == 100) break
+    # i = i + 1
+    # if (i == 100) break
   }
   
   # close file connection
@@ -246,7 +246,7 @@ to_state_county_word_count = function(input_filename, by_state){
   
   # keeps a data frame per lexicon
   tweets_by_lexicon = list()
-  i = 0
+  # i = 0
   # parse json file by line
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
@@ -281,8 +281,8 @@ to_state_county_word_count = function(input_filename, by_state){
       tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
     }
     
-    i = i + 1
-    if (i == 100) break
+    # i = i + 1
+    # if (i == 100) break
   }
   
   # close file connection
@@ -323,15 +323,6 @@ mean_words_features = function(file, by_state)
   }
   
   return(tweets_by_lexicon)
-}
-
-#####################################################################################
-###################### IN NEED OF REVSION FROM THIS POINT BELOW ##################### 
-#####################################################################################
-
-merge_lexicon = function(features, name)
-{
-  
 }
 
 ####
