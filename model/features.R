@@ -12,8 +12,9 @@ count_features = tweets_count_features(file="huge-data/scored.json",
                                        all_file="huge-data/all_state_county.json", 
                                        by_state=TRUE)
 
-# features_10 <- mean_words_features(file="~/non_neutral_data_test_subset", by_state=TRUE)
-# ....
+word_count_features <- mean_words_features(file="huge-data/scored.json", by_state=TRUE)
+
+
 # state_features <- merge_features(features = list(features_1, features_10))
 
 
@@ -27,8 +28,7 @@ count_features_county = tweets_count_features(file="huge-data/scored.json",
                                        all_file="huge-data/all_state_county.json", 
                                        by_state=false)
 
-# ....
-#features_10_county <- mean_words_features(file="data/us_tweets_with_score", by_state=FALSE)
+word_count_features_county <- mean_words_features(file="huge-data/scored.json", by_state=FALSE)
 
 
 
