@@ -6,17 +6,18 @@ source('lib/lib.R', echo=FALSE)
 ############################## BY STATE ####################################
 ############################################################################
 
-score_features = score_features(file="huge-data/scored.json", by_state=TRUE)
+score_features_state = score_features(file="huge-data/scored.json", by_state=TRUE)
 
-count_features = tweets_count_features(file="huge-data/scored.json", 
+tweets_count_features_state = tweets_count_features(file="huge-data/scored.json", 
                                        all_file="huge-data/all_state_county.json", 
                                        by_state=TRUE)
 
-word_count_features <- mean_words_features(file="huge-data/scored.json", by_state=TRUE)
+mean_words_features_state = mean_words_features(file="huge-data/scored.json", by_state=TRUE)
 
 
-# state_features <- merge_features(features = list(features_1, features_10))
+state_features = merge_features(list(score_features_state, tweets_count_features_state, mean_words_features_state))
 
+write.csv(file="huge-data/state_features.csv", x=state_features)
 
 ############################################################################
 ############################# BY COUNTY ####################################
@@ -24,13 +25,12 @@ word_count_features <- mean_words_features(file="huge-data/scored.json", by_stat
 
 score_features_county = score_features(file="huge-data/scored.json", by_state=FALSE)
 
-count_features_county = tweets_count_features(file="huge-data/scored.json", 
+tweets_count_features_county = tweets_count_features(file="huge-data/scored.json", 
                                        all_file="huge-data/all_state_county.json", 
-                                       by_state=false)
+                                       by_state=FALSE)
 
-word_count_features_county <- mean_words_features(file="huge-data/scored.json", by_state=FALSE)
+mean_words_features_county = mean_words_features(file="huge-data/scored.json", by_state=FALSE)
 
+county_features = merge_features(list(score_features_county, tweets_count_features_county, mean_words_features_county))
 
-
-#counties_features <- merge_features(features = list(features_1_county, features_10_county, features_7_county))
-
+write.csv(file="huge-data/county_features.csv", x=county_features)

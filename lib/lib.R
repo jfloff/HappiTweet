@@ -13,7 +13,7 @@ to_state_county_score = function(input_filename){
   
   # keeps a data frame per lexicon
   tweets_by_lexicon = list()
-  # i = 0
+  i = 0
   # parse json file by line
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
@@ -39,8 +39,8 @@ to_state_county_score = function(input_filename){
       tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
     }
     
-    # i = i + 1
-    # if (i == 100) break
+    i = i + 1
+    if (i == 100) break
   }
   
   # close file connection
@@ -117,7 +117,7 @@ count_tweets_all = function(input_filename, by_state) {
   states = c()
   counties = c()
   # parse json file by line
-  # i = 0
+  i = 0
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
     tweet = fromJSON(line)
@@ -125,8 +125,8 @@ count_tweets_all = function(input_filename, by_state) {
     states = c(tweet[['state']], states)
     counties = c(tweet[['county']], counties)
     
-    # i = i + 1
-    # if (i == 100) break
+    i = i + 1
+    if (i == 100) break
   }
   close(con)
   # build data frame and write to CSV
@@ -155,7 +155,7 @@ count_tweets_by_lexicon = function(input_filename, by_state) {
   
   # keeps a data frame per lexicon
   tweets_by_lexicon = list()
-  # i = 0
+  i = 0
   # parse json file by line
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
@@ -181,8 +181,8 @@ count_tweets_by_lexicon = function(input_filename, by_state) {
       tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
     }
     
-    # i = i + 1
-    # if (i == 100) break
+    i = i + 1
+    if (i == 100) break
   }
   
   # close file connection
@@ -246,7 +246,7 @@ to_state_county_word_count = function(input_filename, by_state){
   
   # keeps a data frame per lexicon
   tweets_by_lexicon = list()
-  # i = 0
+  i = 0
   # parse json file by line
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
@@ -281,8 +281,8 @@ to_state_county_word_count = function(input_filename, by_state){
       tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
     }
     
-    # i = i + 1
-    # if (i == 100) break
+    i = i + 1
+    if (i == 100) break
   }
   
   # close file connection
@@ -329,20 +329,46 @@ mean_words_features = function(file, by_state)
 ###################### IN NEED OF REVSION FROM THIS POINT BELOW ##################### 
 #####################################################################################
 
+merge_lexicon = function(features, name)
+{
+  
+}
 
 ####
 # Merges a list of features into a single data frame
 #
 # features -> list of features data frames to merge
 #
-merge_features = function(features){
-  # merge the first two elements
-  merged = merge(features[1], features[2], by="entity", all = TRUE)
-  # remove those from the features
-  features=features[-c(1, 2)]
-  # loops the remaining, merging them
-  for (feature in features) {
-    merged = merge(merged, feature, by="entity", all = TRUE)
+merge_features = function(all_features)
+{ 
+  #will store for each lexicon its features
+  merged_features = NULL
+  for(features_by_type in all_features)
+  {
+    # iterates over the lexicons of each feature type
+    for(lexicon in names(features_by_type))
+    {
+      # all features names expect entity
+      features_names = names(features_by_type[[lexicon]])
+      features_names = features_names[features_names != "entity"]
+      # add lexicon to the feature
+      features_names = paste(lexicon, features_names, sep="__")
+      # add entity again
+      features_names = c("entity", features_names)
+      # replace with the new names
+      names(features_by_type[[lexicon]]) = features_names
+      
+      # checks if its the first merged feature
+      if (is.null(merged_features))
+      {
+        merged_features = features_by_type[[lexicon]]
+      }
+      else
+      {
+        merged_features = merge(merged_features, features_by_type[[lexicon]], by="entity", all = TRUE)
+      }
+    }
   }
-  merged
+  
+  return(merged_features)
 }
