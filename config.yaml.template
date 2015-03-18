@@ -6,6 +6,7 @@
 #
 
 aws:
+  # https://console.aws.amazon.com/iam/home?#security_credential
   access_key_id: ''
   secret_access_key: ''
   region: ''
