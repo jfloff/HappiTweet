@@ -1,6 +1,6 @@
 setwd(Sys.getenv("R_HAPPITWEET"))
 
-source('lib/lib.R', echo=FALSE)
+source('model/lib.R', echo=FALSE)
 
 ############################################################################
 ############################## BY STATE ####################################
