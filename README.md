@@ -63,4 +63,7 @@ First you need to process the features for your dataset. Edit the files needed i
 
 * `output_county`: CSV with the output of the calculated features for each US county
 
+With the output files from the features, we ran the models for both state and county.
+
+
 ## Charts

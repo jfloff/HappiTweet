@@ -110,38 +110,11 @@ score_features = function(file, by_state) {
 #   file      -> CSV file that has tweets with a columns: 'state', 'county'
 #   by_state  -> flag that indicates if we wnt to count by state or county
 #
-count_tweets_all = function(input_filename, by_state) {
-  # Open connection to file
-  con  = file(input_filename, open = "r")
-  # store the data so after we build a data frame
-  states = c()
-  counties = c()
-  # parse json file by line
-  # i = 0
-  while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
-  {
-    tweet = fromJSON(line)
-    
-    states = c(tweet[['state']], states)
-    counties = c(tweet[['county']], counties)
-    
-    # i = i + 1
-    # if (i == 100) break
-  }
-  close(con)
-  # build data frame and write to CSV
-  state_county = data.frame(state = states, county = counties)
-  
-  if(by_state){
-    df = count(state_county, c('state'))
-  } else {
-    # state_county concat to form unique "id"
-    state_county$state_county = paste(state_county$state, state_county$county, sep=",")
-    # count by state_county
-    df = count(state_county, c('state_county'))
-  }
-  names(df) = c('entity', 'count')
-  df
+count_tweets_all = function(all_file, by_state) 
+{
+  data = read.csv(all_file, header = FALSE)
+  names(data) = c('entity', 'count')
+  return(data)
 }
 
 ####
@@ -149,13 +122,14 @@ count_tweets_all = function(input_filename, by_state) {
 #   file      -> CSV file that has tweets with a columns: 'state', 'county'
 #   by_state  -> flag that indicates if we wnt to count by state or county
 #
-count_tweets_by_lexicon = function(input_filename, by_state) {
+count_tweets_by_lexicon = function(input_filename, by_state)
+{
   # Open connection to file
   con = file(input_filename, open = "r")
   
   # keeps a data frame per lexicon
   tweets_by_lexicon = list()
-  # i = 0
+  i = 0
   # parse json file by line
   while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
   {
@@ -181,8 +155,9 @@ count_tweets_by_lexicon = function(input_filename, by_state) {
       tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
     }
     
-    # i = i + 1
-    # if (i == 100) break
+    print(i)
+    i = i + 1
+    # if (i == 10000) break
   }
   
   # close file connection
