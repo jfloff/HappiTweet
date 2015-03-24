@@ -16,9 +16,9 @@ output_county = "huge-data/county_features.csv"
 
 score_features_state = score_features(file=scored_tweets, by_state=TRUE)
 
-tweets_count_features_state = tweets_count_features(file=scored_tweets, 
-                                       all_file=all_tweets_state, 
-                                       by_state=TRUE)
+tweets_count_features_state = num_tweets_features(file=scored_tweets,
+                                                  all_file=all_tweets_state, 
+                                                  by_state=TRUE)
 
 mean_words_features_state = mean_words_features(file=scored_tweets, by_state=TRUE)
 

@@ -17,14 +17,13 @@ colnames_by_prefix = function(df, prefix)
 # Parses a CSV file with state, county columns and with pairs of <score__* / word_count__*>
 # for each lexicon
 #
-to_entity_scores = function(input_filename, by_state)
+to_entity_value = function(input_filename, by_state, prefix)
 {
-  data = read.csv(scored_tweets, header = TRUE)
-  prefix = "score__"
+  data = read.csv(input_filename, header = TRUE)
   
   # gets column names from the score column
-  score_column_names = colnames_by_prefix(data,prefix)
-  filtered_names = c('entity', score_column_names)
+  value_column_names = colnames_by_prefix(data, prefix)
+  filtered_names = c('entity', value_column_names)
   
   # if state rename state column, if county concatenates state and county
   if(by_state)
@@ -39,7 +38,7 @@ to_entity_scores = function(input_filename, by_state)
   # filter columns
   data = data[,filtered_names]
   # remove the score__ prefix
-  names(data) = c('entity',substring(score_column_names,nchar(prefix)+1))
+  names(data) = c('entity',substring(value_column_names,nchar(prefix)+1))
   
   return(data)
 }
@@ -77,7 +76,7 @@ mode = function(x, na.rm=FALSE)
 #
 score_features = function(file, by_state)
 {
-  scores = to_entity_scores(file, by_state)
+  scores = to_entity_value(file, by_state, 'score__')
   
   # lexicons
   lexicons = names(scores)[names(scores) != 'entity']
@@ -115,22 +114,15 @@ score_features = function(file, by_state)
   return(features)
 }
 
-
-
-#######################################################################################################
-####################################### CHANGE FROM HERE BELOW ########################################
-#######################################################################################################
-
-
 ####
 # Count tweets in a CSV file by state or county
 #   file      -> CSV file that has tweets with a columns: 'state', 'county'
 #   by_state  -> flag that indicates if we wnt to count by state or county
 #
-count_tweets_all = function(all_file, by_state) 
+count_tweets_all = function(all_file) 
 {
   data = read.csv(all_file, header = FALSE)
-  names(data) = c('entity', 'count')
+  names(data) = c('entity', 'total_num_tweets')
   return(data)
 }
 
@@ -139,62 +131,30 @@ count_tweets_all = function(all_file, by_state)
 #   file      -> CSV file that has tweets with a columns: 'state', 'county'
 #   by_state  -> flag that indicates if we wnt to count by state or county
 #
-count_tweets_by_lexicon = function(input_filename, by_state)
+num_tweets_by_lexicon = function(input_filename, by_state)
 {
-  # Open connection to file
-  con = file(input_filename, open = "r")
+  word_counts = to_entity_value(input_filename, by_state, 'word_count__')
   
-  # keeps a data frame per lexicon
-  tweets_by_lexicon = list()
-  i = 0
-  # parse json file by line
-  while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
+  # lexicons
+  lexicons = names(word_counts)[names(word_counts) != 'entity']
+  # num_tweets empty df
+  num_tweets = data.frame(entity = unique(word_counts$entity))
+  for(lexicon in lexicons)
   {
-    tweet = fromJSON(line)
+    # filter word_counts per lexicon
+    word_counts_by_lexicon = word_counts[c('entity',lexicon)]
+    names(word_counts_by_lexicon) = c('entity','word_count')
+    # remove rows with 0 word_count, and filters out the word_count column
+    tweets_entity = subset(word_counts_by_lexicon, word_count!=0)[c('entity')]
     
-    # for each lexicon in the tweet checks if its in the list
-    # it not creates an empty dataframe
-    for(score in tweet[['scores']])
-    {
-      # gets the name of the lexicon
-      lexicon = names(score)
-      
-      # if lexicon was not initiated, creates a new entry and puts an empty dataframe in it
-      if(is.null(tweets_by_lexicon[[lexicon]]))
-      {
-        df = data.frame(state=character(), county=character(), state_county=character(), stringsAsFactors=FALSE)
-        tweets_by_lexicon[[lexicon]] = df
-      }
-      
-      # new row values. Order = state,county
-      newrow = c(tweet[['state']], tweet[['county']], paste(tweet[['state']], tweet[['county']], sep=","))
-      # adds to end of the data frame
-      tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
-    }
-    
-    print(i)
-    i = i + 1
-    # if (i == 10000) break
+    # count by entity
+    df = as.data.frame(table(tweets_entity))
+    names(df) = c('entity', lexicon)
+    # merge on entity
+    num_tweets = merge(num_tweets,df,by="entity")
   }
   
-  # close file connection
-  close(con)
-  
-  # for each lexicon chooses its 'entity'
-  for(lexicon in names(tweets_by_lexicon))
-  {
-    # filter is different for each entity
-    filter = if(by_state) c('state') else c('state_county')
-    # count tweets by filter
-    df = count(tweets_by_lexicon[[lexicon]], filter)
-    # change names
-    names(df) = c('entity', 'count')
-    # replace on list of tweets_by_lexicon
-    tweets_by_lexicon[[lexicon]] = df
-  }
-  
-  # returns built df
-  return(tweets_by_lexicon)
+  return(num_tweets)
 }
 
 ####
@@ -204,29 +164,36 @@ count_tweets_by_lexicon = function(input_filename, by_state)
 # all_file  -> file with state and county for all the tweets geolocated
 # by_state  -> flag that indicates if the features are by state (true) or county (false)
 #
-tweets_count_features = function(file, all_file, by_state) {
-  # counts tweets by each lexicon
-  tweets_by_lexicon = count_tweets_by_lexicon(file, by_state)
+num_tweets_features = function(file, all_file, by_state)
+{
   # counts all tweets with state and county
-  all_tweets = count_tweets_all(all_file, by_state)
+  all_tweets = count_tweets_all(all_file)
+  # counts tweets by each lexicon
+  tweets_by_lexicon = num_tweets_by_lexicon(file, by_state)
   
-  # for each lexicon merges with the total and calculates percentage
-  for(lexicon in names(tweets_by_lexicon))
+  # lexicons
+  lexicons = names(tweets_by_lexicon)[names(tweets_by_lexicon) != 'entity']
+  
+  # merge both dfs
+  num_tweets = merge(all_tweets, tweets_by_lexicon, by="entity", all = TRUE)
+  
+  for(lexicon in lexicons)
   {
-    df = tweets_by_lexicon[[lexicon]]
+    # column with the percentage
+    num_tweets[[paste(lexicon, 'num_tweets_percentage', sep='__')]] = round(
+      (num_tweets[[lexicon]] * 100)/num_tweets[['total_num_tweets']], digits=2)
     
-    # merge data replacing NAs with 0
-    tweets = merge(df, all_tweets, by="entity", all = TRUE)
-    tweets[is.na(tweets)] = 0
-    # calculate percentage
-    tweets$percentage = round((tweets$count.x * 100)/tweets$count.y, digits=2)
-    res = data.frame(entity=tweets$entity, count=tweets$count.x, percentage=tweets$percentage)
-    
-    tweets_by_lexicon[[lexicon]] = res[with(res, order(entity)), ]
+    # rename lexicon column
+    names(num_tweets)[names(num_tweets)==lexicon] = paste(lexicon, 'num_tweets', sep='__')
   }
   
-  return(tweets_by_lexicon)
+  return(num_tweets)
 }
+
+
+#######################################################################################################
+####################################### CHANGE FROM HERE BELOW ########################################
+#######################################################################################################
 
 ####
 # Parses a file with tweets building a CSV with 3 columns for each tweet: state, county and word_count
