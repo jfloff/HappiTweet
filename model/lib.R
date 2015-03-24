@@ -190,99 +190,69 @@ num_tweets_features = function(file, all_file, by_state)
   return(num_tweets)
 }
 
-
-#######################################################################################################
-####################################### CHANGE FROM HERE BELOW ########################################
-#######################################################################################################
-
-####
-# Parses a file with tweets building a CSV with 3 columns for each tweet: state, county and word_count
-# input_filename -> name of file with the tweets
-#
-to_state_county_word_count = function(input_filename, by_state){
-  # Open connection to file
-  con  = file(input_filename, open = "r")
-  
-  # keeps a data frame per lexicon
-  tweets_by_lexicon = list()
-  # i = 0
-  # parse json file by line
-  while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
-  {
-    tweet = fromJSON(line)
-    
-    # for each lexicon in the tweet checks if its in the list
-    # it not creates an empty dataframe
-    for(score in tweet[['scores']])
-    {
-      # gets the name of the lexicon
-      lexicon = names(score)
-      
-      # if lexicon was not initiated, creates a new entry and puts an empty dataframe in it
-      if(is.null(tweets_by_lexicon[[lexicon]]))
-      {
-        df = data.frame(entity=character(), word_count=numeric(), stringsAsFactors=FALSE)
-        tweets_by_lexicon[[lexicon]] = df
-      }
-      
-      # new row values according to entity
-      # Order = state,word_count or state_county,word_count
-      if(by_state) 
-      {
-        newrow = c(tweet[['state']], as.numeric(score[[lexicon]]$word_count))
-      }
-      else
-      {
-        newrow = c(paste(tweet[['state']], tweet[['county']], sep=","), as.numeric(score[[lexicon]]$word_count))
-      }
-      
-      # adds to end of the data frame
-      tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
-    }
-    
-    # i = i + 1
-    # if (i == 100) break
-  }
-  
-  # close file connection
-  close(con)
-  # returns built df
-  return(tweets_by_lexicon)
-}
-
 ####
 # Returns features related to the average words per tweet
 #
 # file      -> file with tweets' word_count with state and county info
 # by_state  -> flag that indicates if the features are by state (true) or county (false)
 #
-mean_words_features = function(file, by_state) 
+word_count_features = function(file, by_state) 
 {
-  # loads tweets by lexicon with entity separation (state/state_county)
-  tweets_by_lexicon = to_state_county_word_count(file, by_state)
+  # loads word_counts by entity
+  word_counts = to_entity_value(file, by_state, 'word_count__')
   
-  # for each lexicon sums processes word_count
-  for(lexicon in names(tweets_by_lexicon))
+  # lexicons
+  lexicons = names(word_counts)[names(word_counts) != 'entity']
+  # num_tweets empty df
+  word_counts_by_entity = data.frame(entity = unique(word_counts$entity))
+  for(lexicon in lexicons)
   {
-    data = tweets_by_lexicon[[lexicon]]
-    # due to bug that refers to word_count column as factor
-    # we need to parse that column as numeric and assign it again
-    data$word_count = as.numeric(as.character(data$word_count))
+    # filter word_counts per lexicon
+    word_counts_by_lexicon = word_counts[c('entity',lexicon)]
+    names(word_counts_by_lexicon) = c('entity','word_count')
     
-    # calculates total words by entity
-    df = aggregate(. ~ entity, data=data, FUN=sum)
-    colnames(df)[2] = 'total_words'
-    # counts number of tweets
-    df$total_tweets = count(data, c('entity'))$freq
-    # does a mean average of words per tweet
-    res = data.frame(entity = df$entity, mean_words = df$total_words / df$total_tweets)
+    # remove rows with 0 word_count, and filters out the word_count column
+    tweets_entity = subset(word_counts_by_lexicon, word_count!=0)[c('entity')]
     
-    # sorts result by entity
-    tweets_by_lexicon[[lexicon]] = res[with(res, order(entity)), ]
+    # count by entity
+    total_tweets = as.data.frame(table(tweets_entity))
+    names(total_tweets) = c('entity', 'total_tweets')
+    
+    # count total words by entity
+    total_word_count = aggregate(. ~ entity, data=word_counts_by_lexicon, FUN=sum)
+    names(total_word_count) = c('entity', 'total_word_count')
+    
+    # merge both on entity
+    mean_df = merge(total_tweets,total_word_count,by="entity")
+    
+    # add mean words per tweet
+    mean_df$mean_word_count_per_tweet = round(mean_df$total_word_count / mean_df$total_tweets, digits=2)
+    
+    # select mean_word_count column and properly name it after the lexicon
+    mean_df = mean_df[c('entity','mean_word_count_per_tweet')]
+    names(mean_df) = c('entity', paste(lexicon, 'mean_word_count_per_tweet', sep='__'))
+    
+    # merge with  on entity
+    word_counts_by_entity = merge(word_counts_by_entity,mean_df,by="entity")
   }
   
-  return(tweets_by_lexicon)
+  # replace Inf's and NaN's with NA
+  is.na(word_counts_by_entity) <- do.call(cbind,lapply(word_counts_by_entity, is.infinite))
+  is.na(word_counts_by_entity) <- do.call(cbind,lapply(word_counts_by_entity, is.nan))
+  
+  return(word_counts_by_entity)
 }
+
+#######################################################################################################
+####################################### CHANGE FROM HERE BELOW ########################################
+#######################################################################################################
+
+
+
+
+
+
+
 
 ####
 # Merges a list of features into a single data frame
