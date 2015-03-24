@@ -25,7 +25,7 @@ mean_words_features_state = mean_words_features(file=scored_tweets, by_state=TRU
 
 state_features = merge_features(list(score_features_state, tweets_count_features_state, mean_words_features_state))
 
-write.csv(file=output_state, x=state_features)
+write.csv(file=output_state, x=state_features, row.names=FALSE)
 
 ############################################################################
 ############################# BY COUNTY ####################################
@@ -41,4 +41,4 @@ mean_words_features_county = mean_words_features(file=scored_tweets, by_state=FA
 
 county_features = merge_features(list(score_features_county, tweets_count_features_county, mean_words_features_county))
 
-write.csv(file=output_county, x=county_features)
+write.csv(file=output_county, x=county_features, row.names=FALSE)

@@ -35,6 +35,7 @@ to_state_county_score = function(input_filename){
       
       # new row values. Order = state,county,score
       newrow = c(tweet[['state']], tweet[['county']], as.numeric(score[[lexicon]]$score))
+      
       # adds to end of the data frame
       tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
     }
@@ -52,14 +53,17 @@ to_state_county_score = function(input_filename){
 ####
 # Mode of an array of scores
 #
-mode = function(x) {
-  if(length(x) < 2) {
-    x
+mode = function(x)
+{
+  if(length(x) < 2) 
+  {
+    return(x)
   }
-  else {
+  else
+  {
     # limits and adjust should be changed to meet expectations
     d = density(x, from=0, to=100 , adjust = 0.805)
-    d$x[which.max(d$y)]
+    return(d$x[which.max(d$y)])
   }
 }
 
@@ -70,8 +74,8 @@ mode = function(x) {
 # file      -> file with tweets' score with state and county info
 # by_state  -> flag that indicates if the features are by state (true) or county (false)
 #
-score_features = function(file, by_state) {
-  
+score_features = function(file, by_state)
+{
   scores_by_lexicon = to_state_county_score(file)
   
   # for each lexicon calculates its features
@@ -80,10 +84,13 @@ score_features = function(file, by_state) {
   {
     scores = scores_by_lexicon[[lexicon]]
     
-    if(by_state) {
+    if(by_state)
+    {
       split_by_entity = split(scores, scores$state)
       features = data.frame(entity = unique(scores$state))
-    } else {
+    }
+    else
+    {
       scores$state_county = paste(scores$state, scores$county, sep=",")
       split_by_entity = split(scores, scores$state_county)
       features = data.frame(entity = unique(scores$state_county))
