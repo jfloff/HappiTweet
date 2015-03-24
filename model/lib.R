@@ -4,65 +4,66 @@ library(plyr)
 library(RJSONIO)
 
 ####
-# Parses a file with tweets building a CSV with 3 columns for each tweet: state, county and score
-# input_filename -> name of file with the tweets
+# Returns column names with a specific given prefix
 #
-to_state_county_score = function(input_filename){
-  # Open connection to file
-  con  = file(input_filename, open = "r")
-  
-  # keeps a data frame per lexicon
-  tweets_by_lexicon = list()
-  # i = 0
-  # parse json file by line
-  while (length(line <- readLines(con, n = 1, warn = FALSE)) > 0)
-  {
-    tweet = fromJSON(line)
+colnames_by_prefix = function(df, prefix)
+{
+  pattern = paste(c("^",prefix,"*"), collapse = '')
+  names = names(df)[grepl(pattern, names(df)) == TRUE]
+  return(names)
+}
 
-    # for each lexicon in the tweet checks if its in the list
-    # it not creates an empty dataframe
-    for(score in tweet[['scores']])
-    {
-      # gets the name of the lexicon
-      lexicon = names(score)
-      
-      # if lexicon was not initiated, creates a new entry and puts an empty dataframe in it
-      if(is.null(tweets_by_lexicon[[lexicon]]))
-      {
-        df = data.frame(state=character(), county=character(), score=numeric(), stringsAsFactors=FALSE)
-        tweets_by_lexicon[[lexicon]] = df
-      }
-      
-      # new row values. Order = state,county,score
-      newrow = c(tweet[['state']], tweet[['county']], as.numeric(score[[lexicon]]$score))
-      
-      # adds to end of the data frame
-      tweets_by_lexicon[[lexicon]][nrow(tweets_by_lexicon[[lexicon]])+1,] = newrow
-    }
-    
-    # i = i + 1
-    # if (i == 100) break
+####
+# Parses a CSV file with state, county columns and with pairs of <score__* / word_count__*>
+# for each lexicon
+#
+to_entity_scores = function(input_filename, by_state)
+{
+  data = read.csv(scored_tweets, header = TRUE)
+  prefix = "score__"
+  
+  # gets column names from the score column
+  score_column_names = colnames_by_prefix(data,prefix)
+  filtered_names = c('entity', score_column_names)
+  
+  # if state rename state column, if county concatenates state and county
+  if(by_state)
+  {
+    names(data)[names(data)=="state"] = 'entity'
+  }
+  else
+  {
+    data$entity = paste(data$state, data$county, sep=",")
   }
   
-  # close file connection
-  close(con)
-  # returns built df
-  return(tweets_by_lexicon)
+  # filter columns
+  data = data[,filtered_names]
+  # remove the score__ prefix
+  names(data) = c('entity',substring(score_column_names,nchar(prefix)+1))
+  
+  return(data)
 }
 
 ####
 # Mode of an array of scores
 #
-mode = function(x)
+mode = function(x, na.rm=FALSE)
 {
-  if(length(x) < 2) 
+  # checks if all vector is NA
+  if(all(is.na(x)))
   {
-    return(x)
+    return(NA)
   }
+  # returns non-NA value
+  else if(sum(!is.na(x)) < 2) 
+  {
+    return(x[!is.na(x)])
+  }
+  # returns mode
   else
   {
     # limits and adjust should be changed to meet expectations
-    d = density(x, from=0, to=100 , adjust = 0.805)
+    d = density(x, from=0, to=100 , adjust = 0.805, na.rm = na.rm)
     return(d$x[which.max(d$y)])
   }
 }
@@ -76,40 +77,49 @@ mode = function(x)
 #
 score_features = function(file, by_state)
 {
-  scores_by_lexicon = to_state_county_score(file)
+  scores = to_entity_scores(file, by_state)
   
-  # for each lexicon calculates its features
-  features_by_lexicon = list()
-  for(lexicon in names(scores_by_lexicon))
+  # lexicons
+  lexicons = names(scores)[names(scores) != 'entity']
+  # empty df for features
+  features = data.frame(entity = unique(scores$entity))
+  
+  for(lexicon in lexicons)
   {
-    scores = scores_by_lexicon[[lexicon]]
+    # filter df with scores for that lexicon only
+    score_by_lexicon = scores[c('entity',lexicon)]
+    names(score_by_lexicon) = c('entity','score')
     
-    if(by_state)
-    {
-      split_by_entity = split(scores, scores$state)
-      features = data.frame(entity = unique(scores$state))
-    }
-    else
-    {
-      scores$state_county = paste(scores$state, scores$county, sep=",")
-      split_by_entity = split(scores, scores$state_county)
-      features = data.frame(entity = unique(scores$state_county))
-    }
-    
-    features$max = sapply(split_by_entity, function(x) round(max(as.numeric(x$score)), digits=2))[features$entity]
-    features$min = sapply(split_by_entity, function(x) round(min(as.numeric(x$score)), digits=2))[features$entity]
-    features$mean = sapply(split_by_entity, function(x) round(mean(as.numeric(x$score)), digits=2))[features$entity]
-    features$median = sapply(split_by_entity, function(x) round(median(as.numeric(x$score)), digits=2))[features$entity]
-    features$mode = sapply(split_by_entity, function(x) round(mode(as.numeric(x$score)), digits=2))[features$entity]
-    features$sd = sapply(split_by_entity, function(x) round(sd(as.numeric(x$score)), digits=2))[features$entity]
-    
-    features[with(features, order(entity)), ]
-    
-    features_by_lexicon[[lexicon]] = features
+    # split results by entity
+    split_by_entity = split(score_by_lexicon, score_by_lexicon$entity)
+
+    # features
+    max = sapply(split_by_entity, function(x) round(max(as.numeric(x$score), na.rm=TRUE), digits=2))[features$entity]
+    features[[paste(lexicon, "max", sep = "__")]] = max
+    min = sapply(split_by_entity, function(x) round(min(as.numeric(x$score), na.rm=TRUE), digits=2))[features$entity]
+    features[[paste(lexicon, "min", sep = "__")]] = min
+    mean = sapply(split_by_entity, function(x) round(mean(as.numeric(x$score), na.rm=TRUE), digits=2))[features$entity]
+    features[[paste(lexicon, "mean", sep = "__")]] = mean
+    median = sapply(split_by_entity, function(x) round(median(as.numeric(x$score), na.rm=TRUE), digits=2))[features$entity]
+    features[[paste(lexicon, "median", sep = "__")]] = median
+    mode = sapply(split_by_entity, function(x) round(mode(as.numeric(x$score), na.rm=TRUE), digits=2))[features$entity]
+    features[[paste(lexicon, "mode", sep = "__")]] = mode
+    sd = sapply(split_by_entity, function(x) round(sd(as.numeric(x$score), na.rm=TRUE), digits=2))[features$entity]
+    features[[paste(lexicon, "sd", sep = "__")]] = sd
   }
   
-  features_by_lexicon
+  # replace Inf's and NaN's with NA
+  is.na(features) <- do.call(cbind,lapply(features, is.infinite))
+  is.na(features) <- do.call(cbind,lapply(features, is.nan))
+  
+  return(features)
 }
+
+
+
+#######################################################################################################
+####################################### CHANGE FROM HERE BELOW ########################################
+#######################################################################################################
 
 
 ####
