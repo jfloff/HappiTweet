@@ -187,6 +187,9 @@ num_tweets_features = function(file, all_file, by_state)
     names(num_tweets)[names(num_tweets)==lexicon] = paste(lexicon, 'num_tweets', sep='__')
   }
   
+  # drop total_num_tweets column
+  num_tweets$total_num_tweets = NULL
+  
   return(num_tweets)
 }
 
@@ -247,13 +250,6 @@ word_count_features = function(file, by_state)
 ####################################### CHANGE FROM HERE BELOW ########################################
 #######################################################################################################
 
-
-
-
-
-
-
-
 ####
 # Merges a list of features into a single data frame
 #
@@ -261,34 +257,13 @@ word_count_features = function(file, by_state)
 #
 merge_features = function(all_features)
 { 
-  #will store for each lexicon its features
-  merged_features = NULL
-  for(features_by_type in all_features)
-  {
-    # iterates over the lexicons of each feature type
-    for(lexicon in names(features_by_type))
-    {
-      # all features names expect entity
-      features_names = names(features_by_type[[lexicon]])
-      features_names = features_names[features_names != "entity"]
-      # add lexicon to the feature
-      features_names = paste(lexicon, features_names, sep="__")
-      # add entity again
-      features_names = c("entity", features_names)
-      # replace with the new names
-      names(features_by_type[[lexicon]]) = features_names
-      
-      # checks if its the first merged feature
-      if (is.null(merged_features))
-      {
-        merged_features = features_by_type[[lexicon]]
-      }
-      else
-      {
-        merged_features = merge(merged_features, features_by_type[[lexicon]], by="entity", all = TRUE)
-      }
-    }
-  }
+  # function that merges 2 dataframes by entity
+  merge.all = function(x, y) merge(x, y, by="entity")
+  # applies function to list dfs
+  out = Reduce(merge.all, all_features)
+  # reorder features alphabetically (entity stays)
+  order = c('entity', sort(names(out)[names(out) != 'entity']))
+  out = out[order]
   
-  return(merged_features)
+  return(out)
 }
