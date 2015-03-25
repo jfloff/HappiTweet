@@ -32,7 +32,7 @@ EOF
 
 # Run script to install packages 
 # I think this is universal to all platforms
-# Rscript $RCONFIG_FILENAME &>/dev/null
+Rscript $RCONFIG_FILENAME &>/dev/null
 
 # change script to return working directory
 cat > $RCONFIG_FILENAME <<EOF
