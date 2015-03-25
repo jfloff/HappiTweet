@@ -71,6 +71,10 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
   # Windows
   cmd //c SETX R_HAPPITWEET "$WD" &>/dev/null
+else
+  echo "OS not supported. Please change this script to include its identifier."
 fi
+
+
 
 rm $RCONFIG_FILENAME
