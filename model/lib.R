@@ -258,7 +258,7 @@ word_count_features = function(file, by_state)
 merge_features = function(all_features)
 { 
   # function that merges 2 dataframes by entity
-  merge.all = function(x, y) merge(x, y, by="entity")
+  merge.all = function(x, y) merge(x, y, all = TRUE, by="entity")
   # applies function to list dfs
   out = Reduce(merge.all, all_features)
   # reorder features alphabetically (entity stays)
