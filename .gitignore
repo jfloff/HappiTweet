@@ -4,3 +4,4 @@ temp/
 Gemfile.lock
 config.yaml
 .Rhistory
+r_config.temp.R

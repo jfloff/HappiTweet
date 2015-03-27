@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # R_CONFIG temporary filename
-RCONFIG_FILENAME="r_config.temp.R"
+RCONFIG_FILENAME='r_config.temp.R'
 
 # R_CONFIG data
 cat > $RCONFIG_FILENAME <<EOF
@@ -30,7 +30,7 @@ cat > $RCONFIG_FILENAME <<EOF
   }
 EOF
 
-# Run script to install packages 
+# Run script to install packages
 # I think this is universal to all platforms
 Rscript $RCONFIG_FILENAME &>/dev/null
 
@@ -52,27 +52,27 @@ WD=$(Rscript $RCONFIG_FILENAME)
 
 # OS specific commands
 # Use `uname` to know your system details
-if [ "$(uname)" == "Darwin" ]; then
-  
+if [ "$(uname)" == 'Darwin' ]; then
+
   # MacOS
   if [ -z "$R_HAPPITWEET" ]; then
-    echo 'export R_HAPPITWEET=$WD' >> ~/.bash_profile
-    source ~/.bash_profile
+    echo "export R_HAPPITWEET=$WD" >> ~/.bash_profile
+    . ~/.bash_profile
   fi
 
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-  
+elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+
   # Linux
   if [ -z "$R_HAPPITWEET" ]; then
-    echo 'export R_HAPPITWEET=$WD' >> ~/.bash_profile
-    source ~/.bash_profile
+    echo "export R_HAPPITWEET=$WD" >> ~/.bash_profile
+    . ~/.bash_profile
   fi
 
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+elif [ "$(expr substr $(uname -s) 1 10)" == 'MINGW32_NT' ]; then
   # Windows
   cmd //c SETX R_HAPPITWEET "$WD" &>/dev/null
 else
-  echo "OS not supported. Please change this script to include its identifier."
+  echo 'OS not supported. Please change this script to include its identifier.'
 fi
 
 

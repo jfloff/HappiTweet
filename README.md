@@ -4,12 +4,12 @@ Welcome to the HappiTweet research project. In this project we relate twitter me
 
 ## Configuration and Installation
 
-Duplicate the `config.yaml.template` and remove the `template` extension. Fill that file with your configuration, namely: 
+Duplicate the `config.yaml.template` and remove the `template` extension. Fill that file with your configuration, namely:
 * Your AWS setting, such as your access credentials
 * Your R configuration, such as your working directory
 
 After setting the configuration, you should:
-* Run the `r_config.R` script: `./r_config` or `Rscript r_config.R`
+* Run `source happitweet_config.sh` to perform general configurations
 * In case you are using the AWS Parser: install needed gems located in the `Gemfile`
 
 ## Parsers
@@ -31,18 +31,18 @@ First you need to process the features for your dataset. Edit the files needed i
 
 * `scored_tweets`: file with tweets that have a score associated. Each record should be in a separate line, and each line should have a json record like in the below example:
 ```json
-	{  
+	{
 	  "county":"Conway County",
 	  "state":"Arkansas",
-	  "scores":[  
-	    {  
-	      "en.hedo-happiness-delta_one_of_5":{  
+	  "scores":[
+	    {
+	      "en.hedo-happiness-delta_one_of_5":{
 	        "score":"8.41",
 	        "word_count":1
 	      }
 	    },
-	    {  
-	      "en.hedo-happiness-more_than_7":{  
+	    {
+	      "en.hedo-happiness-more_than_7":{
 	        "score":"8.41",
 	        "word_count":1
 	      }
@@ -53,7 +53,7 @@ First you need to process the features for your dataset. Edit the files needed i
 
 * `all_tweets`: file with all the geolocated tweets of the dataset (regardless if they got a score from any lexicon). Each record should be in a separate line, and each line should have a json record like in the below example:
 ```json
-	{  
+	{
 	  "county":"Conway County",
 	  "state":"Arkansas"
 	}
