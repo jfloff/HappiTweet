@@ -1,17 +1,17 @@
 setwd(Sys.getenv("R_HAPPITWEET"))
 
 library(plyr)
+library(dplyr)
 library(RJSONIO)
+library(glmnet)
+library(Metrics)
+library(caret)
 
-####
-# Returns column names with a specific given prefix
-#
-colnames_by_prefix = function(df, prefix)
-{
-  pattern = paste(c("^",prefix,"*"), collapse = '')
-  names = names(df)[grepl(pattern, names(df)) == TRUE]
-  return(names)
-}
+set.seed(1)
+
+##################################################################################################
+######################################## GENERAL FEATURES ########################################
+##################################################################################################
 
 ####
 # Parses a CSV file with state, county columns and with pairs of <score__* / word_count__*>
@@ -19,10 +19,13 @@ colnames_by_prefix = function(df, prefix)
 #
 to_entity_value = function(input_filename, by_state, prefix)
 {
-  data = read.csv(input_filename, header = TRUE)
+  data = read.csv(input_filename, header = TRUE, stringsAsFactors = FALSE)
   
-  # gets column names from the score column
-  value_column_names = colnames_by_prefix(data, prefix)
+  # gets column names from the prefix column
+  pattern = paste(c("^",prefix,"*"), collapse = '')
+  value_column_names = names(data)[grepl(pattern, names(data)) == TRUE]
+  
+  # filter columns
   filtered_names = c('entity', value_column_names)
   
   # if state rename state column, if county concatenates state and county
@@ -42,6 +45,10 @@ to_entity_value = function(input_filename, by_state, prefix)
   
   return(data)
 }
+
+##################################################################################################
+######################################### SCORE FEATURES #########################################
+##################################################################################################
 
 ####
 # Mode of an array of scores
@@ -108,11 +115,15 @@ score_features = function(file, by_state)
   }
   
   # replace Inf's and NaN's with NA
-  is.na(features) <- do.call(cbind,lapply(features, is.infinite))
-  is.na(features) <- do.call(cbind,lapply(features, is.nan))
+  is.na(features) = do.call(cbind,lapply(features, is.infinite))
+  is.na(features) = do.call(cbind,lapply(features, is.nan))
   
   return(features)
 }
+
+##################################################################################################
+###################################### NUM TWEETS FEATURES #######################################
+##################################################################################################
 
 ####
 # Count tweets in a CSV file by state or county
@@ -121,7 +132,7 @@ score_features = function(file, by_state)
 #
 count_tweets_all = function(all_file) 
 {
-  data = read.csv(all_file, header = FALSE)
+  data = read.csv(all_file, header = FALSE, stringsAsFactors = FALSE)
   names(data) = c('entity', 'total_num_tweets')
   return(data)
 }
@@ -193,6 +204,10 @@ num_tweets_features = function(file, all_file, by_state)
   return(num_tweets)
 }
 
+##################################################################################################
+###################################### WORD COUNT FEATURES #######################################
+##################################################################################################
+
 ####
 # Returns features related to the average words per tweet
 #
@@ -240,15 +255,15 @@ word_count_features = function(file, by_state)
   }
   
   # replace Inf's and NaN's with NA
-  is.na(word_counts_by_entity) <- do.call(cbind,lapply(word_counts_by_entity, is.infinite))
-  is.na(word_counts_by_entity) <- do.call(cbind,lapply(word_counts_by_entity, is.nan))
+  is.na(word_counts_by_entity) = do.call(cbind,lapply(word_counts_by_entity, is.infinite))
+  is.na(word_counts_by_entity) = do.call(cbind,lapply(word_counts_by_entity, is.nan))
   
   return(word_counts_by_entity)
 }
 
-#######################################################################################################
-####################################### CHANGE FROM HERE BELOW ########################################
-#######################################################################################################
+##################################################################################################
+######################################### MERGE FEATURES #########################################
+##################################################################################################
 
 ####
 # Merges a list of features into a single data frame
@@ -266,4 +281,233 @@ merge_features = function(all_features)
   out = out[order]
   
   return(out)
+}
+
+##################################################################################################
+############################################# MODEL ##############################################
+##################################################################################################
+
+####
+# Receives a file with gallup score and returns a vector with
+# only its scores
+# 
+# File format: 'state','gallup_score'
+#
+gallup_scores = function(file)
+{ 
+  # load gallup
+  gallup = read.csv(file=file, header = TRUE, stringsAsFactors = FALSE)
+  # make sure its sorted alphabetically
+  gallup = gallup[order(gallup$state),]
+  # convert scores into vector
+  return(as.vector(gallup[,c('gallup_score')]))
+}
+
+####
+# Receives a file with features and returns the entity associated
+# 
+# File format: 'entity','feature_1','feature_2',...
+#
+get_entities = function(features_file)
+{
+  # load features
+  features_df = read.csv(file=features_file, header=TRUE, stringsAsFactors = FALSE)
+  # make sure its sorted alphabetically
+  return(sort(features_df$entity))
+}
+
+####
+# Receives a file with features and returns a dataframe with
+# only the features values. Removes rows with all NAs
+# 
+# File format: 'entity','feature_1','feature_2',...
+#
+load_features = function(file, names=NULL)
+{
+  # load features
+  features_df = read.csv(file=file, header=TRUE, stringsAsFactors = FALSE)
+  
+  # make sure its sorted alphabetically
+  features_df = features_df[order(features_df$entity),]
+  # remove entity from columns
+  features_df = select(features_df, -(entity))
+  
+  # first remove rows where is all NAs
+  # features_df = features_df[rowSums(is.na(features_df)) != ncol(features_df), ]
+  
+  # remove columns where there is NA values
+  # features_df = features_df[,colSums(is.na(features_df)) == 0]
+  
+  # remove columns where there is all NA values
+  # features_df = features_df[,colSums(is.na(features_df)) == nrow(features_df)]
+  
+  # select only the names given by argument
+  if(!is.null(names))
+  {
+    features_df = features_df[,names]
+  }
+  
+  # return features as matrix
+  return(features_df)
+}
+
+
+####
+# compare against baseline models that always predict the 
+# mean or the median well-being index
+#
+gallup_stats = function(gallup)
+{
+  avg = rep(mean(gallup), length(gallup))
+  med = rep(median(gallup), length(gallup))
+  
+  ret = list(
+    rmse_mean = rmse(gallup, avg),
+    mae_mean = mae(gallup, avg),
+    rmse_median = rmse(gallup, med),
+    mae_median = mae(gallup, med)
+  )
+  return(ret)
+}
+
+
+####
+# Compare gallup with predictions
+#
+eval_predictions = function(predictions)
+{
+  # evaluate results
+  ret = list(
+    cor_pearson=cor(predictions$gallup, predictions$prediction, method = "pearson"),
+    cor_kendall=cor(predictions$gallup, predictions$prediction, method = "kendall"),
+    rmse=rmse(predictions$gallup, predictions$prediction),
+    mae=mae(predictions$gallup, predictions$prediction)
+  )
+  return(ret)
+}
+
+
+####
+# Filter features so they only have features that dont cause cv.glmnet 
+# to throw erro
+#
+filter_features = function(features, gallup)
+{
+  # sort names by colSums
+  columns_by_na = names(sort(colSums(is.na(features)), decreasing=TRUE))
+  
+  # repeat calling model until it doesn't throw error
+  repeat
+  {
+    out = tryCatch(
+      { 
+        # model with state characteristics
+        model = cv.glmnet(x=as.matrix(features), y=gallup, alpha=0.5, nfolds=10)
+        TRUE
+      },
+      error = function(e)
+      {
+        FALSE
+      }
+    )
+      
+    # break of out repreat if model didn't give error
+    if(out)
+    {
+      break
+    }
+    else
+    {
+      # get the name of the column to remove
+      col_to_remove = first(columns_by_na[1])
+      
+      # get column name index
+      # I could only get remove to work by index
+      col_to_remove = first(grep(col_to_remove, colnames(features)))
+    
+      # remove the column name from features
+      features = features[, -c(col_to_remove)]
+      
+      # update available column names
+      columns_by_na = tail(columns_by_na,-1)
+    }
+  }
+  
+  return(features)
+}
+
+####
+# Compare gallup with predictions
+#
+model = function(gallup_file, state_features_file, by_state, county_features_file=NULL)
+{
+  # load gallup scores
+  gallup = gallup_scores(gallup_file)
+  
+  # load state features
+  state_features = load_features(state_features_file)
+  # filter features so they don't throw error to cv.glmnet
+  state_features = filter_features(state_features, gallup)
+  
+  # entities
+  entities = get_entities(state_features_file)
+  
+  if(by_state)
+  {
+    # convert features to matrix
+    state_features = as.matrix(state_features)
+    
+    # train model and generate predictions, using the same data for training and testing
+    # (cross-validation is only used to tune parameters)
+    
+    model = cv.glmnet(x=state_features, y=gallup, alpha=0.5, nfolds=10)
+    
+    coefficients = coef(model, s="lambda.min")
+    predictions = predict(model, newx=state_features, s="lambda.min")
+    
+    # train and generate predictions with a leave-one-out cross validation methodology
+    folds = createFolds(gallup, k=length(gallup), list=TRUE, returnTrain=TRUE)
+    coefficients = rep(0.0, length(coefficients))
+    for (f in folds) {
+      model = cv.glmnet(x=state_features[f,] , y=gallup[f], alpha=0.5 , nfolds=length(gallup[f]))
+      c = coef(model , s="lambda.min")
+      coefficients = coefficients + coef(model, s="lambda.min")
+      predictions[!f,] = predict(model, newx=state_features[!f,], s="lambda.min")
+    }
+    coefficients = coefficients / length(folds)
+  }
+  #County
+  else
+  {
+    if(is.null(county_features_file)) 
+      stop("In case of counties model you need to pass counties features file")
+    
+    # load county features
+    county_features = load_features(county_features_file, names=names(state_features))
+    
+    # convert to matrix
+    state_features = as.matrix(county_features)
+    county_features = as.matrix(county_features)
+    
+    model = cv.glmnet(x=state_features[,], y=gallup, alpha=0.5, nfolds=length(gallup))
+    
+    coefficients = coef(model, s="lambda.min")
+    predictions = predict(model, newx=county_features, s="lambda.min")
+  }
+
+  # turns sparse matrix into dataframe to improve readability
+  coefficients = data.frame(
+    feature=row.names(coefficients),
+    coefficient=as.matrix(coefficients)[,1],
+    stringsAsFactors=FALSE
+  )
+  rownames(coefficients) = NULL
+  
+  # replace 0's with NA's so its clear it comes from the sparse matrix
+  coefficients[coefficients == 0] = NA
+  
+  # adds entity to predictions to improve readability
+  predictions = data.frame(entity=entities,prediction=predictions[,1],gallup=gallup)
+  
+  return(list(coefficients=coefficients, predictions=predictions))
 }

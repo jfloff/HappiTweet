@@ -6,7 +6,7 @@ Welcome to the HappiTweet research project. In this project we relate twitter me
 
 Duplicate the `config.yaml.template` and remove the `template` extension. Fill that file with your configuration, namely:
 * Your AWS setting, such as your access credentials
-* Your R configuration, such as your working directory
+* Your R configuration, such as your working directory and needed packages
 
 After setting the configuration, you should:
 * Run `source happitweet_config.sh` to perform general configurations
