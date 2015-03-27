@@ -449,11 +449,11 @@ model = function(gallup_file, state_features_file, by_state, county_features_fil
   # filter features so they don't throw error to cv.glmnet
   state_features = filter_features(state_features, gallup)
   
-  # entities
-  entities = get_entities(state_features_file)
-  
   if(by_state)
   {
+    # entities
+    entities = get_entities(state_features_file)
+    
     # convert features to matrix
     state_features = as.matrix(state_features)
     
@@ -475,6 +475,9 @@ model = function(gallup_file, state_features_file, by_state, county_features_fil
       predictions[!f,] = predict(model, newx=state_features[!f,], s="lambda.min")
     }
     coefficients = coefficients / length(folds)
+    
+    # adds entity to predictions to improve readability
+    predictions = data.frame(entity=entities,prediction=predictions[,1],gallup=gallup)
   }
   #County
   else
@@ -482,17 +485,23 @@ model = function(gallup_file, state_features_file, by_state, county_features_fil
     if(is.null(county_features_file)) 
       stop("In case of counties model you need to pass counties features file")
     
+    # entities
+    entities = get_entities(county_features_file)
+    
     # load county features
     county_features = load_features(county_features_file, names=names(state_features))
     
     # convert to matrix
-    state_features = as.matrix(county_features)
+    state_features = as.matrix(state_features)
     county_features = as.matrix(county_features)
     
     model = cv.glmnet(x=state_features[,], y=gallup, alpha=0.5, nfolds=length(gallup))
     
     coefficients = coef(model, s="lambda.min")
     predictions = predict(model, newx=county_features, s="lambda.min")
+    
+    # adds entity to predictions to improve readability
+    predictions = data.frame(entity=entities,prediction=predictions[,1])
   }
 
   # turns sparse matrix into dataframe to improve readability
@@ -505,9 +514,6 @@ model = function(gallup_file, state_features_file, by_state, county_features_fil
   
   # replace 0's with NA's so its clear it comes from the sparse matrix
   coefficients[coefficients == 0] = NA
-  
-  # adds entity to predictions to improve readability
-  predictions = data.frame(entity=entities,prediction=predictions[,1],gallup=gallup)
   
   return(list(coefficients=coefficients, predictions=predictions))
 }
