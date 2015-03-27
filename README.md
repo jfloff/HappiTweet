@@ -12,6 +12,8 @@ After setting the configuration, you should:
 * Run `source happitweet_config.sh` to perform general configurations
 * In case you are using the AWS Parser: install needed gems located in the `Gemfile`
 
+Warning: in some cases you need to restart RStudio (or the terminal if that's the case) after this changes.
+
 ## Parsers
 
 Results from parsing the tweet collection should be place in the `huge-data` folder. Due to their large size they are gitignored.

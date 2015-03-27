@@ -56,8 +56,8 @@ if [ "$(uname)" == 'Darwin' ]; then
 
   # MacOS
   if [ -z "$R_HAPPITWEET" ]; then
-    echo "export R_HAPPITWEET=$WD" >> ~/.bash_profile
-    . ~/.bash_profile
+    # global environmental variable available to GUI applications
+    echo setenv R_HAPPITWEET $WD | launchctl
   fi
 
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
