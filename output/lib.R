@@ -8,6 +8,7 @@ library(sp)
 library(maps)
 library(maptools)
 library(tools)
+library(plyr)
 
 ####
 # CONSTANTS
@@ -161,7 +162,7 @@ plot_bump_chart = function (gallup_filename, state_pred_filename)
 # quintiles   -> data to calculate quintiles on
 # values      -> quintile values wanted
 #
-get_quintile <- function(quintiles, values) 
+get_quintile = function(quintiles, values) 
 {
   if (quintiles[1] <= values & values <= quintiles[2]) 
   {
@@ -192,7 +193,7 @@ get_quintile <- function(quintiles, values)
 # score_column  -> score column name in file
 # title         -> title of the plot
 #
-plot_quintiles <- function(filename, state_column, score_column, title)
+plot_quintiles = function(filename, state_column, score_column, title)
 {
   # turns file into scored vector
   df = read.csv(filename, header = TRUE, sep=",")
@@ -207,7 +208,7 @@ plot_quintiles <- function(filename, state_column, score_column, title)
   states_polygons$score = data[states_polygons$region]
   
   quantiles = quantile(data, c(0, 0.2, 0.4, 0.6, 0.8, 1))
-  states_polygons$quantiles <- sapply(states_polygons$score, function(x) get_quintile(quantiles, x))
+  states_polygons$quantiles = sapply(states_polygons$score, function(x) get_quintile(quantiles, x))
   
   #Finally, add a color layer to the map:
   # passes the map, and as fill column the scores
@@ -254,4 +255,47 @@ plot_quintiles <- function(filename, state_column, score_column, title)
   
   # print
   print({map})
+}
+
+plot_scatter_features = function(features_filename, predictions_filename, feature_name, ylabel)
+{
+  features = read.csv(features_filename, header = TRUE, sep=",")
+  features = features[, c("entity", feature_name)]
+  names(features) = c('state_upper', feature_name)
+  
+  # match lower state names with abbvs
+  states_upper_lower = select(STATE_NAMES, c(upper,lower))
+  names(states_upper_lower) = c('state_upper','state')
+  # merge by state lower
+  features = merge(features,states_upper_lower,by="state_upper")
+  
+  # load predictions
+  predictions = read.csv(predictions_filename, header = TRUE, sep=",")
+  
+  # merge features and predictions
+  data = merge(features,predictions,by="state")
+  data = select(data, -c(state_upper,gallup))
+  
+  plot = ggplot(data, aes_string(x="prediction", y=feature_name), environment=environment()) +
+    geom_point(shape=1) + # Use hollow circles
+    geom_smooth(method=lm) + # Add linear regression line
+    labs(x = "Well-being index", y = ylabel) +
+    theme_bw() +
+    theme(
+      axis.text=element_text(size=10), 
+      panel.grid = element_blank(),
+      panel.background=element_blank(),
+      axis.text.y=element_text(colour="black"),
+      axis.text.x=element_text(colour="black"),
+      plot.title=element_text(size=10.5, face='bold'),
+      axis.title=element_text(size=10.5,face='bold')
+    )
+  
+  output_filename = paste("output-charts/scatter--",feature_name,".png",sep='')
+  
+  png(file=output_filename,width=320,height=260,res=96)
+  print({plot})
+  dev.off()
+  
+  plot
 }

@@ -38,3 +38,13 @@ prediction_quintiles = plot_quintiles(
   state_column="state",
   score_column="prediction",
   title="Quintiles for predicted well-being scores")
+
+############################################################################
+################################# SCATTER ##################################
+############################################################################
+
+plot_scatter_features(
+  features_filename="model-output/state_features.csv",
+  predictions_filename="model-output/state_predictions.csv",
+  feature_name="en.hedo.happiness.delta_one_of_5__max",
+  ylabel="Non-neutral hedonometer lexicon\nMax hapiness score")
