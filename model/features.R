@@ -3,7 +3,7 @@ setwd(Sys.getenv("R_HAPPITWEET"))
 source('model/lib.R', echo=FALSE)
 
 # input files
-scored_tweets = "data/scored.csv"
+scored_tweets = "data/scored_noes.csv"
 all_tweets_state = "data/states.csv"
 all_tweets_county = "data/counties.csv"
 # output files

@@ -19,7 +19,7 @@ set.seed(1)
 #
 to_entity_value = function(input_filename, by_state, prefix)
 {
-  data = read.csv(input_filename, header = TRUE, stringsAsFactors = FALSE)
+  data = read.csv(input_filename, header = TRUE, stringsAsFactors = FALSE, sep=";")
   
   # gets column names from the prefix column
   pattern = paste(c("^",prefix,"*"), collapse = '')
@@ -322,7 +322,7 @@ get_entities = function(features_file)
 # 
 # File format: 'entity','feature_1','feature_2',...
 #
-load_features = function(file, names=NULL)
+load_features = function(file)
 {
   # load features
   features_df = read.csv(file=file, header=TRUE, stringsAsFactors = FALSE)
@@ -340,12 +340,6 @@ load_features = function(file, names=NULL)
   
   # remove columns where there is all NA values
   # features_df = features_df[,colSums(is.na(features_df)) == nrow(features_df)]
-  
-  # select only the names given by argument
-  if(!is.null(names))
-  {
-    features_df = features_df[,names]
-  }
   
   # return features as matrix
   return(features_df)
@@ -393,7 +387,7 @@ eval_predictions = function(predictions)
 #
 filter_features = function(features, gallup)
 {
-  # sort names by colSums
+  # sort names by colSums of na features
   columns_by_na = names(sort(colSums(is.na(features)), decreasing=TRUE))
   
   # repeat calling model until it doesn't throw error
@@ -447,7 +441,7 @@ model = function(gallup_file, state_features_file, by_state, county_features_fil
   # load state features
   state_features = load_features(state_features_file)
   # filter features so they don't throw error to cv.glmnet
-  state_features = filter_features(state_features, gallup)
+  # state_features = filter_features(state_features, gallup)
   
   if(by_state)
   {
@@ -485,11 +479,8 @@ model = function(gallup_file, state_features_file, by_state, county_features_fil
     if(is.null(county_features_file)) 
       stop("In case of counties model you need to pass counties features file")
     
-    # entities
-    entities = get_entities(county_features_file)
-    
     # load county features
-    county_features = load_features(county_features_file, names=names(state_features))
+    county_features = load_features(county_features_file)
     
     # convert to matrix
     state_features = as.matrix(state_features)
@@ -499,6 +490,9 @@ model = function(gallup_file, state_features_file, by_state, county_features_fil
     
     coefficients = coef(model, s="lambda.min")
     predictions = predict(model, newx=county_features, s="lambda.min")
+    
+    # entities
+    entities = get_entities(county_features_file)
     
     # adds entity to predictions to improve readability
     predictions = data.frame(entity=entities,prediction=predictions[,1])
