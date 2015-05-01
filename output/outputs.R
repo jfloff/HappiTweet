@@ -22,3 +22,19 @@ plot_tweet_distribution(csv=tweets_scored,
 ############################################################################
 
 plot_bump_chart(gallup_filename=gallup_filename, state_pred_filename=state_predictions)
+
+############################################################################
+################################ QUINTILES #################################
+############################################################################
+
+gallup_quintiles = plot_quintiles(
+  filename="data/gallup_2012.csv",
+  state_column="state",
+  score_column="gallup_score",
+  title="Quintiles for Gallup-Healthways well-being index")
+
+prediction_quintiles = plot_quintiles(
+  filename="model-output/state_predictions.csv",
+  state_column="state",
+  score_column="prediction",
+  title="Quintiles for predicted well-being scores")

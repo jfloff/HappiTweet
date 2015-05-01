@@ -9,6 +9,11 @@ library(caret)
 
 set.seed(1)
 
+# remove hawaii and alaska from states
+STATE_NAMES = subset(
+  data.frame(upper = state.name, lower = tolower(state.name), abbv = state.abb),
+  abbv!='AK' & abbv!='HI')
+
 ##################################################################################################
 ######################################## GENERAL FEATURES ########################################
 ##################################################################################################
@@ -470,8 +475,14 @@ model = function(gallup_file, state_features_file, by_state, county_features_fil
     }
     coefficients = coefficients / length(folds)
     
+    # match upper state names with abbvs
+    states_upper_lower = select(STATE_NAMES, c(upper,lower))
+    names(states_upper_lower) = c('state_upper','state_lower')
+    # merge by state upper
+    state_merge = merge(data.frame(state_upper=entities),states_upper_lower,by="state_upper")
+    
     # adds entity to predictions to improve readability
-    predictions = data.frame(state=entities,prediction=predictions[,1],gallup=gallup)
+    predictions = data.frame(state=state_merge$state_lower,prediction=predictions[,1],gallup=gallup)
   }
   #County
   else

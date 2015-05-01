@@ -4,6 +4,10 @@ library(ggplot2)
 library(RColorBrewer)
 library(reshape)
 library(scales)
+library(sp)
+library(maps)
+library(maptools)
+library(tools)
 
 ####
 # CONSTANTS
@@ -43,7 +47,7 @@ filter_state_score = function(input_filename, state_name, score_column)
 # title         -> title of the plot
 # xlabel        -> Label of the xaxis = Lexicon score
 #
-plot_tweet_distribution <- function(csv, state, score_column, title, xlabel)
+plot_tweet_distribution = function(csv, state, score_column, title, xlabel)
 {
   data = filter_state_score(csv, state, score_column)
   data_mean = mean(data$score)
@@ -110,10 +114,10 @@ plot_bump_chart = function (gallup_filename, state_pred_filename)
   
   state_pred = read.csv(state_pred_filename, header = TRUE, sep=",")
   # match upper state names with abbvs
-  states_upper_abbv = select(STATE_NAMES, c(upper,abbv))
-  names(states_upper_abbv) = c('state','state_abbv')
+  states_lower_abbv = select(STATE_NAMES, c(lower,abbv))
+  names(states_lower_abbv) = c('state','state_abbv')
   # merge by state upper
-  state_pred = merge(state_pred,states_upper_abbv,by="state")
+  state_pred = merge(state_pred,states_lower_abbv,by="state")
   # ranking by score
   state_pred$ranking = rank(-state_pred$prediction, ties.method="first")
   # set colors and group for plot
@@ -149,4 +153,105 @@ plot_bump_chart = function (gallup_filename, state_pred_filename)
   
   # plot at the end anyway
   plot
+}
+
+####
+# Returns the value of the asked quintiles
+#
+# quintiles   -> data to calculate quintiles on
+# values      -> quintile values wanted
+#
+get_quintile <- function(quintiles, values) 
+{
+  if (quintiles[1] <= values & values <= quintiles[2]) 
+  {
+    return("5th Quintile")
+  } 
+  else if (quintiles[2] <= values & values <= quintiles[3]) 
+  {
+    return("4th Quintile")
+  } 
+  else if (quintiles[3] <= values & values <= quintiles[4])
+  {
+    return("3th Quintile")
+  } 
+  else if (quintiles[4] <= values & values <= quintiles[5])
+  {
+    return("2nd Quintile")
+  } 
+  else if (quintiles[5] <= values & values <= quintiles[6])
+  {
+    return("1st Quintile")
+  }
+}
+
+####
+# Plots a quintile choroplet given a csv file with score by state
+# filename      -> csv file with state and score data
+# state_column  -> state column name in file
+# score_column  -> score column name in file
+# title         -> title of the plot
+#
+plot_quintiles <- function(filename, state_column, score_column, title)
+{
+  # turns file into scored vector
+  df = read.csv(filename, header = TRUE, sep=",")
+  data = as.vector(df[,c(score_column)])
+  names(data) = df[,c(state_column)]
+  
+  # Gets data set with states already inside R
+  states_polygons = map_data('state')
+  states_polygons = subset(states_polygons, region != 'district of columbia')
+  
+  #Now link the vote data to the state shapes by matching names:
+  states_polygons$score = data[states_polygons$region]
+  
+  quantiles = quantile(data, c(0, 0.2, 0.4, 0.6, 0.8, 1))
+  states_polygons$quantiles <- sapply(states_polygons$score, function(x) get_quintile(quantiles, x))
+  
+  #Finally, add a color layer to the map:
+  # passes the map, and as fill column the scores
+  map = ggplot(states_polygons, environment = environment()) +
+    aes(long, lat, group=group) +
+    geom_polygon() +
+    aes(fill=quantiles) +
+    labs(fill = "Quintiles") +
+    theme_bw() +
+    theme(legend.position = "bottom",
+          axis.line=element_blank(),
+          axis.text.x=element_blank(),
+          axis.text.y=element_blank(),
+          axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank()
+    ) +
+    # GALLUP 2013 HTML COLORS
+    # GREEN = #4F993F
+    # BLUE = #329FB2
+    # YELLOW = #E4CC3C
+    # ORANGE = #E76B19
+    # RED = #C22D20
+    
+    # GALLUP 2012 HTML COLORS
+    # GREEN = #689A27
+    # BLUE = #4DA7C1
+    # YELLOW = #E7CD44
+  # ORANGE = #E87625
+  # RED = #C53D27
+  scale_fill_manual(values = c('#689A27','#4DA7C1','#E7CD44','#E87625','#C53D27')) + 
+    theme(
+      plot.title=element_text(face="bold", size=20),
+      legend.title = element_text(size = 16, face="bold"),
+      legend.text = element_text(size = 16)
+    ) +
+    coord_map(project='globular') +
+    ggtitle(title)
+  
+  output_filename=paste("output-charts/quintiles_by_state--",file_path_sans_ext(basename(filename)),".png",sep="")
+  png(file=output_filename,width=900,height=550,res=96)
+  print({map})
+  dev.off()
+  
+  # print
+  print({map})
 }
