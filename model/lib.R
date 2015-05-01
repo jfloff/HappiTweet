@@ -471,7 +471,7 @@ model = function(gallup_file, state_features_file, by_state, county_features_fil
     coefficients = coefficients / length(folds)
     
     # adds entity to predictions to improve readability
-    predictions = data.frame(entity=entities,prediction=predictions[,1],gallup=gallup)
+    predictions = data.frame(state=entities,prediction=predictions[,1],gallup=gallup)
   }
   #County
   else
@@ -495,7 +495,7 @@ model = function(gallup_file, state_features_file, by_state, county_features_fil
     entities = get_entities(county_features_file)
     
     # adds entity to predictions to improve readability
-    predictions = data.frame(entity=entities,prediction=predictions[,1])
+    predictions = data.frame(county=entities,prediction=predictions[,1])
   }
 
   # turns sparse matrix into dataframe to improve readability
