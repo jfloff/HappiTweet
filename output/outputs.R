@@ -48,3 +48,18 @@ plot_scatter_features(
   predictions_filename="model-output/state_predictions.csv",
   feature_name="en.hedo.happiness.delta_one_of_5__max",
   ylabel="Non-neutral hedonometer lexicon\nMax hapiness score")
+
+
+############################################################################
+################################## TABLE ###################################
+############################################################################
+
+table = data_table(
+  file_list = list(
+    list(csv = "model-output/state_predictions.csv", state_cap = "lower", colindex = c(1,2,3), colorder = c(1,3,2)),
+    list(csv = "data/all_tweets_by_state.csv", state_cap = "upper", colindex = c(1,2), colorder = c(1,2)),
+    list(csv = "model-output/state_features.csv", state_cap = "upper", colindex = c(1,21,26), colorder = c(1,3,2)) 
+  ),
+  state_cap = 'upper',
+  colnames = c("State", "Gallup-Healthways", "Predicted Well-Being","Number of Tweets","Tweets with Hedonometer","Average Happiness")
+)
