@@ -9,6 +9,7 @@ library(maps)
 library(maptools)
 library(tools)
 library(plyr)
+library(dplyr)
 library(xtable)
 
 ####
@@ -19,6 +20,19 @@ library(xtable)
 STATE_NAMES = subset(
   data.frame(upper = state.name, lower = tolower(state.name), abbv = state.abb, stringsAsFactors=FALSE),
   abbv!='AK' & abbv!='HI')
+
+####
+# Mode of an array of scores
+mode <- function(x) {
+  if(length(x) < 2) {
+    x
+  }
+  else {
+    # limits and adjust should be changed to meet expectations
+    d <- density(x, from=0, to=100 , adjust = 0.805)
+    d$x[which.max(d$y)]
+  }
+}
 
 ####
 # Parses a CSV file with state, county columns and select the respective  and with pairs of <score__* / word_count__*>
@@ -58,7 +72,7 @@ plot_tweet_distribution = function(csv, state, score_column, title, xlabel)
 
   dens = density(data$score)
   max_dens = max(dens$y)
-
+  
   plot = ggplot(data, aes(x=score), environment = environment()) +
     geom_histogram(
       aes(y=..density..),
