@@ -258,6 +258,14 @@ plot_quintiles = function(filename, state_column, score_column, title)
   print({map})
 }
 
+###
+# Plots scatter correlation plots between feature and prediction values
+#
+# features_filename -> filename of features file
+# predictions_filename -> filename of predictions file
+# feature_name -> feature to plot scatter of
+# ylabel -> label of the y axix
+#
 plot_scatter_features = function(features_filename, predictions_filename, feature_name, ylabel)
 {
   features = read.csv(features_filename, header = TRUE, sep=",")
@@ -376,4 +384,79 @@ data_table = function(file_list, state_cap, colnames)
   print(xtable(table), type="latex", file="output-files/table.tex")
 
   return(table)
+}
+
+###
+# Colors scales for state predictions
+#
+state_color_scales = function()
+{
+  # load predictions
+  state_pred = read.csv(file="model-output/state_predictions.csv", header=TRUE, sep=",")
+  predictions = as.vector(state_pred$prediction)
+  
+  # load key statistics
+  mean = mean(predictions, na.rm=TRUE)
+  sd = sd(predictions, na.rm=TRUE)
+  min = min(predictions, na.rm = TRUE)
+  max = max(predictions, na.rm = TRUE)
+  
+  # scale to 9 values spreading out the values near the mean
+  scale = c(min, mean - (sd/8), mean - (sd/7), mean - (sd/6), mean, mean + (sd/6), mean + (sd/7), mean - (sd/8), max)
+  
+  return(scale)
+}
+
+###
+# State chloropleth for a state scores file
+#
+# state_scores_filename -> file with score data
+# title -> title of the plot
+#
+state_choropleth = function(state_scores_filename, score_column, title)
+{
+  scores = read.csv(file=state_scores_filename, header=TRUE, sep=",")
+  vec = as.vector(scores[,c(score_column)])
+  names(vec) = scores$state
+  
+  # Gets data set with states already inside R
+  states_polygons = map_data('state')
+  
+  #Now link the vote data to the state shapes by matching names:
+  states_polygons$score = vec[states_polygons$region]
+  
+  # scales for states
+  scale = state_color_scales()
+  
+  #Finally, add a color layer to the map:
+  # passes the map, and as fill column the scores
+  map = ggplot(states_polygons) +
+    aes(long, lat, group=group) +
+    geom_polygon() +
+    aes(fill=score) +
+    theme_bw() +
+    theme(axis.line=element_blank(),
+          axis.text.x=element_blank(),
+          axis.text.y=element_blank(),
+          axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank()
+    ) + 
+    scale_fill_gradientn(
+      colours = brewer.pal(length(scale), "RdYlGn"),
+      values = rescale(scale),
+      name='score'
+    ) + 
+    theme(plot.title=element_text(face="bold")) +
+    coord_map(project='globular') +
+    ggtitle(title)
+  
+  # save to file
+  output_filename = paste("output-files/state_choropleth--", score_column, ".png",sep='')
+  png(file=output_filename,width=900,height=450,res=96)
+  print({map})
+  dev.off()
+  
+  # plot at the end anyway
+  map
 }

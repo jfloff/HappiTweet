@@ -17,11 +17,24 @@ plot_tweet_distribution(csv=tweets_scored,
   title="Indiana\n(first in ranking)",
   xlabel="Hedonometer (No Filter)")
 
+
+############################################################################
+################################# SCATTER ##################################
+############################################################################
+
+plot_scatter_features(
+  features_filename="model-output/state_features.csv",
+  predictions_filename="model-output/state_predictions.csv",
+  feature_name="en.hedo.happiness.delta_one_of_5__max",
+  ylabel="Non-neutral hedonometer lexicon\nMax hapiness score")
+
+
 ############################################################################
 ################################ BUMP CHART ################################
 ############################################################################
 
 plot_bump_chart(gallup_filename=gallup_filename, state_pred_filename=state_predictions)
+
 
 ############################################################################
 ################################ QUINTILES #################################
@@ -39,15 +52,20 @@ prediction_quintiles = plot_quintiles(
   score_column="prediction",
   title="Quintiles for predicted well-being scores")
 
+
 ############################################################################
-################################# SCATTER ##################################
+################################ CHOROPLETH ################################
 ############################################################################
 
-plot_scatter_features(
-  features_filename="model-output/state_features.csv",
-  predictions_filename="model-output/state_predictions.csv",
-  feature_name="en.hedo.happiness.delta_one_of_5__max",
-  ylabel="Non-neutral hedonometer lexicon\nMax hapiness score")
+state_choropleth(
+  state_scores_filename='model-output/state_predictions.csv', 
+  score_column='prediction', 
+  title='Predicted well-being scores')
+
+state_choropleth(
+  state_scores_filename='model-output/state_predictions.csv', 
+  score_column='gallup', 
+  title='Gallup well-being scores')
 
 
 ############################################################################
