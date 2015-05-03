@@ -67,6 +67,10 @@ state_choropleth(
   score_column='gallup', 
   title='Gallup well-being scores')
 
+county_choropleth(
+  county_scores_filename='model-output/county_predictions.csv', 
+  score_column='prediction', 
+  title='Predicted well-being scores')
 
 ############################################################################
 ################################## TABLE ###################################

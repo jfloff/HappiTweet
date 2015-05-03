@@ -1,591 +1,591 @@
 "county","prediction"
-"Alabama,Autauga County",69.7893555726984
-"Alabama,Baldwin County",67.6758353098804
-"Alabama,Barbour County",70.3603888288071
-"Alabama,Bibb County",70.0286490074738
-"Alabama,Blount County",69.5445133259432
-"Alabama,Bullock County",81.7049445569047
-"Alabama,Butler County",69.4066937334504
-"Alabama,Calhoun County",65.7251100659573
-"Alabama,Chambers County",61.1985220924747
-"Alabama,Cherokee County",68.9355440918602
-"Alabama,Choctaw County",NA
-"Alabama,Clarke County",67.1858434875729
-"Alabama,Clay County",65.0214474073768
-"Alabama,Cleburne County",73.8155821106279
-"Alabama,Coffee County",70.127984645283
-"Alabama,Colbert County",69.3353942203393
-"Alabama,Coosa County",70.9338053639499
-"Alabama,Covington County",67.8671371717028
-"Alabama,Crenshaw County",NA
-"Alabama,Cullman County",69.0709803370244
-"Alabama,Dale County",74.5744489773463
-"Alabama,Dallas County",70.2880046788593
-"Alabama,Dekalb County",69.8423180931188
-"Alabama,Elmore County",70.3292088786242
-"Alabama,Escambia County",68.3322738543624
-"Alabama,Etowah County",65.5617153870674
-"Alabama,Franklin County",NA
-"Alabama,Geneva County",66.5143330084871
-"Alabama,Greene County",68.7868866256517
-"Alabama,Hale County",66.2087731315293
-"Alabama,Henry County",63.0823226653359
-"Alabama,Houston County",65.9294935065681
-"Alabama,Jackson County",66.7122903653907
-"Alabama,Jefferson County",65.2577754778528
-"Alabama,Lamar County",70.1863924239786
-"Alabama,Lauderdale County",64.8612259421811
-"Alabama,Lawrence County",NA
-"Alabama,Lee County",67.5260626510511
-"Alabama,Limestone County",68.7483549837421
-"Alabama,Macon County",68.5488570333954
-"Alabama,Madison County",67.7689772502502
-"Alabama,Marengo County",63.6795568214295
-"Alabama,Marion County",69.7325676767018
-"Alabama,Marshall County",69.0863138094179
-"Alabama,Mobile County",66.1495528829649
-"Alabama,Monroe County",66.1359785604414
-"Alabama,Montgomery County",65.9478928745145
-"Alabama,Morgan County",66.8423276469955
-"Alabama,Perry County",70.4587556683652
-"Alabama,Pickens County",70.4560407778259
-"Alabama,Pike County",70.3342350384726
-"Alabama,Randolph County",67.4658782844957
-"Alabama,Russell County",66.912707094899
-"Alabama,Shelby County",69.3318449110047
-"Alabama,St Clair County",71.359084990136
-"Alabama,Sumter County",68.7290540224907
-"Alabama,Talladega County",66.8362750809119
-"Alabama,Tuscaloosa County",67.2766830665336
-"Alabama,Walker County",67.6470537636716
-"Alabama,Washington County",67.1217291832993
-"Alabama,Wilcox County",67.644791709575
-"Alabama,Winston County",NA
-"Arizona,Cochise County",68.4970724410708
-"Arizona,Coconino County",67.9698349998551
-"Arizona,Graham County",66.3179401386368
-"Arizona,Greenlee County",68.2212785266356
-"Arizona,Maricopa County",66.8994403464702
-"Arizona,Mohave County",69.172936508448
-"Arizona,Navajo County",69.3096384118989
-"Arizona,Pima County",65.5333511425734
-"Arizona,Pinal County",67.8370994042386
-"Arizona,Santa Cruz County",70.4262774546438
-"Arizona,Yavapai County",69.9461884198414
-"Arizona,Yuma County",67.7347977628458
-"Arkansas,Arkansas County",NA
-"Arkansas,Baxter County",69.3731702925146
-"Arkansas,Benton County",68.4803470200692
-"Arkansas,Boone County",68.4800969411677
-"Arkansas,Bradley County",68.9206069247324
-"Arkansas,Calhoun County",68.6576929438668
-"Arkansas,Clark County",70.1687078109241
-"Arkansas,Clay County",69.9982267322268
-"Arkansas,Cleburne County",68.3160242059042
-"Arkansas,Columbia County",NA
-"Arkansas,Conway County",70.2529111451687
-"Arkansas,Craighead County",67.8853762110214
-"Arkansas,Crawford County",68.773511823996
-"Arkansas,Crittenden County",70.5974341145752
-"Arkansas,Cross County",72.9622127123011
-"Arkansas,Dallas County",NA
-"Arkansas,Drew County",68.7327191394765
-"Arkansas,Faulkner County",68.9998806210425
-"Arkansas,Franklin County",68.3680647283901
-"Arkansas,Fulton County",68.2988902143448
-"Arkansas,Garland County",69.3610885039462
-"Arkansas,Greene County",67.5101345380224
-"Arkansas,Hempstead County",70.8384545593618
-"Arkansas,Howard County",72.6803548878136
-"Arkansas,Independence County",66.1934846799483
-"Arkansas,Izard County",67.2199137978074
-"Arkansas,Jackson County",66.5921467309847
-"Arkansas,Jefferson County",69.3373197415007
-"Arkansas,Johnson County",69.6759032544001
-"Arkansas,Lafayette County",NA
-"Arkansas,Lincoln County",68.0543614609191
-"Arkansas,Little River County",NA
-"Arkansas,Logan County",71.6556885828554
-"Arkansas,Lonoke County",66.867869089092
-"Arkansas,Madison County",69.3119304627249
-"Arkansas,Miller County",67.1965728709016
-"Arkansas,Mississippi County",69.7776910724809
-"Arkansas,Monroe County",69.7160914310248
-"Arkansas,Newton County",64.2665235833523
-"Arkansas,Ouachita County",70.3869388060587
-"Arkansas,Perry County",67.0616725919729
-"Arkansas,Pike County",65.5767599720482
-"Arkansas,Poinsett County",69.3918522864687
-"Arkansas,Polk County",72.0291685050713
-"Arkansas,Pope County",70.0694447208401
-"Arkansas,Prairie County",NA
-"Arkansas,Pulaski County",66.2573789829122
-"Arkansas,Saline County",70.2240042918581
-"Arkansas,Scott County",67.4297310605654
-"Arkansas,Sebastian County",68.1904786930412
-"Arkansas,Sharp County",70.5216705460269
-"Arkansas,St Francis County",66.0641037776719
-"Arkansas,Union County",67.6756819034614
-"Arkansas,Van Buren County",NA
-"Arkansas,Washington County",67.8437947879879
-"Arkansas,White County",67.117520245322
-"Arkansas,Woodruff County",68.7696518414899
-"Arkansas,Yell County",65.998824543463
-"California,Alameda County",67.883576142148
-"California,Butte County",66.7429342614945
-"California,Calaveras County",66.1296241575433
-"California,Contra Costa County",66.6917193061323
-"California,El Dorado County",69.9320008808077
-"California,Fresno County",66.8825068370987
-"California,Humboldt County",68.5751324262404
-"California,Imperial County",72.1687339645376
-"California,Inyo County",67.4638173242707
-"California,Kern County",66.1322472469123
-"California,Kings County",68.3404601802173
-"California,Lassen County",66.143117645129
-"California,Los Angeles County",67.0938251423305
-"California,Madera County",69.5596827609894
-"California,Marin County",67.1064846365115
-"California,Mendocino County",67.9812600126638
-"California,Merced County",65.6119980313156
-"California,Monterey County",66.1242784127656
-"California,Napa County",69.8697210715684
-"California,Nevada County",75.4838782661822
-"California,Orange County",67.1728156137486
-"California,Placer County",67.8389755052067
-"California,Plumas County",69.5779323944914
-"California,Riverside County",65.7821494268079
-"California,Sacramento County",66.6881875630467
-"California,San Benito County",70.7635717775989
-"California,San Bernardino County",66.1915388447515
-"California,San Diego County",66.8136939775398
-"California,San Francisco County",67.9215139059617
-"California,San Joaquin County",66.5316481260586
-"California,San Luis Obispo County",72.8287135363307
-"California,San Mateo County",66.9732943732839
-"California,Santa Barbara County",69.9546888175892
-"California,Santa Clara County",65.4588049714627
-"California,Santa Cruz County",66.9944139865031
-"California,Shasta County",71.3161671349658
-"California,Solano County",64.9458357205853
-"California,Sonoma County",68.5950029673097
-"California,Stanislaus County",66.1685791982685
-"California,Sutter County",68.683312620959
-"California,Tehama County",69.0039373319733
-"California,Trinity County",NA
-"California,Tulare County",66.1633915623253
-"California,Tuolumne County",76.7344489276749
-"California,Ventura County",66.0996327284177
-"California,Yolo County",71.1139964759167
-"California,Yuba County",67.0898921978863
-"Colorado,Adams County",67.5044163683142
-"Colorado,Arapahoe County",66.8180934110462
-"Colorado,Boulder County",69.7661694863601
-"Colorado,Broomfield County",NA
-"Colorado,Denver County",66.5031502246213
-"Colorado,Douglas County",67.9519415525809
-"Colorado,Eagle County",65.4739078710125
-"Colorado,El Paso County",65.5309897892571
-"Colorado,Fremont County",74.270245317905
-"Colorado,Garfield County",70.5791315659961
-"Colorado,Grand County",68.6677663568609
-"Colorado,Jefferson County",70.6361541360062
-"Colorado,Kit Carson County",71.1053193981862
-"Colorado,La Plata County",78.1476149716738
-"Colorado,Larimer County",68.8235046292387
-"Colorado,Las Animas County",NA
-"Colorado,Lincoln County",66.834043264838
-"Colorado,Mesa County",68.9617653758871
-"Colorado,Moffat County",66.4601584423619
-"Colorado,Montrose County",66.3158333509645
-"Colorado,Park County",65.6736441417876
-"Colorado,Phillips County",69.9025381084815
-"Colorado,Pitkin County",68.3966960081354
-"Colorado,Pueblo County",67.8303174278258
-"Colorado,Rio Grande County",70.7074503532826
-"Colorado,Routt County",NA
-"Colorado,San Miguel County",67.23752581879
-"Colorado,Summit County",70.3777132989231
-"Colorado,Teller County",NA
-"Colorado,Weld County",69.0431547596312
-"Connecticut,Fairfield County",65.8996371835341
-"Connecticut,Hartford County",65.7465244571662
-"Connecticut,Litchfield County",66.3328476692785
-"Connecticut,Middlesex County",66.1818299336996
-"Connecticut,New Haven County",65.5980009329716
-"Connecticut,New London County",65.9938222013215
-"Connecticut,Tolland County",65.4216237891265
-"Connecticut,Windham County",66.3277031953173
-"Delaware,Kent County",66.2392863716628
-"Delaware,New Castle County",65.9958735968276
-"Delaware,Sussex County",67.5828056845396
-"Florida,Alachua County",68.2530458081186
-"Florida,Bay County",66.7762376763757
-"Florida,Brevard County",68.1473832665023
-"Florida,Broward County",66.1428098891687
-"Florida,Charlotte County",70.7680533208591
-"Florida,Clay County",68.5871890493702
-"Florida,Collier County",66.7213010649516
-"Florida,Duval County",65.9667123579325
-"Florida,Escambia County",66.4501628430336
-"Florida,Flagler County",68.4884872812092
-"Florida,Gadsden County",NA
-"Florida,Hamilton County",67.7120652551525
-"Florida,Hardee County",68.7158466459163
-"Florida,Hernando County",67.1024249735429
-"Florida,Highlands County",66.0131943477053
-"Florida,Hillsborough County",66.0325212610698
-"Florida,Holmes County",NA
-"Florida,Indian River County",68.4094082984973
-"Florida,Lake County",69.2962047226162
-"Florida,Lee County",67.1714695347124
-"Florida,Leon County",65.5452937300829
-"Florida,Manatee County",66.0735019790338
-"Florida,Marion County",67.5870327312169
-"Florida,Martin County",NA
-"Florida,Miami-Dade County",65.3200880478029
-"Florida,Monroe County",66.9191776715851
-"Florida,Nassau County",NA
-"Florida,Okaloosa County",68.314132253193
-"Florida,Orange County",66.1665161187301
-"Florida,Osceola County",66.2442756224393
-"Florida,Palm Beach County",66.7626772206683
-"Florida,Pasco County",68.0014127414087
-"Florida,Pinellas County",66.5844947633827
-"Florida,Polk County",65.9055032638983
-"Florida,Putnam County",74.0209807861456
-"Florida,Santa Rosa County",69.2106237666585
-"Florida,Sarasota County",68.454102438411
-"Florida,Seminole County",74.3404804225369
-"Florida,St Johns County",68.4583109387234
-"Florida,St Lucie County",65.814725084907
-"Florida,Sumter County",69.7099269074013
-"Florida,Volusia County",67.4321149172281
-"Florida,Walton County",71.576730420784
-"Georgia,Baldwin County",68.4281616101226
-"Georgia,Barrow County",70.2772434073925
-"Georgia,Bartow County",69.583682701941
-"Georgia,Bibb County",66.0277765853598
-"Georgia,Brantley County",67.075438512808
-"Georgia,Bryan County",68.80863305754
-"Georgia,Bulloch County",66.7434021514543
-"Georgia,Burke County",65.6714813713996
-"Georgia,Calhoun County",NA
-"Georgia,Carroll County",67.4696835499823
-"Georgia,Catoosa County",73.12782302165
-"Georgia,Chatham County",65.6859277488086
-"Georgia,Chattooga County",NA
-"Georgia,Cherokee County",67.0218521181776
-"Georgia,Clarke County",68.5048763326309
-"Georgia,Clayton County",65.9421290430871
-"Georgia,Cobb County",65.6420650424262
-"Georgia,Coffee County",67.3565928497638
-"Georgia,Columbia County",71.1326705187119
-"Georgia,Coweta County",67.6896858180145
-"Georgia,Crisp County",70.6881892227013
-"Georgia,Decatur County",NA
-"Georgia,Dekalb County",65.866338258026
-"Georgia,Dougherty County",67.9233655774573
-"Georgia,Douglas County",67.2772698628021
-"Georgia,Echols County",NA
-"Georgia,Elbert County",71.425744967961
-"Georgia,Fayette County",71.1073010051664
-"Georgia,Floyd County",67.740109432252
-"Georgia,Forsyth County",68.1381330147441
-"Georgia,Franklin County",NA
-"Georgia,Fulton County",66.3868959467933
-"Georgia,Glynn County",68.9706264531443
-"Georgia,Gordon County",NA
-"Georgia,Grady County",71.0068327644505
-"Georgia,Gwinnett County",66.7272001931174
-"Georgia,Hall County",67.4514472138374
-"Georgia,Hancock County",66.5710486532684
-"Georgia,Haralson County",72.0227181362951
-"Georgia,Harris County",NA
-"Georgia,Henry County",67.7040261027083
-"Georgia,Houston County",65.5829536165099
-"Georgia,Jeff Davis County",69.5224183043789
-"Georgia,Jefferson County",67.6515617215904
-"Georgia,Lamar County",71.6711447303618
-"Georgia,Laurens County",69.4194460476574
-"Georgia,Lee County",63.2842561212011
-"Georgia,Liberty County",67.5575073811154
-"Georgia,Lincoln County",68.6614860831535
-"Georgia,Lowndes County",67.7088643066273
-"Georgia,Lumpkin County",70.6786418100829
-"Georgia,Mitchell County",69.9338010710778
-"Georgia,Morgan County",NA
-"Georgia,Murray County",78.4040872265671
-"Georgia,Muscogee County",67.4111747676008
-"Georgia,Newton County",67.6777334983971
-"Georgia,Paulding County",68.7824043835605
-"Georgia,Peach County",66.1389673315376
-"Georgia,Richmond County",67.5529986446117
-"Georgia,Rockdale County",69.9383998707969
-"Georgia,Spalding County",67.4147853711757
-"Georgia,Sumter County",71.8355525996779
-"Georgia,Tattnall County",70.1014566947576
-"Georgia,Thomas County",70.514918693789
-"Georgia,Tift County",71.728170541752
-"Georgia,Troup County",70.2130379445405
-"Georgia,Turner County",NA
-"Georgia,Twiggs County",NA
-"Georgia,Upson County",70.1742839132881
-"Georgia,Walton County",67.3595940372998
-"Georgia,Warren County",74.1798373099996
-"Georgia,Webster County",71.8124265204778
-"Georgia,Whitfield County",70.0888674875499
-"Georgia,Wilkinson County",70.4793957425481
-"Georgia,Worth County",68.0454088928282
-"Idaho,Ada County",66.3224095053969
-"Idaho,Bannock County",71.6401209689819
-"Idaho,Bingham County",65.9610532259437
-"Idaho,Blaine County",67.5305208793013
-"Idaho,Bonner County",NA
-"Idaho,Bonneville County",71.689283313205
-"Idaho,Canyon County",NA
-"Idaho,Clark County",NA
-"Idaho,Gooding County",71.2661971136171
-"Idaho,Latah County",71.381608005376
-"Idaho,Lincoln County",NA
-"Idaho,Madison County",71.9309196841911
-"Idaho,Nez Perce County",71.1358524286811
-"Idaho,Power County",74.0918218384582
-"Idaho,Shoshone County",NA
-"Idaho,Twin Falls County",71.1958554615501
-"Idaho,Washington County",66.5980173282759
-"Illinois,Adams County",68.7140954631162
-"Illinois,Alexander County",NA
-"Illinois,Boone County",72.8079666422854
-"Illinois,Brown County",62.9427303971687
-"Illinois,Bureau County",66.5154233592751
-"Illinois,Carroll County",NA
-"Illinois,Champaign County",66.4111629831794
-"Illinois,Christian County",69.8405038758912
-"Illinois,Clark County",68.9485480394361
-"Illinois,Clinton County",67.8204658893688
-"Illinois,Coles County",NA
-"Illinois,Cook County",66.6532956064853
-"Illinois,Cumberland County",76.8593365620372
-"Illinois,Dekalb County",70.8297800631167
-"Illinois,Dupage County",68.9348663021089
-"Illinois,Fayette County",72.956226610161
-"Illinois,Franklin County",NA
-"Illinois,Fulton County",66.7375732643787
-"Illinois,Grundy County",69.8709033490814
-"Illinois,Hamilton County",NA
-"Illinois,Hardin County",65.7833596432483
-"Illinois,Jackson County",66.431228026538
-"Illinois,Jasper County",NA
-"Illinois,Jefferson County",66.3390330628473
-"Illinois,Jo Daviess County",69.8759268941699
-"Illinois,Kane County",66.6360652716077
-"Illinois,Kankakee County",65.8316634496445
-"Illinois,Kendall County",64.481783065275
-"Illinois,Knox County",64.0077258265252
-"Illinois,La Salle County",72.5650068932288
-"Illinois,Lake County",66.5463019726285
-"Illinois,Lee County",66.2938998172693
-"Illinois,Livingston County",NA
-"Illinois,Logan County",NA
-"Illinois,Macon County",70.2750669553183
-"Illinois,Macoupin County",66.7613456130653
-"Illinois,Madison County",70.5117509424433
-"Illinois,Marshall County",79.0545945069082
-"Illinois,Mason County",73.9319823105858
-"Illinois,McDonough County",70.2580117593118
-"Illinois,McHenry County",66.1329865949615
-"Illinois,McLean County",69.1214009975481
-"Illinois,Montgomery County",67.8833286202649
-"Illinois,Morgan County",69.3635423767997
-"Illinois,Peoria County",70.4473702057808
-"Illinois,Piatt County",69.5931699618948
-"Illinois,Randolph County",65.5120019869838
-"Illinois,Richland County",70.9662942885702
-"Illinois,Rock Island County",72.7608812608081
-"Illinois,Saline County",69.6024727038887
-"Illinois,Sangamon County",67.0490608853473
-"Illinois,Shelby County",68.4422668797024
-"Illinois,St Clair County",66.4837146990244
-"Illinois,Stephenson County",67.5803528828307
-"Illinois,Vermilion County",68.0656607628903
-"Illinois,Warren County",NA
-"Illinois,Whiteside County",78.414817231187
-"Illinois,Will County",67.8386908646443
-"Illinois,Winnebago County",68.1484451510746
-"Indiana,Allen County",66.6252053890898
-"Indiana,Bartholomew County",65.719809296442
-"Indiana,Boone County",68.0020502106232
-"Indiana,Cass County",NA
-"Indiana,Clark County",67.4888593224271
-"Indiana,Clinton County",64.4809985096364
-"Indiana,Crawford County",70.7892588067104
-"Indiana,Dearborn County",82.0377503844113
-"Indiana,Decatur County",NA
-"Indiana,Delaware County",68.1779790550687
-"Indiana,Elkhart County",69.6238988909607
-"Indiana,Floyd County",68.2478173069579
-"Indiana,Grant County",72.593116994855
-"Indiana,Greene County",73.514431438289
-"Indiana,Hamilton County",69.7187936983091
-"Indiana,Hancock County",70.8643124881734
-"Indiana,Harrison County",69.8254330569027
-"Indiana,Hendricks County",68.5519887565942
-"Indiana,Henry County",79.5638249460716
-"Indiana,Howard County",68.1630388348918
-"Indiana,Huntington County",69.5096868562742
-"Indiana,Jackson County",NA
-"Indiana,Johnson County",67.9631871970064
-"Indiana,Knox County",NA
-"Indiana,Kosciusko County",71.1492407425642
-"Indiana,La Porte County",72.638600274825
-"Indiana,Lake County",68.3925010894973
-"Indiana,Lawrence County",66.1546727937005
-"Indiana,Madison County",68.6026972428341
-"Indiana,Marion County",65.8029806737722
-"Indiana,Miami County",67.309472032495
-"Indiana,Monroe County",69.3588683885466
-"Indiana,Montgomery County",68.7144853679952
-"Indiana,Morgan County",71.7572408091681
-"Indiana,Newton County",NA
-"Indiana,Orange County",72.6123786056979
-"Indiana,Owen County",65.5316318162744
-"Indiana,Parke County",NA
-"Indiana,Perry County",72.9625454069584
-"Indiana,Porter County",67.184352656667
-"Indiana,Putnam County",70.7985832809203
-"Indiana,Randolph County",67.5525352464469
-"Indiana,St Joseph County",66.9316433603937
-"Indiana,St. Joseph County",NA
-"Indiana,Steuben County",69.5985731904756
-"Indiana,Tippecanoe County",67.8202047523486
-"Indiana,Vanderburgh County",67.6678265272261
-"Indiana,Vermillion County",66.2664622447997
-"Indiana,Vigo County",67.6988601087004
-"Indiana,Wabash County",69.1532240634406
-"Indiana,Warren County",NA
-"Indiana,Warrick County",70.1837355589913
-"Indiana,Washington County",65.3917740474913
-"Indiana,Wayne County",70.1948946287898
-"Indiana,Wells County",70.8369684930938
-"Indiana,Whitley County",NA
-"Iowa,Benton County",73.3228396410467
-"Iowa,Black Hawk County",68.9291016878553
-"Iowa,Bremer County",NA
-"Iowa,Carroll County",71.0312484300447
-"Iowa,Cedar County",69.5081507172763
-"Iowa,Cerro Gordo County",69.6355118194531
-"Iowa,Chickasaw County",74.1559780418847
-"Iowa,Clayton County",NA
-"Iowa,Crawford County",65.873598144103
-"Iowa,Decatur County",72.4256453373271
-"Iowa,Dubuque County",70.2580361966608
-"Iowa,Hardin County",67.6067803509744
-"Iowa,Harrison County",NA
-"Iowa,Jefferson County",77.4581166737214
-"Iowa,Johnson County",72.4206317169252
-"Iowa,Keokuk County",70.5223968199114
-"Iowa,Linn County",68.8251611980685
-"Iowa,Madison County",NA
-"Iowa,Marion County",69.0463768557637
-"Iowa,Marshall County",73.5336705299121
-"Iowa,Monona County",NA
-"Iowa,Muscatine County",70.5384886575087
-"Iowa,Palo Alto County",66.6111471532543
-"Iowa,Polk County",68.2682829338491
-"Iowa,Pottawattamie County",69.7543532372565
-"Iowa,Poweshiek County",70.5436658583413
-"Iowa,Ringgold County",NA
-"Iowa,Scott County",70.7576430497827
-"Iowa,Shelby County",67.6946944209537
-"Iowa,Sioux County",74.8560624523199
-"Iowa,Story County",NA
-"Iowa,Van Buren County",69.0833784070128
-"Iowa,Wapello County",69.3479718543135
-"Iowa,Warren County",68.8887195491377
-"Iowa,Washington County",70.6020164468846
-"Iowa,Woodbury County",66.3913125000596
-"Iowa,Wright County",NA
-"Kansas,Bourbon County",73.4130887673157
-"Kansas,Butler County",68.404571803838
-"Kansas,Clay County",68.4768860513846
-"Kansas,Comanche County",67.3555788020825
-"Kansas,Crawford County",69.2328779117105
-"Kansas,Douglas County",68.0298598890174
-"Kansas,Ellis County",71.2360821842532
-"Kansas,Finney County",71.5790431310938
-"Kansas,Ford County",69.834376276566
-"Kansas,Franklin County",NA
-"Kansas,Geary County",68.4191370120412
-"Kansas,Greenwood County",70.5016787970665
-"Kansas,Jewell County",70.9588664792367
-"Kansas,Johnson County",68.9044339493019
-"Kansas,Leavenworth County",NA
-"Kansas,Lincoln County",69.0264935874898
-"Kansas,Logan County",NA
-"Kansas,Lyon County",66.4724948972575
-"Kansas,Marion County",73.2271065107449
-"Kansas,McPherson County",68.5288274266357
-"Kansas,Miami County",NA
-"Kansas,Mitchell County",70.2110154422987
-"Kansas,Norton County",69.6938053599848
-"Kansas,Phillips County",71.2464161623014
-"Kansas,Pratt County",NA
-"Kansas,Rawlins County",67.0120226956422
-"Kansas,Reno County",69.5873911508933
-"Kansas,Riley County",70.870420300545
-"Kansas,Saline County",71.8227636957831
-"Kansas,Sedgwick County",66.4311642236899
-"Kansas,Shawnee County",66.9425417858574
-"Kansas,Smith County",68.1530510300755
-"Kansas,Stanton County",74.123682100878
-"Kansas,Sumner County",NA
-"Kansas,Washington County",72.2749928910739
-"Kansas,Wyandotte County",66.4445378713263
-"Kentucky,Adair County",70.5310413981351
-"Kentucky,Ballard County",NA
-"Kentucky,Bath County",NA
-"Kentucky,Bell County",70.8999012738265
-"Kentucky,Boone County",68.8446746219398
-"Kentucky,Boyd County",71.3678144960918
-"Kentucky,Boyle County",69.5651902038044
-"Kentucky,Bullitt County",69.1717582025468
-"Kentucky,Butler County",66.5437038249878
-"Kentucky,Calloway County",70.3041319377994
-"Kentucky,Campbell County",70.8308514833152
-"Kentucky,Carroll County",NA
-"Kentucky,Christian County",70.8334419027232
-"Kentucky,Clark County",70.50135375671
-"Kentucky,Daviess County",66.9103266508682
-"Kentucky,Fayette County",66.304370344635
-"Kentucky,Floyd County",69.715793008652
-"Kentucky,Franklin County",68.2353490295026
-"Kentucky,Grant County",74.1267446171031
-"Kentucky,Graves County",69.4781643924459
-"Kentucky,Hardin County",69.0584935007542
-"Kentucky,Henderson County",70.5732904865843
-"Kentucky,Jefferson County",65.6230074202333
-"Kentucky,Jessamine County",70.9054217550977
-"Kentucky,Kenton County",70.70070795299
-"Kentucky,Knox County",70.1578466507334
-"Kentucky,Laurel County",72.1137079785968
-"Kentucky,Logan County",NA
-"Kentucky,Madison County",68.1591032642771
-"Kentucky,Mason County",70.5109002655103
-"Kentucky,McCracken County",68.5498333101202
-"Kentucky,McLean County",69.6219331055999
-"Kentucky,Metcalfe County",66.7260114252002
-"Kentucky,Nelson County",67.7596913054738
-"Kentucky,Pendleton County",71.3084868330057
-"Kentucky,Perry County",NA
-"Kentucky,Pike County",67.4482795676021
-"Kentucky,Pulaski County",70.4115722833684
-"Kentucky,Rowan County",70.3555213807028
-"Kentucky,Scott County",72.6031354643005
-"Kentucky,Taylor County",68.079930981721
-"Kentucky,Warren County",68.8230208681255
-"Kentucky,Whitley County",69.6644892635965
-"Kentucky,Woodford County",NA
+"Alabama,Autauga",69.7893555726984
+"Alabama,Baldwin",67.6758353098804
+"Alabama,Barbour",70.3603888288071
+"Alabama,Bibb",70.0286490074738
+"Alabama,Blount",69.5445133259432
+"Alabama,Bullock",81.7049445569047
+"Alabama,Butler",69.4066937334504
+"Alabama,Calhoun",65.7251100659573
+"Alabama,Chambers",61.1985220924747
+"Alabama,Cherokee",68.9355440918602
+"Alabama,Choctaw",NA
+"Alabama,Clarke",67.1858434875729
+"Alabama,Clay",65.0214474073768
+"Alabama,Cleburne",73.8155821106279
+"Alabama,Coffee",70.127984645283
+"Alabama,Colbert",69.3353942203393
+"Alabama,Coosa",70.9338053639499
+"Alabama,Covington",67.8671371717028
+"Alabama,Crenshaw",NA
+"Alabama,Cullman",69.0709803370244
+"Alabama,Dale",74.5744489773463
+"Alabama,Dallas",70.2880046788593
+"Alabama,Dekalb",69.8423180931188
+"Alabama,Elmore",70.3292088786242
+"Alabama,Escambia",68.3322738543624
+"Alabama,Etowah",65.5617153870674
+"Alabama,Franklin",NA
+"Alabama,Geneva",66.5143330084871
+"Alabama,Greene",68.7868866256517
+"Alabama,Hale",66.2087731315293
+"Alabama,Henry",63.0823226653359
+"Alabama,Houston",65.9294935065681
+"Alabama,Jackson",66.7122903653907
+"Alabama,Jefferson",65.2577754778528
+"Alabama,Lamar",70.1863924239786
+"Alabama,Lauderdale",64.8612259421811
+"Alabama,Lawrence",NA
+"Alabama,Lee",67.5260626510511
+"Alabama,Limestone",68.7483549837421
+"Alabama,Macon",68.5488570333954
+"Alabama,Madison",67.7689772502502
+"Alabama,Marengo",63.6795568214295
+"Alabama,Marion",69.7325676767018
+"Alabama,Marshall",69.0863138094179
+"Alabama,Mobile",66.1495528829649
+"Alabama,Monroe",66.1359785604414
+"Alabama,Montgomery",65.9478928745145
+"Alabama,Morgan",66.8423276469955
+"Alabama,Perry",70.4587556683652
+"Alabama,Pickens",70.4560407778259
+"Alabama,Pike",70.3342350384726
+"Alabama,Randolph",67.4658782844957
+"Alabama,Russell",66.912707094899
+"Alabama,Shelby",69.3318449110047
+"Alabama,St Clair",71.359084990136
+"Alabama,Sumter",68.7290540224907
+"Alabama,Talladega",66.8362750809119
+"Alabama,Tuscaloosa",67.2766830665336
+"Alabama,Walker",67.6470537636716
+"Alabama,Washington",67.1217291832993
+"Alabama,Wilcox",67.644791709575
+"Alabama,Winston",NA
+"Arizona,Cochise",68.4970724410708
+"Arizona,Coconino",67.9698349998551
+"Arizona,Graham",66.3179401386368
+"Arizona,Greenlee",68.2212785266356
+"Arizona,Maricopa",66.8994403464702
+"Arizona,Mohave",69.172936508448
+"Arizona,Navajo",69.3096384118989
+"Arizona,Pima",65.5333511425734
+"Arizona,Pinal",67.8370994042386
+"Arizona,Santa Cruz",70.4262774546438
+"Arizona,Yavapai",69.9461884198414
+"Arizona,Yuma",67.7347977628458
+"Arkansas,Arkansas",NA
+"Arkansas,Baxter",69.3731702925146
+"Arkansas,Benton",68.4803470200692
+"Arkansas,Boone",68.4800969411677
+"Arkansas,Bradley",68.9206069247324
+"Arkansas,Calhoun",68.6576929438668
+"Arkansas,Clark",70.1687078109241
+"Arkansas,Clay",69.9982267322268
+"Arkansas,Cleburne",68.3160242059042
+"Arkansas,Columbia",NA
+"Arkansas,Conway",70.2529111451687
+"Arkansas,Craighead",67.8853762110214
+"Arkansas,Crawford",68.773511823996
+"Arkansas,Crittenden",70.5974341145752
+"Arkansas,Cross",72.9622127123011
+"Arkansas,Dallas",NA
+"Arkansas,Drew",68.7327191394765
+"Arkansas,Faulkner",68.9998806210425
+"Arkansas,Franklin",68.3680647283901
+"Arkansas,Fulton",68.2988902143448
+"Arkansas,Garland",69.3610885039462
+"Arkansas,Greene",67.5101345380224
+"Arkansas,Hempstead",70.8384545593618
+"Arkansas,Howard",72.6803548878136
+"Arkansas,Independence",66.1934846799483
+"Arkansas,Izard",67.2199137978074
+"Arkansas,Jackson",66.5921467309847
+"Arkansas,Jefferson",69.3373197415007
+"Arkansas,Johnson",69.6759032544001
+"Arkansas,Lafayette",NA
+"Arkansas,Lincoln",68.0543614609191
+"Arkansas,Little River",NA
+"Arkansas,Logan",71.6556885828554
+"Arkansas,Lonoke",66.867869089092
+"Arkansas,Madison",69.3119304627249
+"Arkansas,Miller",67.1965728709016
+"Arkansas,Mississippi",69.7776910724809
+"Arkansas,Monroe",69.7160914310248
+"Arkansas,Newton",64.2665235833523
+"Arkansas,Ouachita",70.3869388060587
+"Arkansas,Perry",67.0616725919729
+"Arkansas,Pike",65.5767599720482
+"Arkansas,Poinsett",69.3918522864687
+"Arkansas,Polk",72.0291685050713
+"Arkansas,Pope",70.0694447208401
+"Arkansas,Prairie",NA
+"Arkansas,Pulaski",66.2573789829122
+"Arkansas,Saline",70.2240042918581
+"Arkansas,Scott",67.4297310605654
+"Arkansas,Sebastian",68.1904786930412
+"Arkansas,Sharp",70.5216705460269
+"Arkansas,St Francis",66.0641037776719
+"Arkansas,Union",67.6756819034614
+"Arkansas,Van Buren",NA
+"Arkansas,Washington",67.8437947879879
+"Arkansas,White",67.117520245322
+"Arkansas,Woodruff",68.7696518414899
+"Arkansas,Yell",65.998824543463
+"California,Alameda",67.883576142148
+"California,Butte",66.7429342614945
+"California,Calaveras",66.1296241575433
+"California,Contra Costa",66.6917193061323
+"California,El Dorado",69.9320008808077
+"California,Fresno",66.8825068370987
+"California,Humboldt",68.5751324262404
+"California,Imperial",72.1687339645376
+"California,Inyo",67.4638173242707
+"California,Kern",66.1322472469123
+"California,Kings",68.3404601802173
+"California,Lassen",66.143117645129
+"California,Los Angeles",67.0938251423305
+"California,Madera",69.5596827609894
+"California,Marin",67.1064846365115
+"California,Mendocino",67.9812600126638
+"California,Merced",65.6119980313156
+"California,Monterey",66.1242784127656
+"California,Napa",69.8697210715684
+"California,Nevada",75.4838782661822
+"California,Orange",67.1728156137486
+"California,Placer",67.8389755052067
+"California,Plumas",69.5779323944914
+"California,Riverside",65.7821494268079
+"California,Sacramento",66.6881875630467
+"California,San Benito",70.7635717775989
+"California,San Bernardino",66.1915388447515
+"California,San Diego",66.8136939775398
+"California,San Francisco",67.9215139059617
+"California,San Joaquin",66.5316481260586
+"California,San Luis Obispo",72.8287135363307
+"California,San Mateo",66.9732943732839
+"California,Santa Barbara",69.9546888175892
+"California,Santa Clara",65.4588049714627
+"California,Santa Cruz",66.9944139865031
+"California,Shasta",71.3161671349658
+"California,Solano",64.9458357205853
+"California,Sonoma",68.5950029673097
+"California,Stanislaus",66.1685791982685
+"California,Sutter",68.683312620959
+"California,Tehama",69.0039373319733
+"California,Trinity",NA
+"California,Tulare",66.1633915623253
+"California,Tuolumne",76.7344489276749
+"California,Ventura",66.0996327284177
+"California,Yolo",71.1139964759167
+"California,Yuba",67.0898921978863
+"Colorado,Adams",67.5044163683142
+"Colorado,Arapahoe",66.8180934110462
+"Colorado,Boulder",69.7661694863601
+"Colorado,Broomfield",NA
+"Colorado,Denver",66.5031502246213
+"Colorado,Douglas",67.9519415525809
+"Colorado,Eagle",65.4739078710125
+"Colorado,El Paso",65.5309897892571
+"Colorado,Fremont",74.270245317905
+"Colorado,Garfield",70.5791315659961
+"Colorado,Grand",68.6677663568609
+"Colorado,Jefferson",70.6361541360062
+"Colorado,Kit Carson",71.1053193981862
+"Colorado,La Plata",78.1476149716738
+"Colorado,Larimer",68.8235046292387
+"Colorado,Las Animas",NA
+"Colorado,Lincoln",66.834043264838
+"Colorado,Mesa",68.9617653758871
+"Colorado,Moffat",66.4601584423619
+"Colorado,Montrose",66.3158333509645
+"Colorado,Park",65.6736441417876
+"Colorado,Phillips",69.9025381084815
+"Colorado,Pitkin",68.3966960081354
+"Colorado,Pueblo",67.8303174278258
+"Colorado,Rio Grande",70.7074503532826
+"Colorado,Routt",NA
+"Colorado,San Miguel",67.23752581879
+"Colorado,Summit",70.3777132989231
+"Colorado,Teller",NA
+"Colorado,Weld",69.0431547596312
+"Connecticut,Fairfield",65.8996371835341
+"Connecticut,Hartford",65.7465244571662
+"Connecticut,Litchfield",66.3328476692785
+"Connecticut,Middlesex",66.1818299336996
+"Connecticut,New Haven",65.5980009329716
+"Connecticut,New London",65.9938222013215
+"Connecticut,Tolland",65.4216237891265
+"Connecticut,Windham",66.3277031953173
+"Delaware,Kent",66.2392863716628
+"Delaware,New Castle",65.9958735968276
+"Delaware,Sussex",67.5828056845396
+"Florida,Alachua",68.2530458081186
+"Florida,Bay",66.7762376763757
+"Florida,Brevard",68.1473832665023
+"Florida,Broward",66.1428098891687
+"Florida,Charlotte",70.7680533208591
+"Florida,Clay",68.5871890493702
+"Florida,Collier",66.7213010649516
+"Florida,Duval",65.9667123579325
+"Florida,Escambia",66.4501628430336
+"Florida,Flagler",68.4884872812092
+"Florida,Gadsden",NA
+"Florida,Hamilton",67.7120652551525
+"Florida,Hardee",68.7158466459163
+"Florida,Hernando",67.1024249735429
+"Florida,Highlands",66.0131943477053
+"Florida,Hillsborough",66.0325212610698
+"Florida,Holmes",NA
+"Florida,Indian River",68.4094082984973
+"Florida,Lake",69.2962047226162
+"Florida,Lee",67.1714695347124
+"Florida,Leon",65.5452937300829
+"Florida,Manatee",66.0735019790338
+"Florida,Marion",67.5870327312169
+"Florida,Martin",NA
+"Florida,Miami-Dade",65.3200880478029
+"Florida,Monroe",66.9191776715851
+"Florida,Nassau",NA
+"Florida,Okaloosa",68.314132253193
+"Florida,Orange",66.1665161187301
+"Florida,Osceola",66.2442756224393
+"Florida,Palm Beach",66.7626772206683
+"Florida,Pasco",68.0014127414087
+"Florida,Pinellas",66.5844947633827
+"Florida,Polk",65.9055032638983
+"Florida,Putnam",74.0209807861456
+"Florida,Santa Rosa",69.2106237666585
+"Florida,Sarasota",68.454102438411
+"Florida,Seminole",74.3404804225369
+"Florida,St Johns",68.4583109387234
+"Florida,St Lucie",65.814725084907
+"Florida,Sumter",69.7099269074013
+"Florida,Volusia",67.4321149172281
+"Florida,Walton",71.576730420784
+"Georgia,Baldwin",68.4281616101226
+"Georgia,Barrow",70.2772434073925
+"Georgia,Bartow",69.583682701941
+"Georgia,Bibb",66.0277765853598
+"Georgia,Brantley",67.075438512808
+"Georgia,Bryan",68.80863305754
+"Georgia,Bulloch",66.7434021514543
+"Georgia,Burke",65.6714813713996
+"Georgia,Calhoun",NA
+"Georgia,Carroll",67.4696835499823
+"Georgia,Catoosa",73.12782302165
+"Georgia,Chatham",65.6859277488086
+"Georgia,Chattooga",NA
+"Georgia,Cherokee",67.0218521181776
+"Georgia,Clarke",68.5048763326309
+"Georgia,Clayton",65.9421290430871
+"Georgia,Cobb",65.6420650424262
+"Georgia,Coffee",67.3565928497638
+"Georgia,Columbia",71.1326705187119
+"Georgia,Coweta",67.6896858180145
+"Georgia,Crisp",70.6881892227013
+"Georgia,Decatur",NA
+"Georgia,Dekalb",65.866338258026
+"Georgia,Dougherty",67.9233655774573
+"Georgia,Douglas",67.2772698628021
+"Georgia,Echols",NA
+"Georgia,Elbert",71.425744967961
+"Georgia,Fayette",71.1073010051664
+"Georgia,Floyd",67.740109432252
+"Georgia,Forsyth",68.1381330147441
+"Georgia,Franklin",NA
+"Georgia,Fulton",66.3868959467933
+"Georgia,Glynn",68.9706264531443
+"Georgia,Gordon",NA
+"Georgia,Grady",71.0068327644505
+"Georgia,Gwinnett",66.7272001931174
+"Georgia,Hall",67.4514472138374
+"Georgia,Hancock",66.5710486532684
+"Georgia,Haralson",72.0227181362951
+"Georgia,Harris",NA
+"Georgia,Henry",67.7040261027083
+"Georgia,Houston",65.5829536165099
+"Georgia,Jeff Davis",69.5224183043789
+"Georgia,Jefferson",67.6515617215904
+"Georgia,Lamar",71.6711447303618
+"Georgia,Laurens",69.4194460476574
+"Georgia,Lee",63.2842561212011
+"Georgia,Liberty",67.5575073811154
+"Georgia,Lincoln",68.6614860831535
+"Georgia,Lowndes",67.7088643066273
+"Georgia,Lumpkin",70.6786418100829
+"Georgia,Mitchell",69.9338010710778
+"Georgia,Morgan",NA
+"Georgia,Murray",78.4040872265671
+"Georgia,Muscogee",67.4111747676008
+"Georgia,Newton",67.6777334983971
+"Georgia,Paulding",68.7824043835605
+"Georgia,Peach",66.1389673315376
+"Georgia,Richmond",67.5529986446117
+"Georgia,Rockdale",69.9383998707969
+"Georgia,Spalding",67.4147853711757
+"Georgia,Sumter",71.8355525996779
+"Georgia,Tattnall",70.1014566947576
+"Georgia,Thomas",70.514918693789
+"Georgia,Tift",71.728170541752
+"Georgia,Troup",70.2130379445405
+"Georgia,Turner",NA
+"Georgia,Twiggs",NA
+"Georgia,Upson",70.1742839132881
+"Georgia,Walton",67.3595940372998
+"Georgia,Warren",74.1798373099996
+"Georgia,Webster",71.8124265204778
+"Georgia,Whitfield",70.0888674875499
+"Georgia,Wilkinson",70.4793957425481
+"Georgia,Worth",68.0454088928282
+"Idaho,Ada",66.3224095053969
+"Idaho,Bannock",71.6401209689819
+"Idaho,Bingham",65.9610532259437
+"Idaho,Blaine",67.5305208793013
+"Idaho,Bonner",NA
+"Idaho,Bonneville",71.689283313205
+"Idaho,Canyon",NA
+"Idaho,Clark",NA
+"Idaho,Gooding",71.2661971136171
+"Idaho,Latah",71.381608005376
+"Idaho,Lincoln",NA
+"Idaho,Madison",71.9309196841911
+"Idaho,Nez Perce",71.1358524286811
+"Idaho,Power",74.0918218384582
+"Idaho,Shoshone",NA
+"Idaho,Twin Falls",71.1958554615501
+"Idaho,Washington",66.5980173282759
+"Illinois,Adams",68.7140954631162
+"Illinois,Alexander",NA
+"Illinois,Boone",72.8079666422854
+"Illinois,Brown",62.9427303971687
+"Illinois,Bureau",66.5154233592751
+"Illinois,Carroll",NA
+"Illinois,Champaign",66.4111629831794
+"Illinois,Christian",69.8405038758912
+"Illinois,Clark",68.9485480394361
+"Illinois,Clinton",67.8204658893688
+"Illinois,Coles",NA
+"Illinois,Cook",66.6532956064853
+"Illinois,Cumberland",76.8593365620372
+"Illinois,Dekalb",70.8297800631167
+"Illinois,Dupage",68.9348663021089
+"Illinois,Fayette",72.956226610161
+"Illinois,Franklin",NA
+"Illinois,Fulton",66.7375732643787
+"Illinois,Grundy",69.8709033490814
+"Illinois,Hamilton",NA
+"Illinois,Hardin",65.7833596432483
+"Illinois,Jackson",66.431228026538
+"Illinois,Jasper",NA
+"Illinois,Jefferson",66.3390330628473
+"Illinois,Jo Daviess",69.8759268941699
+"Illinois,Kane",66.6360652716077
+"Illinois,Kankakee",65.8316634496445
+"Illinois,Kendall",64.481783065275
+"Illinois,Knox",64.0077258265252
+"Illinois,La Salle",72.5650068932288
+"Illinois,Lake",66.5463019726285
+"Illinois,Lee",66.2938998172693
+"Illinois,Livingston",NA
+"Illinois,Logan",NA
+"Illinois,Macon",70.2750669553183
+"Illinois,Macoupin",66.7613456130653
+"Illinois,Madison",70.5117509424433
+"Illinois,Marshall",79.0545945069082
+"Illinois,Mason",73.9319823105858
+"Illinois,McDonough",70.2580117593118
+"Illinois,McHenry",66.1329865949615
+"Illinois,McLean",69.1214009975481
+"Illinois,Montgomery",67.8833286202649
+"Illinois,Morgan",69.3635423767997
+"Illinois,Peoria",70.4473702057808
+"Illinois,Piatt",69.5931699618948
+"Illinois,Randolph",65.5120019869838
+"Illinois,Richland",70.9662942885702
+"Illinois,Rock Island",72.7608812608081
+"Illinois,Saline",69.6024727038887
+"Illinois,Sangamon",67.0490608853473
+"Illinois,Shelby",68.4422668797024
+"Illinois,St Clair",66.4837146990244
+"Illinois,Stephenson",67.5803528828307
+"Illinois,Vermilion",68.0656607628903
+"Illinois,Warren",NA
+"Illinois,Whiteside",78.414817231187
+"Illinois,Will",67.8386908646443
+"Illinois,Winnebago",68.1484451510746
+"Indiana,Allen",66.6252053890898
+"Indiana,Bartholomew",65.719809296442
+"Indiana,Boone",68.0020502106232
+"Indiana,Cass",NA
+"Indiana,Clark",67.4888593224271
+"Indiana,Clinton",64.4809985096364
+"Indiana,Crawford",70.7892588067104
+"Indiana,Dearborn",82.0377503844113
+"Indiana,Decatur",NA
+"Indiana,Delaware",68.1779790550687
+"Indiana,Elkhart",69.6238988909607
+"Indiana,Floyd",68.2478173069579
+"Indiana,Grant",72.593116994855
+"Indiana,Greene",73.514431438289
+"Indiana,Hamilton",69.7187936983091
+"Indiana,Hancock",70.8643124881734
+"Indiana,Harrison",69.8254330569027
+"Indiana,Hendricks",68.5519887565942
+"Indiana,Henry",79.5638249460716
+"Indiana,Howard",68.1630388348918
+"Indiana,Huntington",69.5096868562742
+"Indiana,Jackson",NA
+"Indiana,Johnson",67.9631871970064
+"Indiana,Knox",NA
+"Indiana,Kosciusko",71.1492407425642
+"Indiana,La Porte",72.638600274825
+"Indiana,Lake",68.3925010894973
+"Indiana,Lawrence",66.1546727937005
+"Indiana,Madison",68.6026972428341
+"Indiana,Marion",65.8029806737722
+"Indiana,Miami",67.309472032495
+"Indiana,Monroe",69.3588683885466
+"Indiana,Montgomery",68.7144853679952
+"Indiana,Morgan",71.7572408091681
+"Indiana,Newton",NA
+"Indiana,Orange",72.6123786056979
+"Indiana,Owen",65.5316318162744
+"Indiana,Parke",NA
+"Indiana,Perry",72.9625454069584
+"Indiana,Porter",67.184352656667
+"Indiana,Putnam",70.7985832809203
+"Indiana,Randolph",67.5525352464469
+"Indiana,St Joseph",66.9316433603937
+"Indiana,St. Joseph",NA
+"Indiana,Steuben",69.5985731904756
+"Indiana,Tippecanoe",67.8202047523486
+"Indiana,Vanderburgh",67.6678265272261
+"Indiana,Vermillion",66.2664622447997
+"Indiana,Vigo",67.6988601087004
+"Indiana,Wabash",69.1532240634406
+"Indiana,Warren",NA
+"Indiana,Warrick",70.1837355589913
+"Indiana,Washington",65.3917740474913
+"Indiana,Wayne",70.1948946287898
+"Indiana,Wells",70.8369684930938
+"Indiana,Whitley",NA
+"Iowa,Benton",73.3228396410467
+"Iowa,Black Hawk",68.9291016878553
+"Iowa,Bremer",NA
+"Iowa,Carroll",71.0312484300447
+"Iowa,Cedar",69.5081507172763
+"Iowa,Cerro Gordo",69.6355118194531
+"Iowa,Chickasaw",74.1559780418847
+"Iowa,Clayton",NA
+"Iowa,Crawford",65.873598144103
+"Iowa,Decatur",72.4256453373271
+"Iowa,Dubuque",70.2580361966608
+"Iowa,Hardin",67.6067803509744
+"Iowa,Harrison",NA
+"Iowa,Jefferson",77.4581166737214
+"Iowa,Johnson",72.4206317169252
+"Iowa,Keokuk",70.5223968199114
+"Iowa,Linn",68.8251611980685
+"Iowa,Madison",NA
+"Iowa,Marion",69.0463768557637
+"Iowa,Marshall",73.5336705299121
+"Iowa,Monona",NA
+"Iowa,Muscatine",70.5384886575087
+"Iowa,Palo Alto",66.6111471532543
+"Iowa,Polk",68.2682829338491
+"Iowa,Pottawattamie",69.7543532372565
+"Iowa,Poweshiek",70.5436658583413
+"Iowa,Ringgold",NA
+"Iowa,Scott",70.7576430497827
+"Iowa,Shelby",67.6946944209537
+"Iowa,Sioux",74.8560624523199
+"Iowa,Story",NA
+"Iowa,Van Buren",69.0833784070128
+"Iowa,Wapello",69.3479718543135
+"Iowa,Warren",68.8887195491377
+"Iowa,Washington",70.6020164468846
+"Iowa,Woodbury",66.3913125000596
+"Iowa,Wright",NA
+"Kansas,Bourbon",73.4130887673157
+"Kansas,Butler",68.404571803838
+"Kansas,Clay",68.4768860513846
+"Kansas,Comanche",67.3555788020825
+"Kansas,Crawford",69.2328779117105
+"Kansas,Douglas",68.0298598890174
+"Kansas,Ellis",71.2360821842532
+"Kansas,Finney",71.5790431310938
+"Kansas,Ford",69.834376276566
+"Kansas,Franklin",NA
+"Kansas,Geary",68.4191370120412
+"Kansas,Greenwood",70.5016787970665
+"Kansas,Jewell",70.9588664792367
+"Kansas,Johnson",68.9044339493019
+"Kansas,Leavenworth",NA
+"Kansas,Lincoln",69.0264935874898
+"Kansas,Logan",NA
+"Kansas,Lyon",66.4724948972575
+"Kansas,Marion",73.2271065107449
+"Kansas,McPherson",68.5288274266357
+"Kansas,Miami",NA
+"Kansas,Mitchell",70.2110154422987
+"Kansas,Norton",69.6938053599848
+"Kansas,Phillips",71.2464161623014
+"Kansas,Pratt",NA
+"Kansas,Rawlins",67.0120226956422
+"Kansas,Reno",69.5873911508933
+"Kansas,Riley",70.870420300545
+"Kansas,Saline",71.8227636957831
+"Kansas,Sedgwick",66.4311642236899
+"Kansas,Shawnee",66.9425417858574
+"Kansas,Smith",68.1530510300755
+"Kansas,Stanton",74.123682100878
+"Kansas,Sumner",NA
+"Kansas,Washington",72.2749928910739
+"Kansas,Wyandotte",66.4445378713263
+"Kentucky,Adair",70.5310413981351
+"Kentucky,Ballard",NA
+"Kentucky,Bath",NA
+"Kentucky,Bell",70.8999012738265
+"Kentucky,Boone",68.8446746219398
+"Kentucky,Boyd",71.3678144960918
+"Kentucky,Boyle",69.5651902038044
+"Kentucky,Bullitt",69.1717582025468
+"Kentucky,Butler",66.5437038249878
+"Kentucky,Calloway",70.3041319377994
+"Kentucky,Campbell",70.8308514833152
+"Kentucky,Carroll",NA
+"Kentucky,Christian",70.8334419027232
+"Kentucky,Clark",70.50135375671
+"Kentucky,Daviess",66.9103266508682
+"Kentucky,Fayette",66.304370344635
+"Kentucky,Floyd",69.715793008652
+"Kentucky,Franklin",68.2353490295026
+"Kentucky,Grant",74.1267446171031
+"Kentucky,Graves",69.4781643924459
+"Kentucky,Hardin",69.0584935007542
+"Kentucky,Henderson",70.5732904865843
+"Kentucky,Jefferson",65.6230074202333
+"Kentucky,Jessamine",70.9054217550977
+"Kentucky,Kenton",70.70070795299
+"Kentucky,Knox",70.1578466507334
+"Kentucky,Laurel",72.1137079785968
+"Kentucky,Logan",NA
+"Kentucky,Madison",68.1591032642771
+"Kentucky,Mason",70.5109002655103
+"Kentucky,McCracken",68.5498333101202
+"Kentucky,McLean",69.6219331055999
+"Kentucky,Metcalfe",66.7260114252002
+"Kentucky,Nelson",67.7596913054738
+"Kentucky,Pendleton",71.3084868330057
+"Kentucky,Perry",NA
+"Kentucky,Pike",67.4482795676021
+"Kentucky,Pulaski",70.4115722833684
+"Kentucky,Rowan",70.3555213807028
+"Kentucky,Scott",72.6031354643005
+"Kentucky,Taylor",68.079930981721
+"Kentucky,Warren",68.8230208681255
+"Kentucky,Whitley",69.6644892635965
+"Kentucky,Woodford",NA
 "Louisiana,Ascension Parish",74.2434838068416
 "Louisiana,Bossier Parish",67.6606115341124
 "Louisiana,Caddo Parish",66.9755591816961
@@ -613,830 +613,830 @@
 "Louisiana,Tangipahoa Parish",68.043966874301
 "Louisiana,Terrebonne Parish",70.1199243350696
 "Louisiana,Vermilion Parish",NA
-"Maine,Androscoggin County",NA
-"Maine,Aroostook County",NA
-"Maine,Cumberland County",66.4555366993148
-"Maine,Kennebec County",66.4311794559445
-"Maine,Knox County",73.9735289800093
-"Maine,Oxford County",68.3944405034122
-"Maine,Penobscot County",66.2737899708119
-"Maine,Piscataquis County",65.8216213628567
-"Maine,Somerset County",69.3648208731535
-"Maine,York County",69.2662301242953
-"Maryland,Allegany County",69.8736528778124
-"Maryland,Anne Arundel County",66.3134598244666
+"Maine,Androscoggin",NA
+"Maine,Aroostook",NA
+"Maine,Cumberland",66.4555366993148
+"Maine,Kennebec",66.4311794559445
+"Maine,Knox",73.9735289800093
+"Maine,Oxford",68.3944405034122
+"Maine,Penobscot",66.2737899708119
+"Maine,Piscataquis",65.8216213628567
+"Maine,Somerset",69.3648208731535
+"Maine,York",69.2662301242953
+"Maryland,Allegany",69.8736528778124
+"Maryland,Anne Arundel",66.3134598244666
 "Maryland,Baltimore City",65.9781344509133
-"Maryland,Baltimore County",67.7636825590042
-"Maryland,Calvert County",NA
-"Maryland,Caroline County",68.2394331057433
-"Maryland,Carroll County",67.1020762766376
-"Maryland,Cecil County",70.0011491447494
-"Maryland,Charles County",69.7366737103087
-"Maryland,Frederick County",67.5454394318218
-"Maryland,Harford County",64.7082780631821
-"Maryland,Howard County",68.9019417926633
-"Maryland,Montgomery County",66.5460276235113
-"Maryland,Prince George's County",65.6072545651379
-"Maryland,Queen Anne's County",NA
-"Maryland,Somerset County",71.4867875789581
-"Maryland,St Mary's County",72.1997781294464
-"Maryland,Talbot County",68.7587949806995
-"Maryland,Washington County",67.8660749059844
-"Maryland,Wicomico County",67.3239708638161
-"Maryland,Worcester County",68.2130079579427
-"Massachusetts,Barnstable County",69.5176877919747
-"Massachusetts,Berkshire County",68.0215678557802
-"Massachusetts,Bristol County",69.1444846075539
-"Massachusetts,Essex County",65.7972010211156
-"Massachusetts,Franklin County",59.3203552173819
-"Massachusetts,Hampden County",66.6083774991302
-"Massachusetts,Hampshire County",65.6541981452648
-"Massachusetts,Middlesex County",65.4445543555824
-"Massachusetts,Nantucket County",71.1005748529265
-"Massachusetts,Norfolk County",66.0126139922726
-"Massachusetts,Plymouth County",65.0850835457924
-"Massachusetts,Suffolk County",66.2066445379731
-"Massachusetts,Worcester County",66.1970740983145
-"Michigan,Allegan County",NA
-"Michigan,Bay County",67.6125243619177
-"Michigan,Berrien County",67.7500218617679
-"Michigan,Calhoun County",71.6558442326485
-"Michigan,Charlevoix County",65.7546847714167
-"Michigan,Delta County",NA
-"Michigan,Dickinson County",NA
-"Michigan,Eaton County",67.2443083131372
-"Michigan,Genesee County",69.6024799626435
-"Michigan,Gladwin County",NA
-"Michigan,Grand Traverse County",69.8662803956556
-"Michigan,Gratiot County",68.6010413769403
-"Michigan,Ingham County",68.510153559342
-"Michigan,Isabella County",69.0863800634262
-"Michigan,Jackson County",69.3232441427
-"Michigan,Kalamazoo County",69.4301750163825
-"Michigan,Kalkaska County",67.9262898213298
-"Michigan,Kent County",66.6207873352692
-"Michigan,Lake County",NA
-"Michigan,Lenawee County",67.2658484960768
-"Michigan,Livingston County",72.3002243270799
-"Michigan,Macomb County",68.9288901546615
-"Michigan,Manistee County",73.9820464117055
-"Michigan,Marquette County",68.3891276832653
-"Michigan,Mecosta County",NA
-"Michigan,Menominee County",72.0331722988481
-"Michigan,Midland County",71.4371045104796
-"Michigan,Monroe County",69.3966552175984
-"Michigan,Montcalm County",NA
-"Michigan,Muskegon County",71.0102576048462
-"Michigan,Oakland County",67.8951966306125
-"Michigan,Ogemaw County",NA
-"Michigan,Otsego County",71.298622440641
-"Michigan,Ottawa County",70.3888004070763
-"Michigan,Saginaw County",70.0474314930742
-"Michigan,Sanilac County",72.5275645440029
-"Michigan,Shiawassee County",70.7304754655084
-"Michigan,St Clair County",72.5430216580924
-"Michigan,Washtenaw County",67.362580154415
-"Michigan,Wayne County",65.7100491339203
-"Minnesota,Anoka County",67.912655259978
-"Minnesota,Beltrami County",72.0685301074453
-"Minnesota,Blue Earth County",70.1808129281243
-"Minnesota,Carver County",66.5542776546369
-"Minnesota,Cass County",67.5956784832777
-"Minnesota,Clay County",69.9037616875164
-"Minnesota,Crow Wing County",NA
-"Minnesota,Dakota County",67.0917496352442
-"Minnesota,Douglas County",NA
-"Minnesota,Hennepin County",67.0351481731132
-"Minnesota,Houston County",75.7928852580706
-"Minnesota,Itasca County",68.3295338579405
-"Minnesota,Kandiyohi County",69.9248228771837
-"Minnesota,Koochiching County",66.088585959773
-"Minnesota,Le Sueur County",67.6829545266444
-"Minnesota,Lyon County",NA
-"Minnesota,Martin County",NA
-"Minnesota,Meeker County",66.3325459747872
-"Minnesota,Mower County",69.9084622311015
-"Minnesota,Olmsted County",70.0344933061128
-"Minnesota,Otter Tail County",67.7375576787844
-"Minnesota,Polk County",73.0926951907765
-"Minnesota,Ramsey County",66.2599792575982
-"Minnesota,Rice County",NA
-"Minnesota,Scott County",NA
-"Minnesota,St Louis County",71.2520470524014
-"Minnesota,Stearns County",69.5929346817692
-"Minnesota,Waseca County",75.2624583022367
-"Minnesota,Washington County",68.9419325271349
-"Minnesota,Winona County",72.612106790809
-"Mississippi,Adams County",70.8131540143202
-"Mississippi,Alcorn County",69.3387613709816
-"Mississippi,Bolivar County",NA
-"Mississippi,Clay County",NA
-"Mississippi,Coahoma County",67.1308602172409
-"Mississippi,DeSoto County",68.8172364777823
-"Mississippi,Forrest County",67.7942095851075
-"Mississippi,Franklin County",71.4177300029668
-"Mississippi,Grenada County",70.6931077950983
-"Mississippi,Harrison County",66.9110098961675
-"Mississippi,Hinds County",67.9984171114029
-"Mississippi,Itawamba County",73.0831258261532
-"Mississippi,Jackson County",67.3038313958248
-"Mississippi,Jefferson County",71.6149936044186
-"Mississippi,Jones County",69.1232890782095
-"Mississippi,Lafayette County",69.6393289096018
-"Mississippi,Lamar County",NA
-"Mississippi,Lauderdale County",67.3754079587537
-"Mississippi,Lee County",70.3219657659365
-"Mississippi,Leflore County",71.008672121293
-"Mississippi,Lincoln County",NA
-"Mississippi,Lowndes County",65.9086298105947
-"Mississippi,Madison County",68.3744062590507
-"Mississippi,Marion County",72.0223244489782
-"Mississippi,Marshall County",NA
-"Mississippi,Monroe County",NA
-"Mississippi,Neshoba County",NA
-"Mississippi,Newton County",NA
-"Mississippi,Oktibbeha County",68.2760137977724
-"Mississippi,Panola County",68.0807225611114
-"Mississippi,Pearl River County",72.4970354833387
-"Mississippi,Pike County",72.2069766664396
-"Mississippi,Pontotoc County",73.2593296130468
-"Mississippi,Rankin County",70.0147320211327
-"Mississippi,Sharkey County",73.1860515008439
-"Mississippi,Sunflower County",70.3106146728065
-"Mississippi,Tallahatchie County",71.2694867975619
-"Mississippi,Warren County",68.4211448553032
-"Mississippi,Washington County",68.0165775819084
-"Mississippi,Webster County",70.0522704372212
-"Mississippi,Winston County",73.095802796049
-"Mississippi,Yazoo County",75.4068862740048
-"Missouri,Adair County",NA
-"Missouri,Boone County",67.5416893078075
-"Missouri,Buchanan County",66.5904543603862
-"Missouri,Cape Girardeau County",68.2690253467555
-"Missouri,Carroll County",71.4072148444357
-"Missouri,Cass County",72.0870123818325
-"Missouri,Christian County",68.6853172057969
-"Missouri,Clay County",72.7744833443604
-"Missouri,Cole County",69.3836670629107
-"Missouri,Dallas County",68.1015524306842
-"Missouri,Dekalb County",73.9175191034346
-"Missouri,Franklin County",70.5479130494408
-"Missouri,Greene County",70.1276437767055
-"Missouri,Grundy County",72.6962997199471
-"Missouri,Jackson County",65.7898206154037
-"Missouri,Jasper County",68.7918310005545
-"Missouri,Jefferson County",68.1401477281066
-"Missouri,Johnson County",73.0984994218614
-"Missouri,Laclede County",NA
-"Missouri,Lincoln County",70.4598440763424
-"Missouri,Moniteau County",68.844858651325
-"Missouri,Monroe County",77.0026386262299
-"Missouri,Morgan County",70.5141436736633
-"Missouri,Nodaway County",69.0259955278075
-"Missouri,Oregon County",NA
-"Missouri,Phelps County",72.3773612944523
-"Missouri,Polk County",82.3870639595903
-"Missouri,Schuyler County",69.0965348976615
-"Missouri,Scott County",76.9340722545485
-"Missouri,St Charles County",70.1902695606882
-"Missouri,St Francois County",71.0326092571058
+"Maryland,Baltimore",67.7636825590042
+"Maryland,Calvert",NA
+"Maryland,Caroline",68.2394331057433
+"Maryland,Carroll",67.1020762766376
+"Maryland,Cecil",70.0011491447494
+"Maryland,Charles",69.7366737103087
+"Maryland,Frederick",67.5454394318218
+"Maryland,Harford",64.7082780631821
+"Maryland,Howard",68.9019417926633
+"Maryland,Montgomery",66.5460276235113
+"Maryland,Prince George's",65.6072545651379
+"Maryland,Queen Anne's",NA
+"Maryland,Somerset",71.4867875789581
+"Maryland,St Mary's",72.1997781294464
+"Maryland,Talbot",68.7587949806995
+"Maryland,Washington",67.8660749059844
+"Maryland,Wicomico",67.3239708638161
+"Maryland,Worcester",68.2130079579427
+"Massachusetts,Barnstable",69.5176877919747
+"Massachusetts,Berkshire",68.0215678557802
+"Massachusetts,Bristol",69.1444846075539
+"Massachusetts,Essex",65.7972010211156
+"Massachusetts,Franklin",59.3203552173819
+"Massachusetts,Hampden",66.6083774991302
+"Massachusetts,Hampshire",65.6541981452648
+"Massachusetts,Middlesex",65.4445543555824
+"Massachusetts,Nantucket",71.1005748529265
+"Massachusetts,Norfolk",66.0126139922726
+"Massachusetts,Plymouth",65.0850835457924
+"Massachusetts,Suffolk",66.2066445379731
+"Massachusetts,Worcester",66.1970740983145
+"Michigan,Allegan",NA
+"Michigan,Bay",67.6125243619177
+"Michigan,Berrien",67.7500218617679
+"Michigan,Calhoun",71.6558442326485
+"Michigan,Charlevoix",65.7546847714167
+"Michigan,Delta",NA
+"Michigan,Dickinson",NA
+"Michigan,Eaton",67.2443083131372
+"Michigan,Genesee",69.6024799626435
+"Michigan,Gladwin",NA
+"Michigan,Grand Traverse",69.8662803956556
+"Michigan,Gratiot",68.6010413769403
+"Michigan,Ingham",68.510153559342
+"Michigan,Isabella",69.0863800634262
+"Michigan,Jackson",69.3232441427
+"Michigan,Kalamazoo",69.4301750163825
+"Michigan,Kalkaska",67.9262898213298
+"Michigan,Kent",66.6207873352692
+"Michigan,Lake",NA
+"Michigan,Lenawee",67.2658484960768
+"Michigan,Livingston",72.3002243270799
+"Michigan,Macomb",68.9288901546615
+"Michigan,Manistee",73.9820464117055
+"Michigan,Marquette",68.3891276832653
+"Michigan,Mecosta",NA
+"Michigan,Menominee",72.0331722988481
+"Michigan,Midland",71.4371045104796
+"Michigan,Monroe",69.3966552175984
+"Michigan,Montcalm",NA
+"Michigan,Muskegon",71.0102576048462
+"Michigan,Oakland",67.8951966306125
+"Michigan,Ogemaw",NA
+"Michigan,Otsego",71.298622440641
+"Michigan,Ottawa",70.3888004070763
+"Michigan,Saginaw",70.0474314930742
+"Michigan,Sanilac",72.5275645440029
+"Michigan,Shiawassee",70.7304754655084
+"Michigan,St Clair",72.5430216580924
+"Michigan,Washtenaw",67.362580154415
+"Michigan,Wayne",65.7100491339203
+"Minnesota,Anoka",67.912655259978
+"Minnesota,Beltrami",72.0685301074453
+"Minnesota,Blue Earth",70.1808129281243
+"Minnesota,Carver",66.5542776546369
+"Minnesota,Cass",67.5956784832777
+"Minnesota,Clay",69.9037616875164
+"Minnesota,Crow Wing",NA
+"Minnesota,Dakota",67.0917496352442
+"Minnesota,Douglas",NA
+"Minnesota,Hennepin",67.0351481731132
+"Minnesota,Houston",75.7928852580706
+"Minnesota,Itasca",68.3295338579405
+"Minnesota,Kandiyohi",69.9248228771837
+"Minnesota,Koochiching",66.088585959773
+"Minnesota,Le Sueur",67.6829545266444
+"Minnesota,Lyon",NA
+"Minnesota,Martin",NA
+"Minnesota,Meeker",66.3325459747872
+"Minnesota,Mower",69.9084622311015
+"Minnesota,Olmsted",70.0344933061128
+"Minnesota,Otter Tail",67.7375576787844
+"Minnesota,Polk",73.0926951907765
+"Minnesota,Ramsey",66.2599792575982
+"Minnesota,Rice",NA
+"Minnesota,Scott",NA
+"Minnesota,St Louis",71.2520470524014
+"Minnesota,Stearns",69.5929346817692
+"Minnesota,Waseca",75.2624583022367
+"Minnesota,Washington",68.9419325271349
+"Minnesota,Winona",72.612106790809
+"Mississippi,Adams",70.8131540143202
+"Mississippi,Alcorn",69.3387613709816
+"Mississippi,Bolivar",NA
+"Mississippi,Clay",NA
+"Mississippi,Coahoma",67.1308602172409
+"Mississippi,DeSoto",68.8172364777823
+"Mississippi,Forrest",67.7942095851075
+"Mississippi,Franklin",71.4177300029668
+"Mississippi,Grenada",70.6931077950983
+"Mississippi,Harrison",66.9110098961675
+"Mississippi,Hinds",67.9984171114029
+"Mississippi,Itawamba",73.0831258261532
+"Mississippi,Jackson",67.3038313958248
+"Mississippi,Jefferson",71.6149936044186
+"Mississippi,Jones",69.1232890782095
+"Mississippi,Lafayette",69.6393289096018
+"Mississippi,Lamar",NA
+"Mississippi,Lauderdale",67.3754079587537
+"Mississippi,Lee",70.3219657659365
+"Mississippi,Leflore",71.008672121293
+"Mississippi,Lincoln",NA
+"Mississippi,Lowndes",65.9086298105947
+"Mississippi,Madison",68.3744062590507
+"Mississippi,Marion",72.0223244489782
+"Mississippi,Marshall",NA
+"Mississippi,Monroe",NA
+"Mississippi,Neshoba",NA
+"Mississippi,Newton",NA
+"Mississippi,Oktibbeha",68.2760137977724
+"Mississippi,Panola",68.0807225611114
+"Mississippi,Pearl River",72.4970354833387
+"Mississippi,Pike",72.2069766664396
+"Mississippi,Pontotoc",73.2593296130468
+"Mississippi,Rankin",70.0147320211327
+"Mississippi,Sharkey",73.1860515008439
+"Mississippi,Sunflower",70.3106146728065
+"Mississippi,Tallahatchie",71.2694867975619
+"Mississippi,Warren",68.4211448553032
+"Mississippi,Washington",68.0165775819084
+"Mississippi,Webster",70.0522704372212
+"Mississippi,Winston",73.095802796049
+"Mississippi,Yazoo",75.4068862740048
+"Missouri,Adair",NA
+"Missouri,Boone",67.5416893078075
+"Missouri,Buchanan",66.5904543603862
+"Missouri,Cape Girardeau",68.2690253467555
+"Missouri,Carroll",71.4072148444357
+"Missouri,Cass",72.0870123818325
+"Missouri,Christian",68.6853172057969
+"Missouri,Clay",72.7744833443604
+"Missouri,Cole",69.3836670629107
+"Missouri,Dallas",68.1015524306842
+"Missouri,Dekalb",73.9175191034346
+"Missouri,Franklin",70.5479130494408
+"Missouri,Greene",70.1276437767055
+"Missouri,Grundy",72.6962997199471
+"Missouri,Jackson",65.7898206154037
+"Missouri,Jasper",68.7918310005545
+"Missouri,Jefferson",68.1401477281066
+"Missouri,Johnson",73.0984994218614
+"Missouri,Laclede",NA
+"Missouri,Lincoln",70.4598440763424
+"Missouri,Moniteau",68.844858651325
+"Missouri,Monroe",77.0026386262299
+"Missouri,Morgan",70.5141436736633
+"Missouri,Nodaway",69.0259955278075
+"Missouri,Oregon",NA
+"Missouri,Phelps",72.3773612944523
+"Missouri,Polk",82.3870639595903
+"Missouri,Schuyler",69.0965348976615
+"Missouri,Scott",76.9340722545485
+"Missouri,St Charles",70.1902695606882
+"Missouri,St Francois",71.0326092571058
 "Missouri,St Louis City",66.4292779511553
-"Missouri,St Louis County",68.5121393876579
-"Missouri,Stone County",67.526298862111
-"Missouri,Taney County",67.8664823385327
-"Missouri,Texas County",56.2434455123683
-"Montana,Carter County",67.4625127381305
-"Montana,Cascade County",71.5850452602715
-"Montana,Gallatin County",72.7163934621761
-"Montana,Hill County",NA
-"Montana,Lewis and Clark County",NA
-"Montana,Mineral County",71.8592362141248
-"Montana,Missoula County",72.6660954824953
-"Montana,Ravalli County",NA
-"Montana,Rosebud County",NA
-"Montana,Yellowstone County",71.8222063795934
-"Nebraska,Adams County",71.1569939723135
-"Nebraska,Box Butte County",NA
-"Nebraska,Buffalo County",70.8178838514457
-"Nebraska,Colfax County",72.4709341269347
-"Nebraska,Custer County",NA
-"Nebraska,Dawson County",66.5819082904595
-"Nebraska,Dodge County",NA
-"Nebraska,Douglas County",67.0871098362416
-"Nebraska,Hall County",70.6611145330676
-"Nebraska,Lancaster County",66.386109756513
-"Nebraska,Madison County",73.9366168845187
-"Nebraska,Saline County",68.8758460045973
-"Nebraska,Sarpy County",69.3124682068944
-"Nebraska,Valley County",68.0686032620064
-"Nebraska,Wayne County",NA
-"Nebraska,York County",73.8089278210003
+"Missouri,St Louis",68.5121393876579
+"Missouri,Stone",67.526298862111
+"Missouri,Taney",67.8664823385327
+"Missouri,Texas",56.2434455123683
+"Montana,Carter",67.4625127381305
+"Montana,Cascade",71.5850452602715
+"Montana,Gallatin",72.7163934621761
+"Montana,Hill",NA
+"Montana,Lewis and Clark",NA
+"Montana,Mineral",71.8592362141248
+"Montana,Missoula",72.6660954824953
+"Montana,Ravalli",NA
+"Montana,Rosebud",NA
+"Montana,Yellowstone",71.8222063795934
+"Nebraska,Adams",71.1569939723135
+"Nebraska,Box Butte",NA
+"Nebraska,Buffalo",70.8178838514457
+"Nebraska,Colfax",72.4709341269347
+"Nebraska,Custer",NA
+"Nebraska,Dawson",66.5819082904595
+"Nebraska,Dodge",NA
+"Nebraska,Douglas",67.0871098362416
+"Nebraska,Hall",70.6611145330676
+"Nebraska,Lancaster",66.386109756513
+"Nebraska,Madison",73.9366168845187
+"Nebraska,Saline",68.8758460045973
+"Nebraska,Sarpy",69.3124682068944
+"Nebraska,Valley",68.0686032620064
+"Nebraska,Wayne",NA
+"Nebraska,York",73.8089278210003
 "Nevada,Carson City",67.6906962685238
-"Nevada,Clark County",66.1165568986164
-"Nevada,Elko County",73.2316401883427
+"Nevada,Clark",66.1165568986164
+"Nevada,Elko",73.2316401883427
 "Nevada,Lincoln",NA
-"Nevada,Washoe County",67.3466006725052
-"Nevada,White Pine County",68.4183400855626
-"New Hampshire,Carroll County",67.2500567285742
-"New Hampshire,Cheshire County",70.398807219782
-"New Hampshire,Grafton County",NA
-"New Hampshire,Hillsborough County",65.9029947163561
-"New Hampshire,Merrimack County",69.082410629627
-"New Hampshire,Rockingham County",67.0627387882888
-"New Hampshire,Strafford County",73.1399959264883
-"New Hampshire,Sullivan County",70.9105583065007
-"New Jersey,Atlantic County",67.3145381551244
-"New Jersey,Bergen County",66.6899032476908
-"New Jersey,Burlington County",68.4348718891191
-"New Jersey,Camden County",65.4407962050069
-"New Jersey,Cape May County",73.3667129891496
-"New Jersey,Cumberland County",66.6933588607681
-"New Jersey,Essex County",65.5559881696948
-"New Jersey,Gloucester County",69.8487256381723
-"New Jersey,Hudson County",66.6688888717304
-"New Jersey,Hunterdon County",NA
-"New Jersey,Mercer County",66.0376838544714
-"New Jersey,Middlesex County",67.8156563058459
-"New Jersey,Monmouth County",66.3354359139875
-"New Jersey,Morris County",65.5739408991449
-"New Jersey,Ocean County",66.7192629976667
-"New Jersey,Passaic County",67.2786079650447
-"New Jersey,Salem County",NA
-"New Jersey,Somerset County",67.128200908315
-"New Jersey,Sussex County",69.148136752695
-"New Jersey,Union County",66.9076306766319
-"New Jersey,Warren County",65.5942716396752
-"New Mexico,Bernalillo County",66.7778720806761
-"New Mexico,Chaves County",68.430588326942
-"New Mexico,Cibola County",65.8495045497473
-"New Mexico,Curry County",73.5772295760781
-"New Mexico,Dona Ana County",69.8492590415521
-"New Mexico,Eddy County",NA
-"New Mexico,Lea County",70.6091340623523
-"New Mexico,Quay County",65.2062866688273
-"New Mexico,Rio Arriba County",72.5825514538985
-"New Mexico,San Juan County",69.5016962804611
-"New Mexico,San Miguel County",NA
-"New Mexico,Sandoval County",68.1895146666684
-"New Mexico,Santa Fe County",67.6885990780711
-"New Mexico,Sierra County",66.670106832395
-"New Mexico,Taos County",80.6063768554766
-"New Mexico,Torrance County",79.1714298960867
-"New Mexico,Valencia County",NA
-"New York,Albany County",66.9683764809759
-"New York,Bronx County",67.2352779163957
-"New York,Broome County",66.10600130734
-"New York,Cattaraugus County",78.864963932729
-"New York,Cayuga County",70.6999733060343
-"New York,Chautauqua County",69.0444241985124
-"New York,Chemung County",67.9058096161835
-"New York,Chenango County",65.4563288339757
-"New York,Clinton County",70.6540332630608
-"New York,Cortland County",68.0030436661778
-"New York,Delaware County",67.0511664041155
-"New York,Dutchess County",70.2838839508931
-"New York,Erie County",65.5970481043943
-"New York,Essex County",NA
-"New York,Franklin County",NA
-"New York,Genesee County",66.3585616372267
-"New York,Jefferson County",70.106399391709
-"New York,Kings County",65.8897426497962
-"New York,Lewis County",70.150653692417
-"New York,Livingston County",NA
-"New York,Monroe County",66.570422228413
-"New York,Nassau County",67.7159067335754
-"New York,New York County",66.8777505666187
-"New York,Niagara County",66.3426354434346
-"New York,Oneida County",66.7444695645381
-"New York,Onondaga County",67.9961042468038
-"New York,Ontario County",67.8795745097514
-"New York,Orange County",67.6661291949529
-"New York,Oswego County",71.2086517186055
-"New York,Otsego County",69.4098911102826
-"New York,Putnam County",67.082091200072
-"New York,Queens County",65.6474718252543
-"New York,Rensselaer County",70.1924159230244
-"New York,Richmond County",66.7646417468139
-"New York,Rockland County",70.8718747435068
-"New York,Saratoga County",68.5932031545197
-"New York,Schenectady County",71.6391520464388
-"New York,St Lawrence County",NA
-"New York,Steuben County",67.0121471819203
-"New York,Suffolk County",67.2848958615567
-"New York,Tompkins County",70.3566584747805
-"New York,Ulster County",70.6790398786234
-"New York,Warren County",NA
-"New York,Westchester County",66.7896917505499
-"North Carolina,Alamance County",67.6799658987061
-"North Carolina,Ashe County",71.7555231436288
-"North Carolina,Beaufort County",71.5030447240796
-"North Carolina,Brunswick County",68.7286250069109
-"North Carolina,Buncombe County",69.6422847636842
-"North Carolina,Burke County",67.9859511115288
-"North Carolina,Cabarrus County",67.853220010082
-"North Carolina,Catawba County",68.7751789042936
-"North Carolina,Cleveland County",67.7501016705492
-"North Carolina,Columbus County",71.9219805323421
-"North Carolina,Craven County",66.4253012435788
-"North Carolina,Cumberland County",67.2337828217744
-"North Carolina,Currituck County",NA
-"North Carolina,Davidson County",68.6379009972267
-"North Carolina,Durham County",66.511471538096
-"North Carolina,Edgecombe County",68.3689355347243
-"North Carolina,Forsyth County",66.0904551504391
-"North Carolina,Franklin County",65.791329750969
-"North Carolina,Gaston County",70.6320822061356
-"North Carolina,Granville County",NA
-"North Carolina,Greene County",NA
-"North Carolina,Guilford County",67.3986189850758
-"North Carolina,Halifax County",69.2644819448833
-"North Carolina,Harnett County",68.118740805919
-"North Carolina,Henderson County",71.5456897166877
-"North Carolina,Hoke County",66.9357909283288
-"North Carolina,Iredell County",68.9761187240885
-"North Carolina,Jackson County",67.8821727078697
-"North Carolina,Johnston County",68.6885817517779
-"North Carolina,Lee County",69.2653231196871
-"North Carolina,Lenoir County",68.1861873393068
-"North Carolina,Lincoln County",68.830788932982
-"North Carolina,Mecklenburg County",65.7486618824042
-"North Carolina,Moore County",67.7106333032224
-"North Carolina,Nash County",69.0056650330696
-"North Carolina,New Hanover County",68.8090777553905
-"North Carolina,Onslow County",70.2356652527572
-"North Carolina,Orange County",71.2605308322117
-"North Carolina,Pasquotank County",72.2862544737815
-"North Carolina,Perquimans County",69.8771271126442
-"North Carolina,Person County",71.5709040641506
-"North Carolina,Pitt County",69.6382103082879
-"North Carolina,Randolph County",69.0742735044926
-"North Carolina,Richmond County",69.385011669586
-"North Carolina,Robeson County",68.1427408254798
-"North Carolina,Rockingham County",70.8528616247808
-"North Carolina,Rowan County",68.4004514556632
-"North Carolina,Sampson County",66.7980782833681
-"North Carolina,Scotland County",69.4660000336475
-"North Carolina,Stanly County",NA
-"North Carolina,Union County",68.403794532212
-"North Carolina,Vance County",69.0337466720605
-"North Carolina,Wake County",66.0163539350818
-"North Carolina,Watauga County",68.3338251438518
-"North Carolina,Wayne County",68.2200268110588
-"North Carolina,Wilson County",67.4173242721941
-"North Dakota,Burleigh County",72.7041390133757
-"North Dakota,Cass County",68.725312560143
-"North Dakota,Dickey County",68.7823401747845
-"North Dakota,Grand Forks County",70.0866428928981
-"North Dakota,Stark County",NA
-"North Dakota,Ward County",72.4209232327989
-"Ohio,Allen County",67.738747929049
-"Ohio,Ashland County",67.8716232336144
-"Ohio,Ashtabula County",67.0088186105349
-"Ohio,Athens County",70.985490668865
-"Ohio,Belmont County",72.5810743129258
-"Ohio,Butler County",68.6119118110705
-"Ohio,Champaign County",67.6804861526851
-"Ohio,Clark County",70.5677858208759
-"Ohio,Clermont County",77.221472461174
-"Ohio,Clinton County",NA
-"Ohio,Columbiana County",72.500644798117
-"Ohio,Coshocton County",NA
-"Ohio,Cuyahoga County",65.7820251498359
-"Ohio,Darke County",72.205107538311
-"Ohio,Defiance County",69.5856413942591
-"Ohio,Delaware County",70.8377576711241
-"Ohio,Erie County",69.8552484751231
-"Ohio,Fairfield County",71.5243752617268
-"Ohio,Franklin County",66.2261632636821
-"Ohio,Gallia County",70.7223801435822
-"Ohio,Geauga County",NA
-"Ohio,Greene County",72.3704532132085
-"Ohio,Hamilton County",65.5421142162587
-"Ohio,Hancock County",69.0620389347026
-"Ohio,Hardin County",70.8342775055386
-"Ohio,Henry County",NA
-"Ohio,Huron County",67.3153668886847
-"Ohio,Jackson County",70.2881089082884
-"Ohio,Jefferson County",71.3147464210059
-"Ohio,Lake County",68.8681410083795
-"Ohio,Lawrence County",68.4275081406485
-"Ohio,Licking County",68.5071496436656
-"Ohio,Logan County",71.0391326717637
-"Ohio,Lorain County",67.8241060309132
-"Ohio,Lucas County",67.4286790872578
-"Ohio,Mahoning County",67.3579116462854
-"Ohio,Marion County",NA
-"Ohio,Medina County",69.0497210204309
-"Ohio,Miami County",66.0304471573277
-"Ohio,Montgomery County",67.1149559311446
-"Ohio,Muskingum County",69.8500878659659
-"Ohio,Ottawa County",NA
-"Ohio,Pickaway County",NA
-"Ohio,Portage County",70.7586824559936
-"Ohio,Putnam County",65.2027798539753
-"Ohio,Richland County",66.7661130610723
-"Ohio,Ross County",71.864355771871
-"Ohio,Sandusky County",68.5758076752204
-"Ohio,Scioto County",70.1655974478441
-"Ohio,Seneca County",NA
-"Ohio,Stark County",69.6454669309999
-"Ohio,Summit County",68.2713175702528
-"Ohio,Trumbull County",66.4993849640605
-"Ohio,Union County",NA
-"Ohio,Warren County",68.9644601045458
-"Ohio,Washington County",70.6228450476437
-"Ohio,Wayne County",68.872228385163
-"Ohio,Williams County",NA
-"Ohio,Wood County",69.6726705376897
-"Oklahoma,Adair County",65.6082026651223
-"Oklahoma,Bryan County",71.0144385619562
-"Oklahoma,Canadian County",68.1653541268551
-"Oklahoma,Carter County",72.7946511435398
-"Oklahoma,Cherokee County",69.622095109465
-"Oklahoma,Cleveland County",66.550161820942
-"Oklahoma,Comanche County",67.6447914986155
-"Oklahoma,Custer County",69.9036264560605
-"Oklahoma,Dewey County",68.4835508482084
-"Oklahoma,Garfield County",72.4175979100047
-"Oklahoma,Kay County",72.4428355066693
-"Oklahoma,Lincoln County",70.0973542120448
-"Oklahoma,Logan County",71.5614696716773
-"Oklahoma,McCurtain County",67.6634008618644
-"Oklahoma,Muskogee County",69.9198883007423
-"Oklahoma,Okfuskee County",66.2786413420638
-"Oklahoma,Oklahoma County",66.821504345716
-"Oklahoma,Payne County",69.3655948809475
-"Oklahoma,Pittsburg County",63.9059124226649
-"Oklahoma,Pontotoc County",71.2532769389867
-"Oklahoma,Pottawatomie County",71.931126558849
-"Oklahoma,Roger Mills County",NA
-"Oklahoma,Rogers County",72.3604000289997
-"Oklahoma,Stephens County",69.7947052873156
-"Oklahoma,Tulsa County",66.152111457482
-"Oklahoma,Washington County",71.8747027969925
-"Oregon,Benton County",71.0064881694673
-"Oregon,Clackamas County",68.8588926475553
-"Oregon,Columbia County",70.0814511710073
-"Oregon,Deschutes County",72.3048641028035
-"Oregon,Douglas County",NA
-"Oregon,Jackson County",67.6304655142908
-"Oregon,Jefferson County",NA
-"Oregon,Josephine County",73.2941186784065
-"Oregon,Klamath County",73.1835929406193
-"Oregon,Lane County",66.1139310152157
-"Oregon,Linn County",69.1915781910896
-"Oregon,Marion County",67.6795382569357
-"Oregon,Multnomah County",66.8827839249267
-"Oregon,Washington County",67.2725136542411
-"Oregon,Yamhill County",66.7280498792099
-"Pennsylvania,Adams County",72.749532069042
-"Pennsylvania,Allegheny County",66.611125858204
-"Pennsylvania,Beaver County",69.191287554698
-"Pennsylvania,Berks County",69.285594653531
-"Pennsylvania,Blair County",70.6408088002922
-"Pennsylvania,Bucks County",66.8567925856336
-"Pennsylvania,Butler County",69.7158670812459
-"Pennsylvania,Cambria County",66.7440359650596
-"Pennsylvania,Carbon County",68.2161782757801
-"Pennsylvania,Centre County",67.5492771813147
-"Pennsylvania,Chester County",66.2169281314219
-"Pennsylvania,Clarion County",70.0852895261502
-"Pennsylvania,Clearfield County",NA
-"Pennsylvania,Clinton County",71.8614172782298
-"Pennsylvania,Columbia County",68.9811013650695
-"Pennsylvania,Cumberland County",69.9097002051794
-"Pennsylvania,Dauphin County",66.9929950778664
-"Pennsylvania,Delaware County",65.2960429152987
-"Pennsylvania,Erie County",69.3394424028223
-"Pennsylvania,Fayette County",69.6004720467167
-"Pennsylvania,Franklin County",66.7716497552664
-"Pennsylvania,Indiana County",69.619701509308
-"Pennsylvania,Lackawanna County",68.970472166741
-"Pennsylvania,Lancaster County",69.157600525289
-"Pennsylvania,Lawrence County",69.5847685865488
-"Pennsylvania,Lebanon County",71.6577520777569
-"Pennsylvania,Lehigh County",66.7438065921507
-"Pennsylvania,Luzerne County",67.3416662353304
-"Pennsylvania,Lycoming County",68.3374836405735
-"Pennsylvania,Mercer County",71.8423813403789
-"Pennsylvania,Monroe County",69.6879244460341
-"Pennsylvania,Montgomery County",66.1258072027648
-"Pennsylvania,Northampton County",69.8789633789633
-"Pennsylvania,Northumberland County",68.5240968081439
-"Pennsylvania,Philadelphia County",65.8138164606051
-"Pennsylvania,Schuylkill County",71.9393370076857
-"Pennsylvania,Somerset County",NA
-"Pennsylvania,Venango County",67.3621717067269
-"Pennsylvania,Washington County",68.0434377867678
-"Pennsylvania,Wayne County",67.7880435797748
-"Pennsylvania,Westmoreland County",65.981263849627
-"Pennsylvania,York County",66.4536580594807
-"Rhode Island,Bristol County",NA
-"Rhode Island,Kent County",69.7723188202271
-"Rhode Island,Newport County",71.0337118241483
-"Rhode Island,Providence County",66.6897600951307
-"Rhode Island,Washington County",68.5485073275294
-"South Carolina,Abbeville County",NA
-"South Carolina,Aiken County",70.2783994243317
-"South Carolina,Anderson County",70.5180206574504
-"South Carolina,Bamberg County",73.5419235824273
-"South Carolina,Barnwell County",NA
-"South Carolina,Beaufort County",65.3561424059479
-"South Carolina,Berkeley County",72.0711966296515
-"South Carolina,Charleston County",65.8104125883997
-"South Carolina,Cherokee County",69.8165696296243
-"South Carolina,Chester County",72.9244650694197
-"South Carolina,Clarendon County",64.2570640093579
-"South Carolina,Darlington County",71.8880963898
-"South Carolina,Dillon County",NA
-"South Carolina,Dorchester County",70.1941615144353
-"South Carolina,Florence County",68.7412470771311
-"South Carolina,Georgetown County",70.4193620216684
-"South Carolina,Greenville County",67.182076527408
-"South Carolina,Greenwood County",69.8439008161956
-"South Carolina,Horry County",66.0901260092186
-"South Carolina,Kershaw County",68.0199457629645
-"South Carolina,Lancaster County",69.4253305628976
-"South Carolina,Laurens County",68.2662506108199
-"South Carolina,Lexington County",69.4910064259159
-"South Carolina,Marion County",69.4911213430057
-"South Carolina,Newberry County",NA
-"South Carolina,Orangeburg County",68.8136653270131
-"South Carolina,Pickens County",67.1365269661134
-"South Carolina,Richland County",66.4556677795834
-"South Carolina,Spartanburg County",68.3873648565394
-"South Carolina,Sumter County",69.0498963361245
-"South Carolina,Union County",70.5383164654822
-"South Carolina,Williamsburg County",67.6666197362076
-"South Carolina,York County",67.5683482694845
-"South Dakota,Brookings County",68.7611849646443
-"South Dakota,Brown County",73.0147961043945
-"South Dakota,Clay County",72.1082101629526
-"South Dakota,Davison County",NA
-"South Dakota,Kingsbury County",69.6823850378389
-"South Dakota,Lake County",NA
-"South Dakota,Lawrence County",NA
-"South Dakota,Lincoln County",67.9794389947161
-"South Dakota,Minnehaha County",67.8939450443401
-"South Dakota,Pennington County",70.5975688308769
-"South Dakota,Walworth County",72.4986996526481
-"South Dakota,Yankton County",NA
-"Tennessee,Anderson County",67.9968524341638
-"Tennessee,Bedford County",67.998156724222
-"Tennessee,Blount County",68.24471900692
-"Tennessee,Bradley County",70.3286491441289
-"Tennessee,Campbell County",NA
-"Tennessee,Carroll County",NA
-"Tennessee,Chester County",71.6371732316576
-"Tennessee,Claiborne County",69.0284220186172
-"Tennessee,Davidson County",67.1668108623175
-"Tennessee,Dickson County",69.1496216553254
-"Tennessee,Giles County",69.9685222729231
-"Tennessee,Greene County",NA
-"Tennessee,Hamblen County",70.6180711459502
-"Tennessee,Hamilton County",67.5582735957076
-"Tennessee,Hardin County",66.4547397592486
-"Tennessee,Henderson County",NA
-"Tennessee,Jefferson County",NA
-"Tennessee,Knox County",66.8585447588286
-"Tennessee,Lawrence County",72.6274505145044
-"Tennessee,Madison County",71.2890472921668
-"Tennessee,Maury County",72.3995040158528
-"Tennessee,McMinn County",72.8426198842382
-"Tennessee,Monroe County",72.5526740280532
-"Tennessee,Montgomery County",67.012249526775
-"Tennessee,Morgan County",74.2564172271626
-"Tennessee,Overton County",NA
-"Tennessee,Putnam County",71.6347962561955
-"Tennessee,Rhea County",70.6942980623595
-"Tennessee,Roane County",71.4146291783062
-"Tennessee,Robertson County",NA
-"Tennessee,Rutherford County",67.4837480110354
-"Tennessee,Sevier County",66.0338580949279
-"Tennessee,Shelby County",66.560393195225
-"Tennessee,Smith County",NA
-"Tennessee,Sullivan County",68.6251314548685
-"Tennessee,Sumner County",68.9269209677828
-"Tennessee,Washington County",67.9227779566714
-"Tennessee,Wayne County",63.8644605221428
-"Tennessee,Weakley County",71.8189645332318
-"Tennessee,White County",NA
-"Tennessee,Williamson County",65.938767264871
-"Tennessee,Wilson County",67.8023348537033
-"Texas,Angelina County",69.6493299094764
-"Texas,Austin County",72.3498081276169
-"Texas,Bastrop County",71.6713756168236
-"Texas,Bell County",68.2041502467709
-"Texas,Bexar County",66.010733123735
-"Texas,Bowie County",68.4594833138042
-"Texas,Brazoria County",65.9145649887911
-"Texas,Brazos County",67.186759183491
-"Texas,Caldwell County",78.0718159158571
-"Texas,Cameron County",68.1055555090942
-"Texas,Collin County",66.459421475888
-"Texas,Comal County",68.0960024623927
-"Texas,Cooke County",NA
-"Texas,Dallas County",66.1261364431074
-"Texas,Denton County",66.6975863124313
-"Texas,Duval County",75.381035408813
-"Texas,Ector County",69.7070477555868
-"Texas,El Paso County",67.7774639117516
-"Texas,Ellis County",69.9147551707007
-"Texas,Erath County",70.5342371405267
-"Texas,Fayette County",NA
-"Texas,Fort Bend County",66.0463999106503
-"Texas,Galveston County",65.3537110438004
-"Texas,Gonzales County",66.1909227207682
-"Texas,Grayson County",70.9045511318769
-"Texas,Gregg County",69.2179309306719
-"Texas,Guadalupe County",67.1896975207835
-"Texas,Harris County",66.2740948872732
-"Texas,Harrison County",69.0640355467695
-"Texas,Hays County",68.1207517783927
-"Texas,Hidalgo County",67.485557858114
-"Texas,Hood County",68.4323410068604
-"Texas,Jefferson County",67.4234619077724
-"Texas,Johnson County",NA
-"Texas,Kleberg County",70.669809209156
-"Texas,Lamar County",67.6489174103976
-"Texas,Liberty County",68.1698308569364
-"Texas,Limestone County",71.474773928374
-"Texas,Lubbock County",65.897898418281
-"Texas,McLennan County",66.3189390075422
-"Texas,Midland County",67.2806893594856
-"Texas,Montague County",NA
-"Texas,Montgomery County",66.8200877712976
-"Texas,Nacogdoches County",66.1480464739206
-"Texas,Nueces County",68.6175934376971
-"Texas,Parker County",66.036654741295
-"Texas,Polk County",NA
-"Texas,Potter County",67.6536542584579
-"Texas,Randall County",71.7129353882497
-"Texas,Rockwall County",67.9887469397537
-"Texas,San Patricio County",NA
-"Texas,Smith County",67.6139919683884
-"Texas,Starr County",73.2874762022085
-"Texas,Tarrant County",65.7836898095433
-"Texas,Taylor County",68.2110769530422
-"Texas,Tom Green County",71.3790365232733
-"Texas,Travis County",65.0698373948112
-"Texas,Uvalde County",65.2345666288095
-"Texas,Val Verde County",67.2892193878492
-"Texas,Victoria County",67.8049717468984
-"Texas,Walker County",66.9700535474711
-"Texas,Waller County",70.2697907317124
-"Texas,Washington County",72.5215396169514
-"Texas,Webb County",68.2651707660223
-"Texas,Wichita County",67.6670517446278
-"Texas,Williamson County",67.8562993183757
-"Utah,Cache County",67.2941514389954
-"Utah,Davis County",73.0845859848326
-"Utah,Iron County",70.7116089057535
-"Utah,Millard County",NA
-"Utah,Salt Lake County",66.220862086688
-"Utah,Summit County",64.0447716826135
-"Utah,Tooele County",70.4727883386873
-"Utah,Utah County",67.1817104745197
-"Utah,Washington County",70.6305042992364
-"Utah,Weber County",70.5999498257495
-"Vermont,Addison County",72.543824342463
-"Vermont,Caledonia County",NA
-"Vermont,Chittenden County",71.713542182746
-"Vermont,Orange County",NA
-"Vermont,Orleans County",68.8657864496476
-"Vermont,Washington County",NA
-"Vermont,Windsor County",67.8953894448047
-"Virginia,Albemarle County",69.1170686398265
+"Nevada,Washoe",67.3466006725052
+"Nevada,White Pine",68.4183400855626
+"New Hampshire,Carroll",67.2500567285742
+"New Hampshire,Cheshire",70.398807219782
+"New Hampshire,Grafton",NA
+"New Hampshire,Hillsborough",65.9029947163561
+"New Hampshire,Merrimack",69.082410629627
+"New Hampshire,Rockingham",67.0627387882888
+"New Hampshire,Strafford",73.1399959264883
+"New Hampshire,Sullivan",70.9105583065007
+"New Jersey,Atlantic",67.3145381551244
+"New Jersey,Bergen",66.6899032476908
+"New Jersey,Burlington",68.4348718891191
+"New Jersey,Camden",65.4407962050069
+"New Jersey,Cape May",73.3667129891496
+"New Jersey,Cumberland",66.6933588607681
+"New Jersey,Essex",65.5559881696948
+"New Jersey,Gloucester",69.8487256381723
+"New Jersey,Hudson",66.6688888717304
+"New Jersey,Hunterdon",NA
+"New Jersey,Mercer",66.0376838544714
+"New Jersey,Middlesex",67.8156563058459
+"New Jersey,Monmouth",66.3354359139875
+"New Jersey,Morris",65.5739408991449
+"New Jersey,Ocean",66.7192629976667
+"New Jersey,Passaic",67.2786079650447
+"New Jersey,Salem",NA
+"New Jersey,Somerset",67.128200908315
+"New Jersey,Sussex",69.148136752695
+"New Jersey,Union",66.9076306766319
+"New Jersey,Warren",65.5942716396752
+"New Mexico,Bernalillo",66.7778720806761
+"New Mexico,Chaves",68.430588326942
+"New Mexico,Cibola",65.8495045497473
+"New Mexico,Curry",73.5772295760781
+"New Mexico,Dona Ana",69.8492590415521
+"New Mexico,Eddy",NA
+"New Mexico,Lea",70.6091340623523
+"New Mexico,Quay",65.2062866688273
+"New Mexico,Rio Arriba",72.5825514538985
+"New Mexico,San Juan",69.5016962804611
+"New Mexico,San Miguel",NA
+"New Mexico,Sandoval",68.1895146666684
+"New Mexico,Santa Fe",67.6885990780711
+"New Mexico,Sierra",66.670106832395
+"New Mexico,Taos",80.6063768554766
+"New Mexico,Torrance",79.1714298960867
+"New Mexico,Valencia",NA
+"New York,Albany",66.9683764809759
+"New York,Bronx",67.2352779163957
+"New York,Broome",66.10600130734
+"New York,Cattaraugus",78.864963932729
+"New York,Cayuga",70.6999733060343
+"New York,Chautauqua",69.0444241985124
+"New York,Chemung",67.9058096161835
+"New York,Chenango",65.4563288339757
+"New York,Clinton",70.6540332630608
+"New York,Cortland",68.0030436661778
+"New York,Delaware",67.0511664041155
+"New York,Dutchess",70.2838839508931
+"New York,Erie",65.5970481043943
+"New York,Essex",NA
+"New York,Franklin",NA
+"New York,Genesee",66.3585616372267
+"New York,Jefferson",70.106399391709
+"New York,Kings",65.8897426497962
+"New York,Lewis",70.150653692417
+"New York,Livingston",NA
+"New York,Monroe",66.570422228413
+"New York,Nassau",67.7159067335754
+"New York,New York",66.8777505666187
+"New York,Niagara",66.3426354434346
+"New York,Oneida",66.7444695645381
+"New York,Onondaga",67.9961042468038
+"New York,Ontario",67.8795745097514
+"New York,Orange",67.6661291949529
+"New York,Oswego",71.2086517186055
+"New York,Otsego",69.4098911102826
+"New York,Putnam",67.082091200072
+"New York,Queens",65.6474718252543
+"New York,Rensselaer",70.1924159230244
+"New York,Richmond",66.7646417468139
+"New York,Rockland",70.8718747435068
+"New York,Saratoga",68.5932031545197
+"New York,Schenectady",71.6391520464388
+"New York,St Lawrence",NA
+"New York,Steuben",67.0121471819203
+"New York,Suffolk",67.2848958615567
+"New York,Tompkins",70.3566584747805
+"New York,Ulster",70.6790398786234
+"New York,Warren",NA
+"New York,Westchester",66.7896917505499
+"North Carolina,Alamance",67.6799658987061
+"North Carolina,Ashe",71.7555231436288
+"North Carolina,Beaufort",71.5030447240796
+"North Carolina,Brunswick",68.7286250069109
+"North Carolina,Buncombe",69.6422847636842
+"North Carolina,Burke",67.9859511115288
+"North Carolina,Cabarrus",67.853220010082
+"North Carolina,Catawba",68.7751789042936
+"North Carolina,Cleveland",67.7501016705492
+"North Carolina,Columbus",71.9219805323421
+"North Carolina,Craven",66.4253012435788
+"North Carolina,Cumberland",67.2337828217744
+"North Carolina,Currituck",NA
+"North Carolina,Davidson",68.6379009972267
+"North Carolina,Durham",66.511471538096
+"North Carolina,Edgecombe",68.3689355347243
+"North Carolina,Forsyth",66.0904551504391
+"North Carolina,Franklin",65.791329750969
+"North Carolina,Gaston",70.6320822061356
+"North Carolina,Granville",NA
+"North Carolina,Greene",NA
+"North Carolina,Guilford",67.3986189850758
+"North Carolina,Halifax",69.2644819448833
+"North Carolina,Harnett",68.118740805919
+"North Carolina,Henderson",71.5456897166877
+"North Carolina,Hoke",66.9357909283288
+"North Carolina,Iredell",68.9761187240885
+"North Carolina,Jackson",67.8821727078697
+"North Carolina,Johnston",68.6885817517779
+"North Carolina,Lee",69.2653231196871
+"North Carolina,Lenoir",68.1861873393068
+"North Carolina,Lincoln",68.830788932982
+"North Carolina,Mecklenburg",65.7486618824042
+"North Carolina,Moore",67.7106333032224
+"North Carolina,Nash",69.0056650330696
+"North Carolina,New Hanover",68.8090777553905
+"North Carolina,Onslow",70.2356652527572
+"North Carolina,Orange",71.2605308322117
+"North Carolina,Pasquotank",72.2862544737815
+"North Carolina,Perquimans",69.8771271126442
+"North Carolina,Person",71.5709040641506
+"North Carolina,Pitt",69.6382103082879
+"North Carolina,Randolph",69.0742735044926
+"North Carolina,Richmond",69.385011669586
+"North Carolina,Robeson",68.1427408254798
+"North Carolina,Rockingham",70.8528616247808
+"North Carolina,Rowan",68.4004514556632
+"North Carolina,Sampson",66.7980782833681
+"North Carolina,Scotland",69.4660000336475
+"North Carolina,Stanly",NA
+"North Carolina,Union",68.403794532212
+"North Carolina,Vance",69.0337466720605
+"North Carolina,Wake",66.0163539350818
+"North Carolina,Watauga",68.3338251438518
+"North Carolina,Wayne",68.2200268110588
+"North Carolina,Wilson",67.4173242721941
+"North Dakota,Burleigh",72.7041390133757
+"North Dakota,Cass",68.725312560143
+"North Dakota,Dickey",68.7823401747845
+"North Dakota,Grand Forks",70.0866428928981
+"North Dakota,Stark",NA
+"North Dakota,Ward",72.4209232327989
+"Ohio,Allen",67.738747929049
+"Ohio,Ashland",67.8716232336144
+"Ohio,Ashtabula",67.0088186105349
+"Ohio,Athens",70.985490668865
+"Ohio,Belmont",72.5810743129258
+"Ohio,Butler",68.6119118110705
+"Ohio,Champaign",67.6804861526851
+"Ohio,Clark",70.5677858208759
+"Ohio,Clermont",77.221472461174
+"Ohio,Clinton",NA
+"Ohio,Columbiana",72.500644798117
+"Ohio,Coshocton",NA
+"Ohio,Cuyahoga",65.7820251498359
+"Ohio,Darke",72.205107538311
+"Ohio,Defiance",69.5856413942591
+"Ohio,Delaware",70.8377576711241
+"Ohio,Erie",69.8552484751231
+"Ohio,Fairfield",71.5243752617268
+"Ohio,Franklin",66.2261632636821
+"Ohio,Gallia",70.7223801435822
+"Ohio,Geauga",NA
+"Ohio,Greene",72.3704532132085
+"Ohio,Hamilton",65.5421142162587
+"Ohio,Hancock",69.0620389347026
+"Ohio,Hardin",70.8342775055386
+"Ohio,Henry",NA
+"Ohio,Huron",67.3153668886847
+"Ohio,Jackson",70.2881089082884
+"Ohio,Jefferson",71.3147464210059
+"Ohio,Lake",68.8681410083795
+"Ohio,Lawrence",68.4275081406485
+"Ohio,Licking",68.5071496436656
+"Ohio,Logan",71.0391326717637
+"Ohio,Lorain",67.8241060309132
+"Ohio,Lucas",67.4286790872578
+"Ohio,Mahoning",67.3579116462854
+"Ohio,Marion",NA
+"Ohio,Medina",69.0497210204309
+"Ohio,Miami",66.0304471573277
+"Ohio,Montgomery",67.1149559311446
+"Ohio,Muskingum",69.8500878659659
+"Ohio,Ottawa",NA
+"Ohio,Pickaway",NA
+"Ohio,Portage",70.7586824559936
+"Ohio,Putnam",65.2027798539753
+"Ohio,Richland",66.7661130610723
+"Ohio,Ross",71.864355771871
+"Ohio,Sandusky",68.5758076752204
+"Ohio,Scioto",70.1655974478441
+"Ohio,Seneca",NA
+"Ohio,Stark",69.6454669309999
+"Ohio,Summit",68.2713175702528
+"Ohio,Trumbull",66.4993849640605
+"Ohio,Union",NA
+"Ohio,Warren",68.9644601045458
+"Ohio,Washington",70.6228450476437
+"Ohio,Wayne",68.872228385163
+"Ohio,Williams",NA
+"Ohio,Wood",69.6726705376897
+"Oklahoma,Adair",65.6082026651223
+"Oklahoma,Bryan",71.0144385619562
+"Oklahoma,Canadian",68.1653541268551
+"Oklahoma,Carter",72.7946511435398
+"Oklahoma,Cherokee",69.622095109465
+"Oklahoma,Cleveland",66.550161820942
+"Oklahoma,Comanche",67.6447914986155
+"Oklahoma,Custer",69.9036264560605
+"Oklahoma,Dewey",68.4835508482084
+"Oklahoma,Garfield",72.4175979100047
+"Oklahoma,Kay",72.4428355066693
+"Oklahoma,Lincoln",70.0973542120448
+"Oklahoma,Logan",71.5614696716773
+"Oklahoma,McCurtain",67.6634008618644
+"Oklahoma,Muskogee",69.9198883007423
+"Oklahoma,Okfuskee",66.2786413420638
+"Oklahoma,Oklahoma",66.821504345716
+"Oklahoma,Payne",69.3655948809475
+"Oklahoma,Pittsburg",63.9059124226649
+"Oklahoma,Pontotoc",71.2532769389867
+"Oklahoma,Pottawatomie",71.931126558849
+"Oklahoma,Roger Mills",NA
+"Oklahoma,Rogers",72.3604000289997
+"Oklahoma,Stephens",69.7947052873156
+"Oklahoma,Tulsa",66.152111457482
+"Oklahoma,Washington",71.8747027969925
+"Oregon,Benton",71.0064881694673
+"Oregon,Clackamas",68.8588926475553
+"Oregon,Columbia",70.0814511710073
+"Oregon,Deschutes",72.3048641028035
+"Oregon,Douglas",NA
+"Oregon,Jackson",67.6304655142908
+"Oregon,Jefferson",NA
+"Oregon,Josephine",73.2941186784065
+"Oregon,Klamath",73.1835929406193
+"Oregon,Lane",66.1139310152157
+"Oregon,Linn",69.1915781910896
+"Oregon,Marion",67.6795382569357
+"Oregon,Multnomah",66.8827839249267
+"Oregon,Washington",67.2725136542411
+"Oregon,Yamhill",66.7280498792099
+"Pennsylvania,Adams",72.749532069042
+"Pennsylvania,Allegheny",66.611125858204
+"Pennsylvania,Beaver",69.191287554698
+"Pennsylvania,Berks",69.285594653531
+"Pennsylvania,Blair",70.6408088002922
+"Pennsylvania,Bucks",66.8567925856336
+"Pennsylvania,Butler",69.7158670812459
+"Pennsylvania,Cambria",66.7440359650596
+"Pennsylvania,Carbon",68.2161782757801
+"Pennsylvania,Centre",67.5492771813147
+"Pennsylvania,Chester",66.2169281314219
+"Pennsylvania,Clarion",70.0852895261502
+"Pennsylvania,Clearfield",NA
+"Pennsylvania,Clinton",71.8614172782298
+"Pennsylvania,Columbia",68.9811013650695
+"Pennsylvania,Cumberland",69.9097002051794
+"Pennsylvania,Dauphin",66.9929950778664
+"Pennsylvania,Delaware",65.2960429152987
+"Pennsylvania,Erie",69.3394424028223
+"Pennsylvania,Fayette",69.6004720467167
+"Pennsylvania,Franklin",66.7716497552664
+"Pennsylvania,Indiana",69.619701509308
+"Pennsylvania,Lackawanna",68.970472166741
+"Pennsylvania,Lancaster",69.157600525289
+"Pennsylvania,Lawrence",69.5847685865488
+"Pennsylvania,Lebanon",71.6577520777569
+"Pennsylvania,Lehigh",66.7438065921507
+"Pennsylvania,Luzerne",67.3416662353304
+"Pennsylvania,Lycoming",68.3374836405735
+"Pennsylvania,Mercer",71.8423813403789
+"Pennsylvania,Monroe",69.6879244460341
+"Pennsylvania,Montgomery",66.1258072027648
+"Pennsylvania,Northampton",69.8789633789633
+"Pennsylvania,Northumberland",68.5240968081439
+"Pennsylvania,Philadelphia",65.8138164606051
+"Pennsylvania,Schuylkill",71.9393370076857
+"Pennsylvania,Somerset",NA
+"Pennsylvania,Venango",67.3621717067269
+"Pennsylvania,Washington",68.0434377867678
+"Pennsylvania,Wayne",67.7880435797748
+"Pennsylvania,Westmoreland",65.981263849627
+"Pennsylvania,York",66.4536580594807
+"Rhode Island,Bristol",NA
+"Rhode Island,Kent",69.7723188202271
+"Rhode Island,Newport",71.0337118241483
+"Rhode Island,Providence",66.6897600951307
+"Rhode Island,Washington",68.5485073275294
+"South Carolina,Abbeville",NA
+"South Carolina,Aiken",70.2783994243317
+"South Carolina,Anderson",70.5180206574504
+"South Carolina,Bamberg",73.5419235824273
+"South Carolina,Barnwell",NA
+"South Carolina,Beaufort",65.3561424059479
+"South Carolina,Berkeley",72.0711966296515
+"South Carolina,Charleston",65.8104125883997
+"South Carolina,Cherokee",69.8165696296243
+"South Carolina,Chester",72.9244650694197
+"South Carolina,Clarendon",64.2570640093579
+"South Carolina,Darlington",71.8880963898
+"South Carolina,Dillon",NA
+"South Carolina,Dorchester",70.1941615144353
+"South Carolina,Florence",68.7412470771311
+"South Carolina,Georgetown",70.4193620216684
+"South Carolina,Greenville",67.182076527408
+"South Carolina,Greenwood",69.8439008161956
+"South Carolina,Horry",66.0901260092186
+"South Carolina,Kershaw",68.0199457629645
+"South Carolina,Lancaster",69.4253305628976
+"South Carolina,Laurens",68.2662506108199
+"South Carolina,Lexington",69.4910064259159
+"South Carolina,Marion",69.4911213430057
+"South Carolina,Newberry",NA
+"South Carolina,Orangeburg",68.8136653270131
+"South Carolina,Pickens",67.1365269661134
+"South Carolina,Richland",66.4556677795834
+"South Carolina,Spartanburg",68.3873648565394
+"South Carolina,Sumter",69.0498963361245
+"South Carolina,Union",70.5383164654822
+"South Carolina,Williamsburg",67.6666197362076
+"South Carolina,York",67.5683482694845
+"South Dakota,Brookings",68.7611849646443
+"South Dakota,Brown",73.0147961043945
+"South Dakota,Clay",72.1082101629526
+"South Dakota,Davison",NA
+"South Dakota,Kingsbury",69.6823850378389
+"South Dakota,Lake",NA
+"South Dakota,Lawrence",NA
+"South Dakota,Lincoln",67.9794389947161
+"South Dakota,Minnehaha",67.8939450443401
+"South Dakota,Pennington",70.5975688308769
+"South Dakota,Walworth",72.4986996526481
+"South Dakota,Yankton",NA
+"Tennessee,Anderson",67.9968524341638
+"Tennessee,Bedford",67.998156724222
+"Tennessee,Blount",68.24471900692
+"Tennessee,Bradley",70.3286491441289
+"Tennessee,Campbell",NA
+"Tennessee,Carroll",NA
+"Tennessee,Chester",71.6371732316576
+"Tennessee,Claiborne",69.0284220186172
+"Tennessee,Davidson",67.1668108623175
+"Tennessee,Dickson",69.1496216553254
+"Tennessee,Giles",69.9685222729231
+"Tennessee,Greene",NA
+"Tennessee,Hamblen",70.6180711459502
+"Tennessee,Hamilton",67.5582735957076
+"Tennessee,Hardin",66.4547397592486
+"Tennessee,Henderson",NA
+"Tennessee,Jefferson",NA
+"Tennessee,Knox",66.8585447588286
+"Tennessee,Lawrence",72.6274505145044
+"Tennessee,Madison",71.2890472921668
+"Tennessee,Maury",72.3995040158528
+"Tennessee,McMinn",72.8426198842382
+"Tennessee,Monroe",72.5526740280532
+"Tennessee,Montgomery",67.012249526775
+"Tennessee,Morgan",74.2564172271626
+"Tennessee,Overton",NA
+"Tennessee,Putnam",71.6347962561955
+"Tennessee,Rhea",70.6942980623595
+"Tennessee,Roane",71.4146291783062
+"Tennessee,Robertson",NA
+"Tennessee,Rutherford",67.4837480110354
+"Tennessee,Sevier",66.0338580949279
+"Tennessee,Shelby",66.560393195225
+"Tennessee,Smith",NA
+"Tennessee,Sullivan",68.6251314548685
+"Tennessee,Sumner",68.9269209677828
+"Tennessee,Washington",67.9227779566714
+"Tennessee,Wayne",63.8644605221428
+"Tennessee,Weakley",71.8189645332318
+"Tennessee,White",NA
+"Tennessee,Williamson",65.938767264871
+"Tennessee,Wilson",67.8023348537033
+"Texas,Angelina",69.6493299094764
+"Texas,Austin",72.3498081276169
+"Texas,Bastrop",71.6713756168236
+"Texas,Bell",68.2041502467709
+"Texas,Bexar",66.010733123735
+"Texas,Bowie",68.4594833138042
+"Texas,Brazoria",65.9145649887911
+"Texas,Brazos",67.186759183491
+"Texas,Caldwell",78.0718159158571
+"Texas,Cameron",68.1055555090942
+"Texas,Collin",66.459421475888
+"Texas,Comal",68.0960024623927
+"Texas,Cooke",NA
+"Texas,Dallas",66.1261364431074
+"Texas,Denton",66.6975863124313
+"Texas,Duval",75.381035408813
+"Texas,Ector",69.7070477555868
+"Texas,El Paso",67.7774639117516
+"Texas,Ellis",69.9147551707007
+"Texas,Erath",70.5342371405267
+"Texas,Fayette",NA
+"Texas,Fort Bend",66.0463999106503
+"Texas,Galveston",65.3537110438004
+"Texas,Gonzales",66.1909227207682
+"Texas,Grayson",70.9045511318769
+"Texas,Gregg",69.2179309306719
+"Texas,Guadalupe",67.1896975207835
+"Texas,Harris",66.2740948872732
+"Texas,Harrison",69.0640355467695
+"Texas,Hays",68.1207517783927
+"Texas,Hidalgo",67.485557858114
+"Texas,Hood",68.4323410068604
+"Texas,Jefferson",67.4234619077724
+"Texas,Johnson",NA
+"Texas,Kleberg",70.669809209156
+"Texas,Lamar",67.6489174103976
+"Texas,Liberty",68.1698308569364
+"Texas,Limestone",71.474773928374
+"Texas,Lubbock",65.897898418281
+"Texas,McLennan",66.3189390075422
+"Texas,Midland",67.2806893594856
+"Texas,Montague",NA
+"Texas,Montgomery",66.8200877712976
+"Texas,Nacogdoches",66.1480464739206
+"Texas,Nueces",68.6175934376971
+"Texas,Parker",66.036654741295
+"Texas,Polk",NA
+"Texas,Potter",67.6536542584579
+"Texas,Randall",71.7129353882497
+"Texas,Rockwall",67.9887469397537
+"Texas,San Patricio",NA
+"Texas,Smith",67.6139919683884
+"Texas,Starr",73.2874762022085
+"Texas,Tarrant",65.7836898095433
+"Texas,Taylor",68.2110769530422
+"Texas,Tom Green",71.3790365232733
+"Texas,Travis",65.0698373948112
+"Texas,Uvalde",65.2345666288095
+"Texas,Val Verde",67.2892193878492
+"Texas,Victoria",67.8049717468984
+"Texas,Walker",66.9700535474711
+"Texas,Waller",70.2697907317124
+"Texas,Washington",72.5215396169514
+"Texas,Webb",68.2651707660223
+"Texas,Wichita",67.6670517446278
+"Texas,Williamson",67.8562993183757
+"Utah,Cache",67.2941514389954
+"Utah,Davis",73.0845859848326
+"Utah,Iron",70.7116089057535
+"Utah,Millard",NA
+"Utah,Salt Lake",66.220862086688
+"Utah,Summit",64.0447716826135
+"Utah,Tooele",70.4727883386873
+"Utah,Utah",67.1817104745197
+"Utah,Washington",70.6305042992364
+"Utah,Weber",70.5999498257495
+"Vermont,Addison",72.543824342463
+"Vermont,Caledonia",NA
+"Vermont,Chittenden",71.713542182746
+"Vermont,Orange",NA
+"Vermont,Orleans",68.8657864496476
+"Vermont,Washington",NA
+"Vermont,Windsor",67.8953894448047
+"Virginia,Albemarle",69.1170686398265
 "Virginia,Alexandria City",66.2853926676267
-"Virginia,Arlington County",68.347612603207
-"Virginia,Buckingham County",69.4766437038909
-"Virginia,Charles City County",NA
+"Virginia,Arlington",68.347612603207
+"Virginia,Buckingham",69.4766437038909
+"Virginia,Charles City",NA
 "Virginia,Charlottesville City",65.9473550131556
 "Virginia,Chesapeake City",69.187922659803
-"Virginia,Chesterfield County",68.1724455098823
+"Virginia,Chesterfield",68.1724455098823
 "Virginia,Danville City",68.6579480945555
-"Virginia,Dinwiddie County",NA
-"Virginia,Essex County",NA
+"Virginia,Dinwiddie",NA
+"Virginia,Essex",NA
 "Virginia,Fairfax City",68.0543721327171
-"Virginia,Fairfax County",66.2317238239818
+"Virginia,Fairfax",66.2317238239818
 "Virginia,Falls Church City",67.4544096692466
-"Virginia,Fauquier County",NA
+"Virginia,Fauquier",NA
 "Virginia,Franklin City",NA
 "Virginia,Fredericksburg City",67.6212610913643
 "Virginia,Hampton City",68.2082188765564
-"Virginia,Hanover County",68.7645770613363
+"Virginia,Hanover",68.7645770613363
 "Virginia,Harrisonburg City",68.8513028035871
-"Virginia,Henrico County",68.5993393646891
+"Virginia,Henrico",68.5993393646891
 "Virginia,Hopewell City",66.3939802717192
-"Virginia,Isle of Wight County",68.8363634510133
-"Virginia,Lancaster County",67.0978349355837
+"Virginia,Isle of Wight",68.8363634510133
+"Virginia,Lancaster",67.0978349355837
 "Virginia,Lexington City",76.3819005024665
-"Virginia,Loudoun County",67.8666767589736
+"Virginia,Loudoun",67.8666767589736
 "Virginia,Lynchburg City",68.9700936086086
 "Virginia,Manassas City",67.4429269687422
 "Virginia,Martinsville City",70.0342605829129
-"Virginia,Mathews County",65.493332442502
-"Virginia,Montgomery County",70.1142705239625
-"Virginia,New Kent County",71.9513938947692
+"Virginia,Mathews",65.493332442502
+"Virginia,Montgomery",70.1142705239625
+"Virginia,New Kent",71.9513938947692
 "Virginia,Newport News City",67.4478748833211
 "Virginia,Norfolk City",67.2258395904698
-"Virginia,Nottoway County",70.945887751399
+"Virginia,Nottoway",70.945887751399
 "Virginia,Petersburg City",69.031861984659
-"Virginia,Pittsylvania County",64.0402208266256
+"Virginia,Pittsylvania",64.0402208266256
 "Virginia,Portsmouth City",70.7308639015495
-"Virginia,Prince Edward County",70.1667202383313
-"Virginia,Prince George County",69.2998590504816
-"Virginia,Prince William County",66.6575641353997
+"Virginia,Prince Edward",70.1667202383313
+"Virginia,Prince George",69.2998590504816
+"Virginia,Prince William",66.6575641353997
 "Virginia,Radford City",70.2220370146868
 "Virginia,Richmond City",66.2421870868337
 "Virginia,Roanoke City",70.7331499271762
-"Virginia,Rockingham County",68.9353827724704
-"Virginia,Russell County",74.0373715151475
+"Virginia,Rockingham",68.9353827724704
+"Virginia,Russell",74.0373715151475
 "Virginia,Salem City",72.1296213999637
-"Virginia,Scott County",NA
-"Virginia,Stafford County",68.3614575352824
+"Virginia,Scott",NA
+"Virginia,Stafford",68.3614575352824
 "Virginia,Staunton City",71.7556839171134
 "Virginia,Suffolk City",68.1707663377474
-"Virginia,Sussex County",67.763017867314
+"Virginia,Sussex",67.763017867314
 "Virginia,Virginia Beach City",65.9407588164877
-"Virginia,Washington County",69.829680884146
+"Virginia,Washington",69.829680884146
 "Virginia,Waynesboro City",72.9740022728526
 "Virginia,Williamsburg City",69.0605505903476
 "Virginia,Winchester City",67.6253199286645
-"Virginia,York County",68.7005713374332
-"Washington,Benton County",69.704514596375
-"Washington,Chelan County",73.1529157940792
-"Washington,Clallam County",70.4091228795055
-"Washington,Clark County",68.4142937734711
-"Washington,Cowlitz County",65.7815890209634
-"Washington,Franklin County",67.5078672082028
-"Washington,Grays Harbor County",75.7965453444513
-"Washington,Island County",70.4522470313182
-"Washington,King County",65.4495429969974
-"Washington,Kitsap County",72.0579679875242
-"Washington,Kittitas County",71.8226934336233
-"Washington,Pierce County",67.1592238945604
-"Washington,Skagit County",73.5337055777515
-"Washington,Snohomish County",67.6908091149001
-"Washington,Spokane County",69.9375596330473
-"Washington,Stevens County",71.1894810722009
-"Washington,Thurston County",67.2708039283294
-"Washington,Walla Walla County",71.9227544489474
-"Washington,Whatcom County",67.7751105429184
-"Washington,Whitman County",70.2676013240386
-"Washington,Yakima County",68.6198878332409
-"West Virginia,Berkeley County",69.594814070358
-"West Virginia,Braxton County",66.8690841750392
-"West Virginia,Cabell County",68.0173739695232
-"West Virginia,Calhoun County",67.2800368089488
-"West Virginia,Clay County",67.3539484818953
-"West Virginia,Fayette County",72.26437026318
-"West Virginia,Greenbrier County",66.0920701333747
-"West Virginia,Hancock County",NA
-"West Virginia,Harrison County",70.5279867436228
-"West Virginia,Jackson County",72.4466917384207
-"West Virginia,Jefferson County",70.1074903047023
-"West Virginia,Kanawha County",65.9926396985253
-"West Virginia,Lincoln County",64.3689870042049
-"West Virginia,Marion County",69.0621376917326
-"West Virginia,Marshall County",74.3143827320634
-"West Virginia,Mercer County",70.9284484681309
-"West Virginia,Mineral County",74.4315735566655
-"West Virginia,Monongalia County",69.2803888313863
-"West Virginia,Morgan County",NA
-"West Virginia,Ohio County",69.9499760515196
-"West Virginia,Putnam County",71.3092647139032
-"West Virginia,Raleigh County",71.0236761914912
-"West Virginia,Randolph County",69.8277005210414
-"West Virginia,Upshur County",NA
-"West Virginia,Wood County",72.5899204799595
-"Wisconsin,Ashland County",73.0850110003932
-"Wisconsin,Brown County",72.4378282468362
-"Wisconsin,Buffalo County",NA
-"Wisconsin,Clark County",71.3802178749863
-"Wisconsin,Dane County",66.743335128659
-"Wisconsin,Douglas County",65.2124854423649
-"Wisconsin,Dunn County",71.0878402919645
-"Wisconsin,Eau Claire County",65.8446985725301
-"Wisconsin,Fond Du Lac County",68.2096457485099
-"Wisconsin,Kenosha County",66.9646413733833
-"Wisconsin,La Crosse County",71.253376788872
-"Wisconsin,Manitowoc County",NA
-"Wisconsin,Marathon County",73.3830616909185
-"Wisconsin,Milwaukee County",66.2336452932684
-"Wisconsin,Outagamie County",65.1656363715014
-"Wisconsin,Pierce County",73.2159385171103
-"Wisconsin,Portage County",NA
-"Wisconsin,Racine County",66.4775854639558
-"Wisconsin,Richland County",69.2590143645944
-"Wisconsin,Rock County",67.6757821411928
-"Wisconsin,Sheboygan County",70.3439758385944
-"Wisconsin,Vernon County",70.3742344109201
-"Wisconsin,Walworth County",67.1348379803001
-"Wisconsin,Washington County",71.7920182322329
-"Wisconsin,Waukesha County",68.6023051295474
-"Wisconsin,Winnebago County",70.924942154015
-"Wyoming,Albany County",70.3219954309712
-"Wyoming,Campbell County",NA
-"Wyoming,Laramie County",67.9166541248035
-"Wyoming,Natrona County",65.7022050981787
+"Virginia,York",68.7005713374332
+"Washington,Benton",69.704514596375
+"Washington,Chelan",73.1529157940792
+"Washington,Clallam",70.4091228795055
+"Washington,Clark",68.4142937734711
+"Washington,Cowlitz",65.7815890209634
+"Washington,Franklin",67.5078672082028
+"Washington,Grays Harbor",75.7965453444513
+"Washington,Island",70.4522470313182
+"Washington,King",65.4495429969974
+"Washington,Kitsap",72.0579679875242
+"Washington,Kittitas",71.8226934336233
+"Washington,Pierce",67.1592238945604
+"Washington,Skagit",73.5337055777515
+"Washington,Snohomish",67.6908091149001
+"Washington,Spokane",69.9375596330473
+"Washington,Stevens",71.1894810722009
+"Washington,Thurston",67.2708039283294
+"Washington,Walla Walla",71.9227544489474
+"Washington,Whatcom",67.7751105429184
+"Washington,Whitman",70.2676013240386
+"Washington,Yakima",68.6198878332409
+"West Virginia,Berkeley",69.594814070358
+"West Virginia,Braxton",66.8690841750392
+"West Virginia,Cabell",68.0173739695232
+"West Virginia,Calhoun",67.2800368089488
+"West Virginia,Clay",67.3539484818953
+"West Virginia,Fayette",72.26437026318
+"West Virginia,Greenbrier",66.0920701333747
+"West Virginia,Hancock",NA
+"West Virginia,Harrison",70.5279867436228
+"West Virginia,Jackson",72.4466917384207
+"West Virginia,Jefferson",70.1074903047023
+"West Virginia,Kanawha",65.9926396985253
+"West Virginia,Lincoln",64.3689870042049
+"West Virginia,Marion",69.0621376917326
+"West Virginia,Marshall",74.3143827320634
+"West Virginia,Mercer",70.9284484681309
+"West Virginia,Mineral",74.4315735566655
+"West Virginia,Monongalia",69.2803888313863
+"West Virginia,Morgan",NA
+"West Virginia,Ohio",69.9499760515196
+"West Virginia,Putnam",71.3092647139032
+"West Virginia,Raleigh",71.0236761914912
+"West Virginia,Randolph",69.8277005210414
+"West Virginia,Upshur",NA
+"West Virginia,Wood",72.5899204799595
+"Wisconsin,Ashland",73.0850110003932
+"Wisconsin,Brown",72.4378282468362
+"Wisconsin,Buffalo",NA
+"Wisconsin,Clark",71.3802178749863
+"Wisconsin,Dane",66.743335128659
+"Wisconsin,Douglas",65.2124854423649
+"Wisconsin,Dunn",71.0878402919645
+"Wisconsin,Eau Claire",65.8446985725301
+"Wisconsin,Fond Du Lac",68.2096457485099
+"Wisconsin,Kenosha",66.9646413733833
+"Wisconsin,La Crosse",71.253376788872
+"Wisconsin,Manitowoc",NA
+"Wisconsin,Marathon",73.3830616909185
+"Wisconsin,Milwaukee",66.2336452932684
+"Wisconsin,Outagamie",65.1656363715014
+"Wisconsin,Pierce",73.2159385171103
+"Wisconsin,Portage",NA
+"Wisconsin,Racine",66.4775854639558
+"Wisconsin,Richland",69.2590143645944
+"Wisconsin,Rock",67.6757821411928
+"Wisconsin,Sheboygan",70.3439758385944
+"Wisconsin,Vernon",70.3742344109201
+"Wisconsin,Walworth",67.1348379803001
+"Wisconsin,Washington",71.7920182322329
+"Wisconsin,Waukesha",68.6023051295474
+"Wisconsin,Winnebago",70.924942154015
+"Wyoming,Albany",70.3219954309712
+"Wyoming,Campbell",NA
+"Wyoming,Laramie",67.9166541248035
+"Wyoming,Natrona",65.7022050981787

@@ -402,7 +402,32 @@ state_color_scales = function()
   max = max(predictions, na.rm = TRUE)
   
   # scale to 9 values spreading out the values near the mean
-  scale = c(min, mean - (sd/8), mean - (sd/7), mean - (sd/6), mean, mean + (sd/6), mean + (sd/7), mean - (sd/8), max)
+  scale = c(min, mean - (sd/8), mean - (sd/7), mean - (sd/6), 
+            mean, 
+            mean + (sd/6), mean + (sd/7), mean - (sd/8), max)
+  
+  return(scale)
+}
+
+###
+# Colors scales for county predictions
+#
+county_color_scales = function()
+{
+  # load predictions
+  county_pred = read.csv(file="model-output/county_predictions.csv", header=TRUE, sep=",")
+  predictions = as.vector(county_pred$prediction)
+  
+  # load key statistics
+  mean = mean(predictions, na.rm=TRUE)
+  sd = sd(predictions, na.rm=TRUE)
+  min = min(predictions, na.rm = TRUE)
+  max = max(predictions, na.rm = TRUE)
+  
+  # scale to 9 values spreading out the values near the mean
+  scale = c(min, mean - (sd/8), mean - (sd/6), mean - (sd/4), mean - (sd/3), 
+            mean, 
+            mean + (sd/3), mean + (sd/4), mean + (sd/6), mean + (sd/8), max)
   
   return(scale)
 }
@@ -454,7 +479,70 @@ state_choropleth = function(state_scores_filename, score_column, title)
   # save to file
   output_filename = paste("output-files/state_choropleth--", score_column, ".png",sep='')
   png(file=output_filename,width=900,height=450,res=96)
+    print({map})
+  dev.off()
+  
+  # plot at the end anyway
+  map
+}
+
+
+###
+# County chloropleth for a county scores file
+#
+# county_scores_filename -> file with score data
+# score_column -> score column name
+# title -> title of the plot
+#
+county_choropleth = function(county_scores_filename, score_column, title)
+{
+  county_pred = read.csv("model-output/county_predictions.csv", header = TRUE)
+  vec = as.vector(county_pred[,c(score_column)])
+  names(vec) = tolower(county_pred$county)
+  
+  # Gets data set with counties already inside R
+  states_polygons = map_data('county')
+  states_polygons$state_county = paste(states_polygons$region, states_polygons$subregion, sep=",")
+  
+  #Now link the vote data to the state shapes by matching names:
+  states_polygons$score = vec[states_polygons$state_county]
+  
+  # color scale for plot
+  scale <- county_color_scales()
+  
+  #Finally, add a color layer to the map:
+  # passes the map, and as fill column the scores
+  map = ggplot(states_polygons) +
+    aes(long, lat, group=group) +
+    geom_polygon() +
+    aes(fill=score) +
+    theme_bw() +
+    theme(axis.line=element_blank(),
+          axis.text.x=element_blank(),
+          axis.text.y=element_blank(),
+          axis.ticks=element_blank(),
+          axis.title.x=element_blank(),
+          axis.title.y=element_blank()
+    ) + 
+    scale_fill_gradientn(
+      colours = brewer.pal(length(scale), "RdYlGn"),
+      values = rescale(scale),
+      name='score'
+    ) + 
+    theme(
+      plot.title=element_text(face="bold", size=20),
+      legend.title = element_text(size = 16, face="bold"),
+      legend.text = element_text(size = 16)
+    ) + 
+    coord_map(project='globular') + 
+    ggtitle (title)
+  
+  # save to file
+  output_filename = paste("output-files/county_choropleth--", score_column, ".png",sep='')
+  png(file=output_filename,width=900,height=450,res=96)
   print({map})
+  # needs sleep since county plot is heavy and takes a bit longer to plot
+  Sys.sleep(60)
   dev.off()
   
   # plot at the end anyway
