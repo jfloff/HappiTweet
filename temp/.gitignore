@@ -1,4 +1,5 @@
 # Ignore everything in this directory
+# used to download large files to
 *
 # Except this file
 !.gitignore
