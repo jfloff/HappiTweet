@@ -6,23 +6,14 @@ Welcome to the HappiTweet research project. In this project we relate twitter me
 If you use this work in any way, please cite the following paper [[PDF]](http://dl.acm.org/citation.cfm?id=2695939):
 > Loff, J., Reis, M., & Martins, B. (2015, April). Predicting well-being with geo-referenced data collected from social media platforms. In Proceedings of the 30th Annual ACM Symposium on Applied Computing (pp. 1167-1173). ACM.
 
-##### Citing
 ```latex
-@article{rendle:tist2012,
-  author = {Rendle, Steffen},
-  title = {Factorization Machines with {libFM}},
-  journal = {ACM Trans. Intell. Syst. Technol.},
-  issue_date = {May 2012},
-  volume = {3},
-  number = {3},
-  month = May,
-  year = {2012},
-  issn = {2157-6904},
-  pages = {57:1--57:22},
-  articleno = {57},
-  numpages = {22},
-  publisher = {ACM},
-  address = {New York, NY, USA},
+@inproceedings{loff2015predicting,
+  title={Predicting well-being with geo-referenced data collected from social media platforms},
+  author={Loff, Jo{\~a}o and Reis, Manuel and Martins, Bruno},
+  booktitle={Proceedings of the 30th Annual ACM Symposium on Applied Computing},
+  pages={1167--1173},
+  year={2015},
+  organization={ACM}
 }
 ```
 
