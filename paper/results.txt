@@ -1,0 +1,35 @@
+#######################################
+################ STATE ################
+#######################################
+
+> # evaluate results
+> cor( gallup, predictions, method = "pearson" )
+            1
+[1,] 0.744091
+
+> cor( gallup, predictions, method = "kendall" )
+             1
+[1,] 0.5862567
+
+> rmse( gallup, predictions )
+[1] 1.217401
+
+> mae( gallup, predictions )
+[1] 0.9196227
+
+> # compare against baseline models that always predict the mean or the median well-being index
+> avg <- rep( mean( gallup ) , length(gallup) )
+
+> med <- rep( median( gallup ) , length(gallup) )
+
+> rmse( gallup, avg )
+[1] 1.73
+
+> mae( gallup, avg )
+[1] 1.403646
+
+> rmse( gallup, med )
+[1] 1.736136
+
+> mae( gallup, med )
+[1] 1.391667
